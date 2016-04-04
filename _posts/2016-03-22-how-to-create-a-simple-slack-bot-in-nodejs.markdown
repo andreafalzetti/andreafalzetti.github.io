@@ -10,20 +10,19 @@ author:     "Andrea Falzetti"
 header-img: "img/post-bg-01.jpg"
 ---
 
-In this post I want to help you creating your *first Slack application with Node.js*.
+In this post I want to help you creating a *simple Slack bot with Node.js*.
 
-Slack has created two different integrations methods, Incoming/Outcoming Webhooks and Bot Users. If you are interested in the latter case, please read my article about _Creating a Slack User Bot_.
+Slack has created two different integrations methods, **Incoming/Outcoming Webhooks** and **Bot Users**. If you are interested in the latter case, please read my article about _Creating a Slack User Bot_.
 
-In this article, we are going to integrate the Slack Incoming Webhooks which allows you to send data into Slack in real-time.
+In this article, we are going to integrate the Slack Incoming Webhooks which allows you to **send data into Slack** in real-time.
 
-The application created for this example has to read a calendar and send the daily events to a Slack channel.
+The application created in this example reads the events from a calendar and sends the daily events to a Slack channel. At [Activate Media](http://activate.co.uk){:target="_blank"} we use this bot everyday. Check out [The Activate bot story](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292){:target="_blank"} for more informations.
 
-At [Activate Media](http://activate.co.uk){:target="_blank"} we use this bot everyday. Check out [The Activate bot story](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292){:target="_blank"} for more informations.
 ![slack-plannerbot-example]({{site.url}}/img/slack-plannerbot-example.jpg)
 
 ## Step 1: Install Node.js ##
 
-If you have Node installed on your machine, you can skip this step. If now, follow the link based on your operating system:
+If you have Node installed on your machine, you can skip this step. If not, follow the link based on your operating system:
 
 * [OS X](https://nodejs.org/en/download/package-manager/#osx){:target="_blank"}
 * [Linux](https://nodejs.org/en/download/package-manager/){:target="_blank"}
@@ -42,15 +41,14 @@ As you can see I'm using `node v0.10.36` and `npm 1.4.28`.
 First thing you can do is [set up an Incoming Webhook](https://my.slack.com/services/new/incoming-webhook/) for you Slack channel. Once you have done it, you'll have a `Webhook URL` that will be the gateway for all your `HTTP/POST` requests formatted in `JSON` containing the data that you want to send to Slack.
 
 Example:
-{% highlight bash %}
-curl -X POST --data-urlencode 'payload={"channel": "#general", "username": "webhookbot", "text": "This is posted to #general and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"}' YOUR_WEBHOOK_URL_HERE
-{% endhighlight %}
+`curl -X POST --data-urlencode 'payload={"channel": "#general", "username": "webhookbot", "text": "This is posted to #general and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"}' YOUR_WEBHOOK_URL_HERE`
+
 
 ----------
 
 ## Step 3: Initialize your Node application
 
-If you are new to Node.js I recommend you to read [Learn Node.js in 90 minutes](http://rapidops.com/blog/learn-node-js-in-90-minutes/){:target="_blank"}. If you know how to move, please keep reading.
+If you are new to Node.js I recommend you to read [Learn Node.js in 90 minutes](http://rapidops.com/blog/learn-node-js-in-90-minutes/){:target="_blank"} first, otherwise please keep reading.
 
 
 {% highlight bash %}
@@ -61,15 +59,18 @@ npm install node-slackr --save
 npm install express --save
 npm install moment-timezone --save
 npm install libxmljs --save
+npm install node-caldav --save
 touch index.js
 touch config.js
 {% endhighlight %}
 
 If any of the commands above return an error, try running the same command with `sudo` prepended.
 
-or start from this [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json){:target="_blank"}
+In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json){:target="_blank"} or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git)
 
-{% highlight json %}
+Here's the content of the `package.json`:
+
+```
 {
   "name": "plannerbot",
   "version": "0.0.1",
@@ -99,7 +100,11 @@ or start from this [`package.json`](https://github.com/ActivateMedia/plannerbot/
     "node-slackr": "^0.1.2"
   }
 }
-{% endhighlight %}
+```
+
+As you have maybe noticed, in my package.json I don't have a dependency for **node-caldav**, the package in charge of retreiving & parsing the iCalendar feed. This is because I'm using an improved forked version that you can find [here](https://github.com/andreafalzetti/node-caldav){:target="_blank"}.
+
+The main reason of why I did this is because it wasn't parsing correctly the iCalendar feed that I was working with so if you are experiencing any parsing issue have a look at it.
 
 ----------
 
@@ -224,7 +229,7 @@ function getTodayEvents(cb) {
 
 ----------
 
-## Step X: Send the events to Slack
+## Step 8: Send the events to Slack
 
 Our team is located in different timezones, so the message will be localized in 3 different times. You can change this in `var timezones`;
 
@@ -334,7 +339,7 @@ function postTodayEvents(events, cb) {
 
 ----------
 
-## Step X: Add helper functions
+## Step 9: Add helper functions
 
 In your `index.js` add the following helper functions:
 
@@ -379,16 +384,10 @@ function stripslashes(str) {
 
 ----------
 
-## Step 6: Run the application
+## Step 10: Run the application
 
 From the root folder of your application, run `npm start` or `node index.js`. You should see something like this:
 
 ![PlannerBot-Start-Output]({{site.url}}/img/plannerbot-start-output.jpg)
 
 Now you are ready to call your API Endpoint at your-app-domain`/today` and if you have configured everything correctly, your bot will post a message on Slack with your events for today.
-
-----------
-
-If you have any question
-
-Comments
