@@ -11,6 +11,6 @@ I love to create and deliver good and innovative software.
 
 Now, my interests are focused on `node.js`, `machine learning`, `bots` and `conversational UI apps`.
 
-[Get in touch](mailto:andrea@falzetti.me).
+[<button class="btn btn-default">Get in touch</button>](mailto:andrea@falzetti.me)
 
 ![Andrea Falzetti]({{site.urk}}/img/about.jpg)
