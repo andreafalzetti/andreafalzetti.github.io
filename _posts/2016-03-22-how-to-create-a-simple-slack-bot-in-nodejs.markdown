@@ -12,7 +12,8 @@ header-img: "img/post-bg-01.jpg"
 
 In this post I want to help you creating a *simple Slack bot with Node.js*.
 
-Slack has created two different integrations methods, **Incoming/Outcoming Webhooks** and **Bot Users**. If you are interested in the latter case, please read my article about _Creating a Slack User Bot_.
+Slack has created two different integrations methods, **Incoming/Outcoming Webhooks** and **Bot Users**. If you are interested in the latter case, please read my article about [_Creating a Slack User Bot_]({% post_url
+  2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).
 
 In this article, we are going to integrate the Slack Incoming Webhooks which allows you to **send data into Slack** in real-time.
 
@@ -189,13 +190,10 @@ In your `index.js` add the following code, will create a listener on application
 {% highlight Javascript %}
 /* Today Events API Endpoint */
 app.get('/today', function (req, res) {
-
   getTodayEvents(function(events) {
      events.sort(compare);
-      console.log(events);
      postTodayEvents(events, function(result) {
-         console.log("Slack message has been sent");
-	       res.send("Slack message sent successfully");
+         res.send("Slack message sent successfully");
      });    
   });
 });
@@ -229,7 +227,7 @@ function getTodayEvents(cb) {
 
 ----------
 
-## Step 8: Send the events to Slack
+## Step 8: Send a Slack message with the events
 
 Our team is located in different timezones, so the message will be localized in 3 different times. You can change this in `var timezones`;
 
@@ -391,3 +389,10 @@ From the root folder of your application, run `npm start` or `node index.js`. Yo
 ![PlannerBot-Start-Output]({{site.url}}/img/plannerbot-start-output.jpg)
 
 Now you are ready to call your API Endpoint at your-app-domain`/today` and if you have configured everything correctly, your bot will post a message on Slack with your events for today.
+
+----------
+
+## What next?
+
+In the next article, you will see [How to create a smart Slack Bot in Node.js that schedules appointments for you]({% post_url
+  2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).
