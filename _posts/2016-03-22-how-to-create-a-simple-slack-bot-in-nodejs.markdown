@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'How to create a simple Slack Bot in Node.js'
 subtitle: 'that interacts with a CalDAV calendar'
 date: 2016-03-22 09:00:00
@@ -17,6 +18,9 @@ In this article, we are going to integrate the Slack Incoming Webhooks which all
 
 The application created for this example has to read a calendar and send the daily events to a Slack channel.
 
+At [Activate Media](http://activate.co.uk){:target="_blank"} we use this bot everyday. Check out [The Activate bot story](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292){:target="_blank"} for more informations.
+![slack-plannerbot-example]({{site.url}}/img/slack-plannerbot-example.jpg)
+
 ## Step 1: Install Node.js ##
 
 If you have Node installed on your machine, you can skip this step. If now, follow the link based on your operating system:
@@ -24,6 +28,12 @@ If you have Node installed on your machine, you can skip this step. If now, foll
 * [OS X](https://nodejs.org/en/download/package-manager/#osx){:target="_blank"}
 * [Linux](https://nodejs.org/en/download/package-manager/){:target="_blank"}
 * [Windows](https://nodejs.org/en/download/package-manager/#windows){:target="_blank"}
+
+Once you have Node & npm installed, check what version you are running:
+
+![my-node-version]({{site.url}}/img/my-node-version.jpg)
+
+As you can see I'm using `node v0.10.36` and `npm 1.4.28`.
 
 ----------
 
@@ -214,59 +224,13 @@ function getTodayEvents(cb) {
 
 ----------
 
-## Step X: Add helper functions
-
-In your `index.js` add the following helper functions:
-
-{% highlight Javascript %}
-var findPropertyNameByRegex = function(o, r) {
-  var key;
-  for (key in o) {
-    if (key.match(r)) {
-      return key;
-    }
-  }
-  return undefined;
-};
-function compare(a,b) {
-
-  var startDate_a = findPropertyNameByRegex(a, "DTSTART");
-  var startDate_b = findPropertyNameByRegex(b, "DTSTART");
-
-  if (a[startDate_a] < b[startDate_b])
-    return -1;
-  else if (a[startDate_a] > b[startDate_b])
-    return 1;
-  else
-    return 0;
-}
-function stripslashes(str) {
-  return (str + '')
-    .replace(/\\(.?)/g, function(s, n1) {
-      switch (n1) {
-      case '\\':
-        return '\\';
-      case '0':
-        return '\u0000';
-      case '':
-        return '';
-      default:
-        return n1;
-      }
-    });
-}
-{% endhighlight %}
-
-----------
-
 ## Step X: Send the events to Slack
 
-Our team is located in different timezones, so the message will be localized in 3 different times. You can change this at `var timezones`;
+Our team is located in different timezones, so the message will be localized in 3 different times. You can change this in `var timezones`;
 
-Example
-![Screenshot]({{site.url}}/img/activate-plannerbot-smartphone-view.png)
+<img src="{{site.url}}/img/activate-plannerbot-smartphone-view.png" alt="Screenshot" class="img-responsive" style="width: 50%;">
 
-{% highlight Javascript%}
+{% highlight javascript %}
 function postTodayEvents(events, cb) {
 
   var goodMorningMsg = "Hello <!channel|channel>! Here the events for today:";
@@ -368,11 +332,63 @@ function postTodayEvents(events, cb) {
 }
 {% endhighlight %}
 
+----------
+
+## Step X: Add helper functions
+
+In your `index.js` add the following helper functions:
+
+{% highlight Javascript %}
+var findPropertyNameByRegex = function(o, r) {
+  var key;
+  for (key in o) {
+    if (key.match(r)) {
+      return key;
+    }
+  }
+  return undefined;
+};
+function compare(a,b) {
+
+  var startDate_a = findPropertyNameByRegex(a, "DTSTART");
+  var startDate_b = findPropertyNameByRegex(b, "DTSTART");
+
+  if (a[startDate_a] < b[startDate_b])
+    return -1;
+  else if (a[startDate_a] > b[startDate_b])
+    return 1;
+  else
+    return 0;
+}
+function stripslashes(str) {
+  return (str + '')
+    .replace(/\\(.?)/g, function(s, n1) {
+      switch (n1) {
+      case '\\':
+        return '\\';
+      case '0':
+        return '\u0000';
+      case '':
+        return '';
+      default:
+        return n1;
+      }
+    });
+}
+{% endhighlight %}
 
 ----------
 
 ## Step 6: Run the application
 
+From the root folder of your application, run `npm start` or `node index.js`. You should see something like this:
+
+![PlannerBot-Start-Output]({{site.url}}/img/plannerbot-start-output.jpg)
+
+Now you are ready to call your API Endpoint at your-app-domain`/today` and if you have configured everything correctly, your bot will post a message on Slack with your events for today.
+
 ----------
 
-If you have any question ..
+If you have any question
+
+Comments
