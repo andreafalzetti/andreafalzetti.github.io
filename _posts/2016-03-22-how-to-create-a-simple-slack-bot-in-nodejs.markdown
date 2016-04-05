@@ -4,7 +4,7 @@ comments: true
 title: 'How to create a simple Slack Bot in Node.js'
 subtitle: 'that interacts with a CalDAV calendar'
 date: 2016-03-22 09:00:00
-categories: blog development
+categories: blog
 tags: nodejs caldav slack bot
 author:     "Andrea Falzetti"
 header-img: "img/post-bg-01.jpg"
