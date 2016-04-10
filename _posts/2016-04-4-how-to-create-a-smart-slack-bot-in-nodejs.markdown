@@ -3,11 +3,11 @@ layout: post
 comments: true
 title: 'How to create a smart Slack Bot in Node.js'
 subtitle: 'that schedules events using text analysis API'
-date: 2016-03-22 09:00:00
+date: 2016-04-04 09:00:00
 categories: blog
 tags: nodejs caldav slack bot
 author:     "Andrea Falzetti"
-header-img: "img/post-bg-01.jpg"
+header-img: "img/post-bg-04.jpg"
 ---
 
 The challenge here was creating a **bot able to schedule events**. Part of our internal tools at [Activate Media](http://activate.co.uk), **PlannerBot**, so it has been named, is now a member of our team. He currently lives in Slack, online 24/7 for 365 days of the year, programmed with the idea in mind that one day he could be moved to Facebook Messenger, Skype, or any other messaging platform.
@@ -60,10 +60,11 @@ The minimum informations required to schedule an event are event **title**, **da
 At the current state, the bot is able to understand english only.
 
 ## Technologies involved
-* [Slack](https://slack.com)
-* [Node.js](https://nodejs.org)
-* [Chrono](https://github.com/wanasit/chrono) (A natural language date parser in JavaScript)
-* [AlchemyAPI](http://www.alchemyapi.com) (Semantic Text Analysis APIs Using Natural Language Processing)
+* [**Slack**](https://slack.com)
+* [**Node.js**](https://nodejs.org)
+* [**Chrono**](https://github.com/wanasit/chrono) (A natural language date parser in JavaScript)
+* [**AlchemyAPI**](http://www.alchemyapi.com) (Semantic Text Analysis APIs Using Natural Language Processing)
+* [**CalDAV**](https://en.wikipedia.org/wiki/CalDAV) (HTTP-based protocol for data manipulation)
 
 ## Step 1: Install Node.js ##
 If you have Node installed on your machine, you can skip this step. If not, follow the link based on your operating system:
@@ -104,9 +105,9 @@ touch index.js
 touch config.js
 {% endhighlight %}
 
-If any of the commands above return an error, try running the same command with `sudo` prepended.
+If any of the commands above return an error, try running the same command with `sudo` prepended or check that the folder `/Users/your-username/.npm` has the right permissions.
 
-In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json){:target="_blank"} or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git)
+In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/outgoing/package.json) or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git) (outgoing branch).
 
 Here's the content of the `package.json`:
 
@@ -148,3 +149,112 @@ Here's the content of the `package.json`:
   }
 }
 ```
+
+As you have maybe noticed, in my package.json I don't have a dependency for **node-caldav**, the package in charge of retreiving & parsing the iCalendar feed. This is because I'm using an improved forked version that you can find [here](https://github.com/andreafalzetti/node-caldav).
+
+The main reason of why I did this is because it wasn't parsing correctly the iCalendar feed that I was working with so if you are experiencing any parsing issue have a look at it.
+
+----------
+
+## Step 4: Edit the configuration file
+
+I like to keep all global variables like api keys on a separate file, if you like this approach, edit `config.js` with your favorite code editor, I'm currently using [Atom.io](https://atom.io/), and assign the values to the variables required.
+
+{% highlight Javascript %}
+var config = {};
+
+config.app = {};
+config.api = {};
+config.caldav = {};
+config.slack = {};
+config.alchemyapi = {};
+
+// App Settings
+config.app.name = "PlannerBot";
+
+// calDav Settings
+config.caldav.url = "";
+config.caldav.username = "";
+config.caldav.password = "";
+config.caldav.timeFormat = "YYYYMMDDTHHmms";
+
+// API Settings
+config.api.port = 3000;
+
+// Slack WebHook Settings
+config.slack.username = config.app.name;
+config.slack.emoji = ":calendar:";
+config.slack.channel = "";
+config.slack.webhook_url = "";
+config.slack.eventColor = "good"; // can either be one of good, warning, danger, or any hex color code (eg. #439FE0).
+config.slack.bot_token = "";
+
+// AlchemyAPI Settings
+config.alchemyapi.api_key = "";
+
+// Do Not edit the following code
+module.exports = config;
+{% endhighlight %}
+
+----------
+
+## Step 5: Edit
+
+I have used [this approach](https://scotch.io/tutorials/building-a-slack-bot-with-node-js-and-chuck-norris-super-powers) to code the Bot so the code that defines the bot is located in `lib/plannerbot.js`.
+
+
+----------
+
+## Step 6: Edit the main file
+
+Now edit your `index.js`
+
+{% highlight Javascript %}
+'use strict';
+
+var util = require('util');
+var config = require('./config');
+var https = require("https");
+var xmljs = require("libxmljs");
+var express = require('express');
+var caldav = require("node-caldav");
+var moment = require('moment-timezone');
+var bodyParser = require('body-parser')
+var AlchemyAPI = require('alchemy-api');
+var Bot = require('slackbots');
+var PlannerBot = require('./lib/plannerbot');
+var NodeCache = require('node-cache');
+
+var myCache = new NodeCache();
+
+var plannerbot = new PlannerBot({
+    token: config.slack.bot_token,
+    name: config.slack.username.toLowerCase(),
+    max_timeout: 5,
+    cleaning_interval: 60000
+});
+
+plannerbot.run();
+
+// Initialising AlchemyAPI
+var alchemy = new AlchemyAPI(config.alchemyapi.api_key);
+
+// Initialising Express APP
+var app = express();
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+
+// Initialising Slack Client
+var Slack = require('node-slackr');
+var slack = new Slack(config.slack.webhook_url,{
+  channel: config.slack.channel,
+  username: config.slack.username,
+  icon_emoji: config.slack.emoji
+});
+{% endhighlight %}
+
+
+----------

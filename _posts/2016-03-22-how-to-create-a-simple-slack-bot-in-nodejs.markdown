@@ -65,7 +65,7 @@ touch index.js
 touch config.js
 {% endhighlight %}
 
-If any of the commands above return an error, try running the same command with `sudo` prepended.
+If any of the commands above return an error, try running the same command with `sudo` prepended or check that the folder `/Users/your-username/.npm` has the right permissions.
 
 In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json){:target="_blank"} or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git)
 
@@ -143,6 +143,8 @@ config.slack.eventColor = "good"; // can either be one of good, warning, danger,
 /* Do Not edit the following code */
 module.exports = config;
 {% endhighlight %}
+
+----------
 
 ## Step 5: Edit the main file
 
