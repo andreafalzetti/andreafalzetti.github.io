@@ -17,7 +17,7 @@ Slack has created two different integrations methods, **Incoming/Outcoming Webho
 
 In this article, we are going to integrate the Slack Incoming Webhooks which allows you to **send data into Slack** in real-time.
 
-The application created in this example reads the events from a calendar and sends the daily events to a Slack channel. At [Activate Media](http://activate.co.uk){:target="_blank"} we use this bot everyday. Check out [The Activate bot story](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292){:target="_blank"} for more informations.
+The application created in this example reads the events from a calendar and sends the daily events to a Slack channel. At [Activate Media](http://activate.co.uk) we use this bot everyday. Check out [The Activate bot story](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292) for more informations.
 
 ![slack-plannerbot-example]({{site.url}}/img/slack-plannerbot-example.jpg)
 
@@ -25,9 +25,9 @@ The application created in this example reads the events from a calendar and sen
 
 If you have Node installed on your machine, you can skip this step. If not, follow the link based on your operating system:
 
-* [OS X](https://nodejs.org/en/download/package-manager/#osx){:target="_blank"}
-* [Linux](https://nodejs.org/en/download/package-manager/){:target="_blank"}
-* [Windows](https://nodejs.org/en/download/package-manager/#windows){:target="_blank"}
+* [OS X](https://nodejs.org/en/download/package-manager/#osx)
+* [Linux](https://nodejs.org/en/download/package-manager/)
+* [Windows](https://nodejs.org/en/download/package-manager/#windows)
 
 Once you have Node & npm installed, check what version you are running:
 
@@ -49,7 +49,7 @@ Example:
 
 ## Step 3: Initialize your Node application
 
-If you are new to Node.js I recommend you to read [Learn Node.js in 90 minutes](http://rapidops.com/blog/learn-node-js-in-90-minutes/){:target="_blank"} first, otherwise please keep reading.
+If you are new to Node.js I recommend you to read [Learn Node.js in 90 minutes](http://rapidops.com/blog/learn-node-js-in-90-minutes/) first, otherwise please keep reading.
 
 
 {% highlight bash %}
@@ -67,7 +67,7 @@ touch config.js
 
 If any of the commands above return an error, try running the same command with `sudo` prepended or check that the folder `/Users/your-username/.npm` has the right permissions.
 
-In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json){:target="_blank"} or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git)
+In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json) or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git)
 
 Here's the content of the `package.json`:
 
@@ -103,7 +103,7 @@ Here's the content of the `package.json`:
 }
 ```
 
-As you have maybe noticed, in my package.json I don't have a dependency for **node-caldav**, the package in charge of retreiving & parsing the iCalendar feed. This is because I'm using an improved forked version that you can find [here](https://github.com/andreafalzetti/node-caldav){:target="_blank"}.
+As you have maybe noticed, in my package.json I don't have a dependency for **node-caldav**, the package in charge of retreiving & parsing the iCalendar feed. This is because I'm using an improved forked version that you can find [here](https://github.com/andreafalzetti/node-caldav).
 
 The main reason of why I did this is because it wasn't parsing correctly the iCalendar feed that I was working with so if you are experiencing any parsing issue have a look at it.
 
@@ -111,7 +111,7 @@ The main reason of why I did this is because it wasn't parsing correctly the iCa
 
 ## Step 4: Edit the configuration file
 
-I like to keep all global variables like api keys on a separate file, if you like this approach, edit `config.js` with your favorite code editor, I'm currently using [Atom.io](https://atom.io/){:target="_blank"}, and assign the values to the variables required.
+I like to keep all global variables like api keys on a separate file, if you like this approach, edit `config.js` with your favorite code editor, I'm currently using [Atom.io](https://atom.io/), and assign the values to the variables required.
 
 {% highlight Javascript %}
 var config = {};
@@ -206,9 +206,9 @@ app.get('/today', function (req, res) {
 
 ## Step 7: Get the events from the calendar with CalDAV
 
-[CalDAV](https://en.wikipedia.org/wiki/CalDAV){:target="_blank"}, **Calendaring Extensions to WebDAV** is an extension of WebDAV (HTTP-based protocol for data manipulation) and it uses the iCalendar format.
+[CalDAV](https://en.wikipedia.org/wiki/CalDAV), **Calendaring Extensions to WebDAV** is an extension of WebDAV (HTTP-based protocol for data manipulation) and it uses the iCalendar format.
 
-I have found really useful reading the article [Build a CalDAV client](http://sabre.io/dav/building-a-caldav-client/){:target="_blank"} which explains you how this protocol works, providing querying examples and all the HTTP parameters required in order to make your requests.
+I have found really useful reading the article [Build a CalDAV client](http://sabre.io/dav/building-a-caldav-client/) which explains you how this protocol works, providing querying examples and all the HTTP parameters required in order to make your requests.
 
 {% highlight Javascript %}
 /*
