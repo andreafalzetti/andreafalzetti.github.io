@@ -103,7 +103,7 @@ Here's the content of the `package.json`:
 }
 ```
 
-As you have maybe noticed, in my package.json I don't have a dependency for **node-caldav**, the package in charge of retreiving & parsing the iCalendar feed. This is because I'm using an improved forked version that you can find [here](https://github.com/andreafalzetti/node-caldav).
+As you have maybe noticed, in my package.json I don't have a dependency for **node-caldav**, the package in charge of retrieving & parsing the iCalendar feed. This is because I'm using an improved forked version that you can find [here](https://github.com/andreafalzetti/node-caldav).
 
 The main reason of why I did this is because it wasn't parsing correctly the iCalendar feed that I was working with so if you are experiencing any parsing issue have a look at it.
 
