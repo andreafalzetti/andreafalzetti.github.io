@@ -65,7 +65,7 @@ touch index.js
 touch config.js
 {% endhighlight %}
 
-If any of the commands above return an error, try running the same command with `sudo` prepended or check that the folder `/Users/your-username/.npm` has the right permissions.
+If any of the commands above return an error (e.g. `EACCESS`), check that the `.npm` folder has the right permissions, for further informations I point you to the official docs about [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
 
 In alternative you can initialize your project with the following [`package.json`](https://github.com/ActivateMedia/plannerbot/blob/master/package.json) or clone the entire [PlannerBot repository](https://github.com/ActivateMedia/plannerbot.git)
 
