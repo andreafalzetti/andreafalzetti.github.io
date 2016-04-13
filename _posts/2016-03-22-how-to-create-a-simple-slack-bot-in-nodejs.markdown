@@ -33,7 +33,7 @@ Once you have Node & npm installed, check what version you are running:
 
 ![my-node-version]({{site.url}}/img/my-node-version.jpg)
 
-As you can see I'm using `node v0.10.36` and `npm 1.4.28`.
+As you can see I'm using `node v4.4.2` and `npm 2.15.0`.
 
 ----------
 
