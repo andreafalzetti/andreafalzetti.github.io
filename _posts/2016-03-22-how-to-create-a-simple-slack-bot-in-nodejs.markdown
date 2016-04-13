@@ -211,7 +211,8 @@ app.get('/today', function (req, res) {
 I have found really useful reading the article [Build a CalDAV client](http://sabre.io/dav/building-a-caldav-client/) which explains you how this protocol works, providing querying examples and all the HTTP parameters required in order to make your requests.
 
 {% highlight Javascript %}
-//This function retrieves the events from the calendar and return an array of objects
+// This function retrieves the events from the calendar
+// and return an array of objects
 function getTodayEvents(cb) {
   var query_start_date = moment().set({'hour': 0, 'minute': 0, 'second': 10}).format(config.caldav.timeFormat) + "Z";
   var query_end_date = moment().set({'hour': 23, 'minute': 59, 'second': 59}).format(config.caldav.timeFormat) + "Z";
