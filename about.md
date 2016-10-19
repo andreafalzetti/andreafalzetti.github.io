@@ -21,13 +21,13 @@ I think it's incredibly useful to meet and talk with people that share your same
 
 Upcoming confs I will attend:
 
-- **[GOTO London 2016 Developer Conference](https://gotocon.com//london-2016/)**, London <i class="em em-uk"></i>
-- **[OSCON 2016](http://conferences.oreilly.com/oscon/open-source-eu)**, London <i class="em em-uk"></i>
 - **[Serverlessconf](http://london.serverlessconf.io)**, London <i class="em em-uk"></i>
 - **[dotJS](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 
 I have recently attended:
 
+- **[OSCON 2016](http://conferences.oreilly.com/oscon/open-source-eu)**, London <i class="em em-uk"></i>
+- **[GOTO London 2016 Developer Conference](https://gotocon.com//london-2016/)**, London <i class="em em-uk"></i>
 - **[Valencian Summer School in Machine Learning](https://bigml.com/events/valencian-summer-school-in-machine-learning-2016)**, Valencia <i class="em em-es"></i>
 
 ### Interests
