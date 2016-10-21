@@ -7,7 +7,7 @@ date: 2016-10-21 12:15:00
 categories: blog
 tags: nodejs javascript snippets
 author:     "Andrea Falzetti"
-header-img: "img/post-bg-01.jpg"
+header-img: "img/post-bg-06.jpg"
 ---
 
 ## Challenge
