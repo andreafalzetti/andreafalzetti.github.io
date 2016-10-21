@@ -38,4 +38,4 @@ keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 paginate: 5
-gems:         [jekyll-paginate, jekyll-feed]
+gems:         [jekyll-paginate, jekyll-feed, jekyll-gist]

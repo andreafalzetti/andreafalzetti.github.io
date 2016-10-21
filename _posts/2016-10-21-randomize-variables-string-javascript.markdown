@@ -19,20 +19,7 @@ I need to render the text randomising the action (_go for a walk_ **or** _to the
 
 I wrote a little snippet to do it, so feel free to use it:
 
-{% highlight Javascript %}
-Conversation.prototype.randomizeMessage = function(message) {    
-    const pattern = /\[(.*?)\]/g;
-    const matches = message.match(pattern);
-    if(matches) {
-        matches.map((match) => {
-            const items = match.substring(1, match.length-1).split('|');
-            const randomItem = items[Math.floor(Math.random()*items.length)];
-            message = message.replace(match, randomItem);
-        });
-    }
-    return message;
-}
-{% endhighlight %}
+{% gist andreafalzetti/2d90bc57dcdcaf1fde4dedd9361f1f93 %}
 
 **GitHub Gist** available [here](https://gist.github.com/andreafalzetti/2d90bc57dcdcaf1fde4dedd9361f1f93).
 
