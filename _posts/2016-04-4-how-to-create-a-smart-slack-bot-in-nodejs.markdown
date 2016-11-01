@@ -16,37 +16,37 @@ The challenge here was creating a **bot able to schedule events**. Part of our i
 
 In this case I give a partial information, so the **bot will ask me** the missing details.
 
-![smart-bot-example-1]({{site.urk}}/img/smart-bot-example-1.jpg)
+![smart-bot-example-1]({{site.baseurl}}/img/smart-bot-example-1.jpg)
 
 ----------
 
 Now I will give him a full description of the event, he doesn't need any other information so it will just ask me to confirm.
 
-![smart-bot-example-2]({{site.urk}}/img/smart-bot-example-2.jpg)
+![smart-bot-example-2]({{site.baseurl}}/img/smart-bot-example-2.jpg)
 
 ----------
 
 And here I'm scheduling a multiple-days event, the bot understands that **time** is not required.
 
-![smart-bot-example-3]({{site.urk}}/img/smart-bot-example-3.jpg)
+![smart-bot-example-3]({{site.baseurl}}/img/smart-bot-example-3.jpg)
 
 ----------
 
 Typing `help` or `help me` the bot will return a preset message.
 
-![smart-bot-example-4]({{site.urk}}/img/smart-bot-example-4.jpg)
+![smart-bot-example-4]({{site.baseurl}}/img/smart-bot-example-4.jpg)
 
 ----------
 
 At any point, using the words `stop`, `don't worry` or `cancel` the bot will forget about your event.
 
-![smart-bot-example-5]({{site.urk}}/img/smart-bot-example-5.jpg)
+![smart-bot-example-5]({{site.baseurl}}/img/smart-bot-example-5.jpg)
 
 ----------
 
 After 5 minutes, if you don't answer its question, the bot will forget about your event.
 
-![smart-bot-example-6]({{site.urk}}/img/smart-bot-example-6.jpg)
+![smart-bot-example-6]({{site.baseurl}}/img/smart-bot-example-6.jpg)
 
 
 PlannerBot also reminds us the daily events every morning, as described in a [previous article]({% post_url
