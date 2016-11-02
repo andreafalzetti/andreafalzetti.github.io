@@ -24,7 +24,7 @@ IBM has presented their <i class="em em-cloud"></i> event-based platform which a
 Microsoft had a very interactive demo while presenting their product, [**Azure functions**](https://azure.microsoft.com/en-gb/services/functions/) and [**WebJobs**](https://azure.microsoft.com/en-gb/documentation/articles/web-sites-create-web-jobs/). A web interface and a command line tool allow to deploy and test serverless functions, pretty cool.
 
 ## Google Cloud Functions
-Google as well has lunched a Lambda-like service called Google Cloud Functions, they had a talk (which I have unfortunately missed) but you can read more about their product, [here](https://cloud.google.com/functions/).
+Google as well has lunched a Lambda-like service called Google Cloud Functions, they had a [talk](https://www.youtube.com/watch?v=BybYim0HRmY&list=PLnwBrRU5CSTmM4OsUzDaog2pqadQSxKBv) (which I have unfortunately missed) but you can read more about their product, [here](https://cloud.google.com/functions/).
 
 ## The Workshop
 There were other two workshops but I chose "**Building a Serverless Messenger Bot on AWS Using the Messenger Platform and the Serverless Framework**" hosted by [Mikael Puittinen](https://twitter.com/mpuittinen) the CTO of [SC5](http://sc5.io) and [Eetu Tuomala](https://twitter.com/hopeatussi), they introduced us to [AWS Lambda](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html), the [serverless framework](https://serverless.com/) and we managed to create a serverless Messenger Bot using their boilerplate which is open source and available [here](https://github.com/SC5/serverless-messenger-boilerplate).
