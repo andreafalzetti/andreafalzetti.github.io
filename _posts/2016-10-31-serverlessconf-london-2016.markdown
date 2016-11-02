@@ -54,6 +54,8 @@ With serverless architectures, we hand over the **responsibility** of running th
 ## The Serverless Framework
 It's a tool built in Node.js that allows developers building serverless architectures on AWS Lambda and more. It helps **provisioning**, **scaling** and **deploying** faster. It works with multiple providers including AWS, Google Cloud Functions, OpenWhisk and it's configurable with a *yaml* file. Their CTO, [Florian Motlik](https://twitter.com/flomotlik), had a very interesting talk at the conference during which he announced that a lot of features are coming soon, so it definitely worth keeping on eye this. You can read more about it on [serverless.com](https://serverless.com/). In my opinion, it's really **powerful** and absolutely necessary especially if you are using Node.js.
 
+<i class="em em-cinema"></i> Talk: [_Getting the most out of the Serverless Framework - Florian Motlik_](https://www.youtube.com/watch?v=ygGmigMBVfI)
+
 ## Future (for me) <i class="em em-loudspeaker"></i>
 I am taking the [AWS Certified Developer - Associate](https://aws.amazon.com/certification/certified-developer-associate/) course on [aCloud.guru](https://acloud.guru/courses) which I highly recommend, it's really nice and well done. Once I have a better understanding of all AWS services I might use serverless at work or in a side project.
 
