@@ -20,11 +20,17 @@ The main sponsor was _certainly_ Amazon so we have seen a lot of AWS stuff but b
 ## OpenWhisk
 IBM has presented their <i class="em em-cloud"></i> event-based platform which allows to trigger and run serverless functions. An interesting fact is that the platform is mainly built in [**Scala**](http://www.scala-lang.org/) and they used Node.js to prototype it. They explained the reason behind the decision of moving from Node to Scala for production and it's because they believe Scala is more reliable than Node (ok, it's time for me to look into Scala <i class="em em-grimacing"></i>). It's worth knowing that OpenWhisk is the only solution at the moment supports multiple languages such as Node, Swift and anything you can wrap in a Docker image, as they are able to run Docker images for you.
 
+<i class="em em-cinema"></i> Talk: [_OpenWhisk Under the Hood - Stephen Fink_](https://www.youtube.com/watch?v=S-fY1exdbao&list=UUqlcVgk8SkUmve4Kw4xSlgw)
+
 ## Azure functions
 Microsoft had a very interactive demo while presenting their product, [**Azure functions**](https://azure.microsoft.com/en-gb/services/functions/) and [**WebJobs**](https://azure.microsoft.com/en-gb/documentation/articles/web-sites-create-web-jobs/). A web interface and a command line tool allow to deploy and test serverless functions, pretty cool.
 
+<i class="em em-cinema"></i> Talk: [_The making of Azure Functions - Chris Anderson_](https://www.youtube.com/watch?v=yJ9KnTw1kyc&list=UUqlcVgk8SkUmve4Kw4xSlgw)
+
 ## Google Cloud Functions
-Google as well has lunched a Lambda-like service called Google Cloud Functions, they had a [talk](https://www.youtube.com/watch?v=BybYim0HRmY&list=PLnwBrRU5CSTmM4OsUzDaog2pqadQSxKBv) (which I have unfortunately missed) but you can read more about their product, [here](https://cloud.google.com/functions/).
+Google as well has lunched a Lambda-like service called Google Cloud Functions, they had a talk (which I have unfortunately missed) but you can read more about their product, [here](https://cloud.google.com/functions/).
+
+<i class="em em-cinema"></i> Talk: [_Serverless Microservices with Google Cloud Functions - Bret McGowen_](https://www.youtube.com/watch?v=BybYim0HRmY&list=PLnwBrRU5CSTmM4OsUzDaog2pqadQSxKBv)
 
 ## The Workshop
 There were other two workshops but I chose "**Building a Serverless Messenger Bot on AWS Using the Messenger Platform and the Serverless Framework**" hosted by [Mikael Puittinen](https://twitter.com/mpuittinen) the CTO of [SC5](http://sc5.io) and [Eetu Tuomala](https://twitter.com/hopeatussi), they introduced us to [AWS Lambda](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html), the [serverless framework](https://serverless.com/) and we managed to create a serverless Messenger Bot using their boilerplate which is open source and available [here](https://github.com/SC5/serverless-messenger-boilerplate).
