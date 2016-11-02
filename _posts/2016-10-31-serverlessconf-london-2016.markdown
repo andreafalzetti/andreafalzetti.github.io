@@ -43,7 +43,7 @@ Which, in essence, is a statement to describe serverless. When you build your ne
 
 I agree with [Charity Majors](https://twitter.com/mipsytipsy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), founder of [parse.com](http://parse.com) when during her talk she said that *serverless* is an **ambiguous** name that doesn't reflect the real concept behind it, because, at the end, the functions still run on servers.
 
-With serverless architectures, we hand over the **responsibility** of running the servers. If now we are comfortable buying virtual machines that run on someone else hardware on which hosting providers install the OS and give us access to it, serverless is a step further. The provider also installs the **dependencies** and **framework** that we need in order to run our software. Ah, and they also keep it up to date, optimised and secure. <i class="em em-scream_cat"></i>
+With serverless architectures, we hand over the **responsibility** of running the servers. If now we are comfortable buying virtual machines that run on someone else hardware on which hosting providers install the OS and give us access to it, serverless is a step further. The provider also installs the **dependencies** and **framework** that we need in order to run our software. Ah, and they also keep it up to date, ed and secure. <i class="em em-scream_cat"></i>
 
 ## The Serverless Framework
 It's a tool built in Node.js that allows developers building serverless architectures on AWS Lambda and more. It helps **provisioning**, **scaling** and **deploying** faster. It works with multiple providers including AWS, Google Cloud Functions, OpenWhisk and it's configurable with a *yaml* file. Their CTO, [Florian Motlik](https://twitter.com/flomotlik), had a very interesting talk at the conference during which he announced that a lot of features are coming soon, so it definitely worth keeping on eye this. You can read more about it on [serverless.com](https://serverless.com/). In my opinion, it's really **powerful** and absolutely necessary especially if you are using Node.js.
@@ -58,6 +58,8 @@ I am also using Lambda functions to create a few skills for my Amazon Alexa, it'
 
 ## Thanks <i class="em em-end"></i>
 Thanks to the organisers of the event and to all the staff at the venue!
+
+Thanks to [Activate Media](http://activate.co.uk) for supporting me.
 
 And also thanks for reading! If you find any typo or mistake, please send me a pull request <i class="em em-blush"></i>
 
