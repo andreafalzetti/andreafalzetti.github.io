@@ -41,7 +41,7 @@ They designed the workshop in order to have us coding as less as possible and th
 [![bot-architecture](/img/serverless-messenger-bot.png)](https://github.com/SC5/serverless-messenger-boilerplate)
 
 ## Serverless <i class="em em-zap"></i>
-It's not here to replace or pretend to be better than existing solutions, as any new technology it might be good for some and not appropriate for other cases, serverless is a way of simplifying software development. You focus on the actual business logic of your code and you forget about everything else. You write small microservicess that can be 1 or 2 lambda functions and you **use services**. I particularly liked this quote from one of the talks:
+It's not here to replace or pretend to be better than existing solutions, as any new technology it might be good for some and not appropriate for other cases, serverless is a way of simplifying software development. You focus on the actual business logic of your code and you forget about everything else. You write small microservices that can be 1 or 2 lambda functions and you **use services**. I particularly liked this quote from one of the talks:
 
 > "Build Apps with Services not Servers" [@danilop](https://twitter.com/danilop)
 
