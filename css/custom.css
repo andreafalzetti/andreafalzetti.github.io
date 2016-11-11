@@ -3,8 +3,14 @@ blockquote p {
 }
 
 .share-button {
-  margin-right: 15px;
+    margin: 0px;
+    padding: 5px 10px 5px 10px;
+    opacity: 0.9;
 }
+.share-button:hover {
+    opacity: 1;
+}
+
 .fa-facebook-official {
   color: #3b5998
 }
