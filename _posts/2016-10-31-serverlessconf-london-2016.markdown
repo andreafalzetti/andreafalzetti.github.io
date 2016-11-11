@@ -7,7 +7,7 @@ date: 2016-10-31 23:00:00
 categories: blog
 tags: conference serverless london
 author:     "Andrea Falzetti"
-header-img: "img/serverlessconf-london-2016-3.jpg"
+header-img: "img/serverlessconf-london-2016/serverlessconf-london-2016-3.jpg"
 ---
 
 ## ServerlessConf London 2016 <i class="em em-zap"></i>
@@ -38,7 +38,7 @@ There were other two workshops but I chose "**Building a Serverless Messenger Bo
 They designed the workshop in order to have us coding as less as possible and they achieved it especially using [Wit.ai](http://wit.ai) which provides an easy way for designing conversation flows using stories and machine learning. I already had some experience on this because when Facebook released the Messenger API I have implemented a [LyricsBot](https://github.com/andreafalzetti/FB-LyricsBot) for fun and few months before I have used Wit.ai to [create a smart Slack Bot in Node.js]({% post_url 2016-03-22-how-to-create-a-simple-slack-bot-in-nodejs %})
  that we use at [Activate](http://activate.co.uk), as explained in [this article](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292).
 
-[![bot-architecture](/img/serverless-messenger-bot.png)](https://github.com/SC5/serverless-messenger-boilerplate)
+[![bot-architecture](/img/serverlessconf-london-2016/serverless-messenger-bot.png)](https://github.com/SC5/serverless-messenger-boilerplate)
 
 ## Serverless <i class="em em-zap"></i>
 It's not here to replace or pretend to be better than existing solutions, as any new technology it might be good for some and not appropriate for other cases, serverless is a way of simplifying software development. You focus on the actual business logic of your code and you forget about everything else. You write small microservices that can be 1 or 2 lambda functions and you **use services**. I particularly liked this quote from one of the talks:

@@ -2,14 +2,15 @@
 layout: page
 title: About Me
 permalink: /about/
-#header-img: "img/about-space.jpg"
+header-img: "img/squares.png"
+description: "Andrea Falzetti"
 ---
 
 ![Andrea Falzetti]({{site.urk}}/img/about.jpg)
 
 I am an enthusiastic **Full Stack Developer** based in *London* <i class="em em-uk"></i>. I have been designing and developing web applications for over 5 years.
 
-I'm currently focused on `node.js`, `microservices architecture`, `serverless`, conversational UI, `bots` and `machine learning`. I come from many years of `PHP` development and study of Computer Science.
+I'm currently focused on `node.js`, `microservices architecture`, `serverless`, `React`, conversational UI, `bots` and `machine learning`. I come from many years of `PHP` development and study of Computer Science.
 
 ### Current role
 I am currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile applications.
