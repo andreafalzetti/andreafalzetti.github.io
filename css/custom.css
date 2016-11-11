@@ -1,3 +1,30 @@
 blockquote p {
   margin-top: 0;
 }
+
+.share-button {
+  margin-right: 15px;
+}
+.fa-facebook-official {
+  color: #3b5998
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-linkedin {
+  color: #007bb6;
+}
+
+.fa-google-plus {
+  color: #dd4b39;
+}
+
+.fa-reddit {
+  color: #FF4500;
+}
+
+.fa-envelope {
+  color: #D3D3D3;
+}
