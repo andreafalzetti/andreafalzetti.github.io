@@ -10,10 +10,13 @@ description: "Andrea Falzetti"
 
 I am an enthusiastic **Full Stack Developer** based in *London* <i class="em em-uk"></i>. I have been designing and developing web applications for over 5 years.
 
-I'm currently focused on `node.js`, `microservices architecture`, `serverless`, `React`, conversational UI, `bots` and `machine learning`. I come from many years of `PHP` development and study of Computer Science.
+I'm currently focused on `node.js`, `react`, `microservices architecture`, `serverless`, conversational UI, `chat bots` and `machine learning`. I come from many years of `PHP` development and study of Computer Science.
 
 ### Current role
-I am currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile applications.
+I am currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile platforms.
+
+### Previous roles
+If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
 
 ### Confs & Communities
 I like to stay up to date with the latest technologies and best practices so if you attend any conference or meetup in London or around Europe you will probably meet me. If you need some inspiration look at my [meetup.com profile](https://www.meetup.com/members/195831274/) to see some interesting communities I often join, about `JavaScript`, `Machine Learning`, `AWS`, `node.js`, `React`, `Angular`, `Neo4j`, `Chat Bots`, `AI` and much more.
