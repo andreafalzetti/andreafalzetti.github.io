@@ -8,7 +8,7 @@ description: "Andrea Falzetti"
 
 ![Andrea Falzetti]({{site.urk}}/img/about.jpg)
 
-I am an enthusiastic **Full Stack Developer** based in *London* <i class="em em-uk"></i>. I have been designing and developing web applications for over 5 years.
+I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i class="em em-uk"></i>. I have been designing and developing web applications for over 5 years.
 
 I'm currently focused on `node.js`, `react`, `microservices architecture`, `serverless`, conversational UI, `chat bots` and `machine learning`. I come from many years of `PHP` development and study of Computer Science.
 
