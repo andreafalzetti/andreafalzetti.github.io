@@ -26,10 +26,11 @@ I think it's incredibly useful to meet and talk with people that share your same
 Upcoming conferences that I will attend:
 
 - **[React London 2017](https://react.london/)**, London <i class="em em-uk"></i>
+- **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i> 
 
 I have recently attended:
 
-- **[dotJS](http://dotjs.io)**, Paris <i class="em em-fr"></i>
+- **[dotJS 2016](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 - **[Serverlessconf](http://london.serverlessconf.io)**, London <i class="em em-uk"></i>
 - **[OSCON 2016](http://conferences.oreilly.com/oscon/open-source-eu)**, London <i class="em em-uk"></i>
 - **[GOTO London 2016 Developer Conference](https://gotocon.com//london-2016/)**, London <i class="em em-uk"></i>
