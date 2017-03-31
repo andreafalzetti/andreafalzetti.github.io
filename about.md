@@ -8,7 +8,7 @@ description: "Andrea Falzetti"
 
 ![Andrea Falzetti]({{site.urk}}/img/about.jpg)
 
-I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i class="em em-uk"></i>. I have been designing and developing web applications for over 5 years.
+I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i class="em em-uk"></i>. I have been designing and developing web applications for over 6 years.
 
 I'm currently focused on `node.js`, `react`, `microservices architecture`, `serverless`, conversational UI, `chat bots` and `machine learning`. I come from many years of `PHP` development and study of Computer Science.
 
@@ -19,17 +19,17 @@ I am currently working at [Activate](http://activate.co.uk) where my role is to 
 If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
 
 ### Confs & Communities
-I like to stay up to date with the latest technologies and best practices so if you attend any conference or meetup in London or around Europe you will probably meet me. If you need some inspiration look at my [meetup.com profile](https://www.meetup.com/members/195831274/) to see some interesting communities I often join, about `JavaScript`, `Machine Learning`, `AWS`, `node.js`, `React`, `Angular`, `Neo4j`, `Chat Bots`, `AI` and much more.
+I like to stay up to date with the latest technologies and best practices so if you attend any conference or meetup in London or around Europe you will probably meet me. If you need some inspiration look at my [meetup.com profile](https://www.meetup.com/members/195831274/) to see some interesting communities I often join, about `JavaScript`, `Machine Learning`, `AWS User Group`, `node.js`, `React`, `Neo4j`, `Chat Bots`, `AI` and much more.
 
 I think it's incredibly useful to meet and talk with people that share your same passion and interests.
 
 Upcoming conferences that I will attend:
 
-- **[React London 2017](https://react.london/)**, London <i class="em em-uk"></i>
-- **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i> 
+- **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 
 I have recently attended:
 
+- **[React London 2017](https://react.london/)**, London <i class="em em-uk"></i>
 - **[dotJS 2016](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 - **[Serverlessconf](http://london.serverlessconf.io)**, London <i class="em em-uk"></i>
 - **[OSCON 2016](http://conferences.oreilly.com/oscon/open-source-eu)**, London <i class="em em-uk"></i>
