@@ -1,7 +1,13 @@
 blockquote p {
   margin-top: 0;
 }
-
+.intro-header {
+  box-shadow: inset 10px 10px 100px 100px rgba(0,0,0,0.5);
+}
+.post-heading h1,
+.post-heading .meta {
+  text-shadow: 1px 1px 2px black;
+}
 .share-button {
     margin: 0px;
     padding: 5px 10px 5px 10px;
