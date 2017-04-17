@@ -22,7 +22,7 @@ The problem I was facing was that the image was missing or simply not displaying
 I eventually found out that it was a problem of **time**.
 
 ### Solution: Delay <i class="em em-alarm_clock"></i>
-Add a delay of _few seconds_ before displaying the image or before calling the Slack API to send the attachment will solve the issue. I am currently using a 60 seconds delay, just to make sure it doesn't happen again.
+Add a delay of _few seconds_ before displaying the image or before calling the Slack API to send the attachment will solve the issue. This time is needed for Datadog to generate the actual image file. I am currently using a 60 seconds delay, just to make sure it doesn't happen again.
 
 A more elegant solution would be requesting the image, checking the size of the document or maybe the content-type and only then using the snapshot URL provided by Datadog. For the moment, the delay just works for me.
 
