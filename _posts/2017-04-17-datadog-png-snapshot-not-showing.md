@@ -12,7 +12,7 @@ crosspost_to_medium: true
 ---
 
 ## Issue <i class="em em-rage4"></i>
-If you are here, you have probably experienced the same issue I did using the [Datadog programmatic API  v1](http://docs.datadoghq.com/api/) to generate PNG snapshot of your metrics.
+If you are here, you have probably experienced the same issue I did using the [Datadog programmatic API  v1](http://docs.datadoghq.com/api/#graph-snapshot) to generate PNG snapshot of your metrics.
 
 I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:
 
