@@ -8,6 +8,7 @@ categories: blog
 tags: javascript nodejs datadog slack chatbots webhooks
 author: "Andrea Falzetti"
 header-img: "img/macbook-stickers.jpg"
+crosspost_to_medium: true
 ---
 
 ## Issue <i class="em em-rage4"></i>
