@@ -25,6 +25,7 @@ I think it's incredibly useful to meet, talk and share with people that have you
 
 Upcoming conferences that I will attend:
 
+- **[Couchbase Day (NoSql database)](https://www.couchbase.com/nosql-resources/events/2017/april/couchbase-day-london)**, London <i class="em em-uk"></i>
 - **[GraphConnect Europe 2017](http://graphconnect.com/)**, London <i class="em em-uk"></i>
 - **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 

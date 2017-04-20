@@ -1,6 +1,9 @@
 blockquote p {
   margin-top: 0;
 }
+.navbar-custom .nav li a {
+  font-size: 16px;
+}
 .intro-header {
   box-shadow: inset 10px 10px 100px 100px rgba(0,0,0,0.5);
 }
