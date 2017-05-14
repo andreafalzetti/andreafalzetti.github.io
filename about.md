@@ -25,7 +25,6 @@ I think it's incredibly useful to meet, talk and share with people that have you
 
 Upcoming conferences that I will attend:
 
-- **[GraphConnect Europe 2017](http://graphconnect.com/)**, London <i class="em em-uk"></i>
 - **[Elastic{ON} Tour](https://www.elastic.co/elasticon)**, London <i class="em em-uk"></i>
 - **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 
@@ -33,6 +32,7 @@ If you are also going, [ping me](https://twitter.com/rexromae)!
 
 I have recently attended:
 
+- **[GraphConnect Europe 2017](http://graphconnect.com/)**, London <i class="em em-uk"></i>
 - **[React London 2017](https://react.london/)**, London <i class="em em-uk"></i>
 - **[dotJS 2016](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 - **[Serverlessconf](http://london.serverlessconf.io)**, London <i class="em em-uk"></i> - [read my blog post]({{site.url}}/blog/2016/10/31/serverlessconf-london-2016.html)
