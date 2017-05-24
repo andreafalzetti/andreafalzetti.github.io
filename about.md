@@ -10,18 +10,20 @@ description: "Andrea Falzetti"
 
 I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i class="em em-uk"></i>. I have been professionally designing and developing web applications for over 6 years.
 
-I'm currently focused on **Node.js**, **React**, **Microservices architecture**, **Serverless**, conversational UI, **Chat Bots** and I get very excited if you mention _machine learning_. I have started my career learning Pascal, C++, VB6, **C#** (see my Xbox Indie Game [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), **Java**, Android SDK and finally PHP and the LAMP stack which I have used at work for more than 5 years.
+I'm currently focused on technologies such as **node js**, **React**, **React Native**, **Serverless**, **Microservices**, **Chat Bots** and I get very excited if you mention _machine learning_. I have started my career learning Pascal at school, then C, VB6, **C#** (I have also published an Xbox Live Indie Game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), **Java**, Android SDK and finally PHP / LAMP stack which I have used at work for more than 5 years.
 
-### Current role
-I am currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile platforms.
+### Current position
+I am a **Full Stack Developer** currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile platforms. We have successfully invested on JavaScript so I spend most of my time coding in **node js** and **react**.
 
-### Previous roles
+#### Previous roles
 If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
 
-### Confs & Communities
-I like to stay up to date with the latest technologies and best practices so if you attend any conference or meetup in London or around the Europe you will probably meet me. If you need some inspiration look at my [meetup.com profile](https://www.meetup.com/members/195831274/) to see some interesting communities where I often hang around, they are mainly about: `JS`, `ML`, `AWS`, `node`, `React / React Native`, `Neo4j`, `Chat Bots`, `AI` and much more.
+### Events
+I like to stay up to date with the latest tools, technologies and best practices about software development. One of my favourite way of doing so is through meetups and conferences. If you are in London and looking for the next interesting tech talk to listen to, check out on meetup.com [my profile](https://www.meetup.com/members/195831274/) and get inspired by the communities I have joined (they are about: `JS`, `ML`, `AWS`, `node`, `React / React Native`, `Neo4j`, `Chat Bots`, `AI` and much more).
 
-I think it's incredibly useful to meet, talk and share with people that have your same passion for technology and have different backgrounds, probably with the same issues as you, and maybe some solutions you don't know yet!
+I think it's incredibly useful to meet and share ideas with people that have the same passion as you for technology and software development. People have different backgrounds, they are probably facing your same challenges, and they might have found a solution that works for you too, so don't wait anymore if you haven't joined a community or partecipated to a tech conference yet. Start today!
+
+If you are a FullStack developer too, you might find interesting some of the conferences that I am planning to attend, that's why I have decided to share this with you.
 
 Upcoming conferences that I will attend:
 
@@ -30,7 +32,7 @@ Upcoming conferences that I will attend:
 
 If you are also going, [ping me](https://twitter.com/rexromae)!
 
-I have recently attended:
+Next, is what I have recently attended, you might have just missed a good one but don't worry, you can be an early-bird next year:
 
 - **[GraphConnect Europe 2017](http://graphconnect.com/)**, London <i class="em em-uk"></i>
 - **[React London 2017](https://react.london/)**, London <i class="em em-uk"></i>
@@ -41,7 +43,7 @@ I have recently attended:
 - **[Valencian Summer School in Machine Learning](https://bigml.com/events/valencian-summer-school-in-machine-learning-2016)**, Valencia <i class="em em-es"></i>
 
 ### Interests
-I also <i class="em em-heart"></i> baking bread and <i class="em em-pizza"></i> for friends and family, taking pictures and travel the <i class="em em-earth_americas"></i> with my sweet wife <i class="em em-couple"></i>, find all this on [my instagram](https://www.instagram.com/rexromae/). Follow me on [Twitter](https://twitter.com/rexromae) to stay up to date with the latest news in software development.
+I also <i class="em em-heart"></i> [baking bread](https://www.instagram.com/p/BTPsjO7A-HS/?taken-by=rexromae) and [<i class="em em-pizza"></i>](https://www.instagram.com/p/BQJZF7eAx1M/?taken-by=rexromae) for friends and family, taking pictures and travel the [<i class="em em-earth_americas"></i>](https://www.instagram.com/p/BOvh5pkAKAZ/?taken-by=rexromae) with my sweet wife <i class="em em-couple"></i>, find all this on [my instagram](https://www.instagram.com/rexromae/). Follow me on [Twitter](https://twitter.com/rexromae) to stay up to date with the latest news in software development.
 
 ### Contact
 Get in touch with me if you would like to do business together, share an idea or just say hello.
