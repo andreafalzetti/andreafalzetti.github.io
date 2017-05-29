@@ -40,7 +40,7 @@ Let's discuss about CSS and styles. At [work](http://activate.co.uk) we have bee
 
 For this reason, I was so euphoric to see that the starter-kit that I have chosen has decided to embrace Bootstrap too, which means that I finally have the chance to work with the latest version of Bootstrap: **4**.
 
-Although Bootstrap 4 is still in alpha version - it seemes stable enough for us to start using it, especially because [reactstrap](https://reactstrap.github.io/) appears to support it well and it has good support.
+Although Bootstrap 4 is still in alpha version - it seems stable enough for us to start using it, especially because [reactstrap](https://reactstrap.github.io/) appears to support it well and it has good support.
 
 ## Storybook
 
