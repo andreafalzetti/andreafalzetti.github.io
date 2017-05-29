@@ -2,10 +2,11 @@
 layout: post
 comments: true
 title: 'Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2'
+crosspost_to_medium: true
 subtitle: 'With few alpha versions'
 date: 2017-05-23 09:00:00
 categories: blog
-tags: javascript react storybook webpack bootstrap sass
+tags: javascript, react, storybook, webpack, bootstrap, sass
 author:     "Andrea Falzetti"
 header-img: "img/post-bg-11.jpg"
 ---
@@ -26,10 +27,10 @@ Let me summarise you my journey.
 
 ## Ingredients
 
-1. react-redux-starter-kit [{% icon fa-github %}](https://github.com/davezuko/react-redux-starter-kit)
-1. bootstrap v4.0.0-alpha [{% icon fa-github %}](https://github.com/twbs/bootstrap/tree/v4-npm)
-1. storybook 3 alpha (rc2) [{% icon fa-github %}](https://github.com/storybooks/storybook/issues/1046#issuecomment-304360179)
-1. reactstrap [{% icon fa-github %}](https://github.com/reactstrap/reactstrap)
+1. react-redux-starter-kit [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i> Home</a></li>](https://github.com/davezuko/react-redux-starter-kit)
+1. bootstrap v4.0.0-alpha [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i>](https://github.com/twbs/bootstrap/tree/v4-npm)
+1. storybook 3 alpha (rc2) [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i>](https://github.com/storybooks/storybook/issues/1046#issuecomment-304360179)
+1. reactstrap [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i>](https://github.com/reactstrap/reactstrap)
 
 You can get all of them bundled in the [repository](https://github.com/andreafalzetti/react-redux-starter-kit) that I have forked for this purpose.
 
