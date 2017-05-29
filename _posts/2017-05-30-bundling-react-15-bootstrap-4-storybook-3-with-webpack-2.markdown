@@ -174,3 +174,4 @@ I hope that with this post I made clear the followins thoughts:
 By the way, if you also love using cutting edge technologies to solve new real world challenges every day check out our vacant position for a [Frontend Developer at Activate](http://bit.ly/Activate-Jobs-FrontEnd), our startup studio needs you!
 
 Thanks for reading!
+ 
