@@ -5,7 +5,7 @@ title: 'Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2'
 subtitle: 'With few alpha versions'
 date: 2017-05-23 09:00:00
 categories: blog
-tags: javascript, react, storybook, webpack, bootstrap, sass
+tags: javascript react storybook webpack bootstrap sass
 author:     "Andrea Falzetti"
 header-img: "img/post-bg-11.jpg"
 ---
@@ -174,4 +174,3 @@ I hope that with this post I made clear the followins thoughts:
 By the way, if you also love using cutting edge technologies to solve new real world challenges every day check out our vacant position for a [Frontend Developer at Activate](http://bit.ly/Activate-Jobs-FrontEnd), our startup studio needs you!
 
 Thanks for reading!
- 
