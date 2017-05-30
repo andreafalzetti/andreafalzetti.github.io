@@ -13,7 +13,7 @@ header-img: "img/post-bg-11.jpg"
 
 How many times did it happen to you that you were debugging some code and at the end of the day you didn't manage to find a solution? How frustrating is that?
 
-Good news is, you will fell so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.
+Good news is, you will feel so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.
 
 Today, it was one of those days for me. I have spent long hours trying to make something work, and I eventually found a solution, so I thought it was a good thing to share it with the community.
 
