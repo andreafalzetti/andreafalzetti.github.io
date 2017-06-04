@@ -27,10 +27,10 @@ Let me summarise you my journey.
 
 ## Ingredients
 
-1. react-redux-starter-kit [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i> Home</a></li>](https://github.com/davezuko/react-redux-starter-kit)
-1. bootstrap v4.0.0-alpha [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i>](https://github.com/twbs/bootstrap/tree/v4-npm)
-1. storybook 3 alpha (rc2) [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i>](https://github.com/storybooks/storybook/issues/1046#issuecomment-304360179)
-1. reactstrap [<li><a href="{{ site.baseurl }}/index.html"><i class='fa fa-github'></i>](https://github.com/reactstrap/reactstrap)
+1. react-redux-starter-kit [<i class='fa fa-github'></i>](https://github.com/davezuko/react-redux-starter-kit)
+1. bootstrap v4.0.0-alpha [<i class='fa fa-github'></i>](https://github.com/twbs/bootstrap/tree/v4-npm)
+1. storybook 3 alpha (rc2) [<i class='fa fa-github'></i>](https://github.com/storybooks/storybook/issues/1046#issuecomment-304360179)
+1. reactstrap [<i class='fa fa-github'></i>](https://github.com/reactstrap/reactstrap)
 
 You can get all of them bundled in the [repository](https://github.com/andreafalzetti/react-redux-starter-kit) that I have forked for this purpose.
 
