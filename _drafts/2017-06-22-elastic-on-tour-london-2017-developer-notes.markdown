@@ -87,11 +87,3 @@ Thanks for reading!
 
 
 ![elastic-tour-london-2017-gadgets](/img/2017/06/elastic-tour-london-2017-gadgets.jpg)
-
-![IMG_6058](/img/2017/06/IMG_6058.jpg)
-
-![IMG_1110](/img/2017/06/IMG_1110.jpg)
-
-![IMG_6042](/img/2017/06/IMG_6042.jpg)
-
-![IMG_6056](/img/2017/06/IMG_6056.jpg)
