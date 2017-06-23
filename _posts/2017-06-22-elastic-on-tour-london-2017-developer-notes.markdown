@@ -8,6 +8,7 @@ categories: blog
 tags: elasticsearch conference full-stack
 author:     "Andrea Falzetti"
 header-img: "img/2017/06/elastic-on-tour-2017-london.jpg"
+crosspost_to_medium: true
 ---
 
 [Elastic{ON} Tour 2017](https://www.elastic.co/elasticon/tour/2017/london) was held today in London at [The Brewery](https://www.thebrewery.co.uk/), and I had the chance to attend it. The Elastic team has done a great job in organising the event, and I would like to thank them for the beautiful day. The location and catering were great, and so was the training Lab on [Timelion](https://www.elastic.co/blog/timelion-timeline), pronounced "_Timeline_", is a Kibana module that helps to visualise time series data.
