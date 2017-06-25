@@ -27,13 +27,13 @@ If you are a FullStack developer too, you might find interesting some of the con
 
 Upcoming conferences that I will attend:
 
-- **[Elastic{ON} Tour](https://www.elastic.co/elasticon)**, London <i class="em em-uk"></i>
 - **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 
 If you are also going, [ping me](https://twitter.com/rexromae)!
 
 Next, is what I have recently attended, you might have just missed a good one but don't worry, you can be an early-bird next year:
 
+- **[Elastic{ON} Tour](https://www.elastic.co/elasticon)**, London <i class="em em-uk"></i>
 - **[GraphConnect Europe 2017](http://graphconnect.com/)**, London <i class="em em-uk"></i>
 - **[React London 2017](https://react.london/)**, London <i class="em em-uk"></i>
 - **[dotJS 2016](http://dotjs.io)**, Paris <i class="em em-fr"></i>
