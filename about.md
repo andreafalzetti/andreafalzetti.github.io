@@ -10,16 +10,16 @@ description: "Andrea Falzetti"
 
 I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i class="em em-uk"></i>. I have been professionally designing and developing web applications for over 6 years.
 
-I'm currently focused on technologies such as **node js**, **React**, **React Native**, **Serverless**, **Microservices**, **Chat Bots** and I get very excited if you mention _machine learning_. I have started my career learning Pascal at school, then C, VB6, **C#** (I have also published an Xbox Live Indie Game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), **Java**, Android SDK and finally PHP / LAMP stack which I have used at work for more than 5 years.
+I'm currently focused on **Node.js** and **React**. I have experience with **AWS**, **microservices**, **serverless**, **chat bots** and I am very interested in _machine learning_. I have started by learning Pascal at school, then C, VB6, C# (I have also published an Xbox indie game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), Java, Android SDK and finally PHP / LAMP stack which I have used at work for more than 5 years.
 
 ### Current position
-I am a **Full Stack Developer** currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile platforms. We have successfully invested on JavaScript so I spend most of my time coding in **node js** and **react**.
+I am a **Full Stack Developer** currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile platforms. We have successfully invested on JavaScript so I spend most of my time coding in **Node.js** and **React**.
 
 #### Previous roles
 If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
 
 ### Events
-I like to stay up to date with the latest tools, technologies and best practices about software development. One of my favourite way of doing so is through meetups and conferences. If you are in London and looking for the next interesting tech talk to listen to, check out on meetup.com [my profile](https://www.meetup.com/members/195831274/) and get inspired by the communities I have joined (they are about: `JS`, `ML`, `AWS`, `node`, `React / React Native`, `Neo4j`, `Chat Bots`, `AI` and much more).
+I like to stay up to date with the latest tools, technologies and best practices about software development. One of my favourite way of doing so is through meetups and conferences. If you are in London and looking for the next interesting tech talk to listen to, check out on meetup.com [my profile](https://www.meetup.com/members/195831274/) and get inspired by the communities I have joined (they are about: `JavaScriptS`, `ML`, `AWS`, `Node.js`, `React / React Native`, `Neo4j`, `Chat Bots`, `AI` and much more).
 
 I think it's incredibly useful to meet and share ideas with people that have the same passion as you for technology and software development. People have different backgrounds, they are probably facing your same challenges, and they might have found a solution that works for you too, so don't wait anymore if you haven't joined a community or partecipated to a tech conference yet. Start today!
 
