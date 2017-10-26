@@ -17,11 +17,8 @@ We will look into JavaScript code, but the concepts apply to any language.
 
 I named it, **Picasso code**:
 
-![picasso-code-1](/img/2017/07/picasso-code-1.jpg)
-
-------
-
-![picasso-code-2](/img/2017/07/picasso-code-2.jpg)
+{% gist andreafalzetti/1cd9e8c9cd5af3b37e8b2f77d68a87df %}
+_This is just a sample of the component_
 
 With a quick read of the code above, you will immediately see that:
 
