@@ -13,7 +13,7 @@ I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i cl
 I'm currently focused on **Node.js** and **React**. I have experience with **AWS**, **microservices**, **serverless**, **chat bots** and I am very interested in _machine learning_. I have started by learning Pascal at school, then C, VB6, C# (I have also published an Xbox indie game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), Java, Android SDK and finally PHP / LAMP stack which I have used at work for more than 5 years.
 
 ### Current position
-I am a **Full Stack Developer** currently working at [Activate](http://activate.co.uk) where my role is to estimate, design and lead the development of web and mobile platforms. We have successfully invested on JavaScript so I spend most of my time coding in **Node.js** and **React**.
+I am a **Software Engineer** at [DAZN](https://dazn.com) where I am part of the **Node.js** team.
 
 #### Previous roles
 If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
