@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Requires:
+#  - bash v4
+#  - code
+
+DATE=`date +%Y-%m-%d`
+TITLE=$1
+if [ -z "$TITLE" ]; then
+  echo -n "Enter the title: "  1>&2
+  read TITLE
+fi
+SAFE_TITLE=${TITLE// /-}
+SAFE_TITLE=${SAFE_TITLE,,}
+FP="../_drafts/$DATE-$SAFE_TITLE.markdown"
+touch $FP
+echo "---" > $FP
+echo "layout: post" >> $FP
+echo "comments: true" >> $FP
+echo "title: '$TITLE'" >> $FP
+echo "subtitle: ''" >> $FP
+echo "date: $DATE" >> $FP
+echo "categories: blog" >> $FP
+echo "tags: " >> $FP
+echo "author: 'Andrea Falzetti'" >> $FP
+echo "header-img: 'img/post-bg-01.jpg'" >> $FP
+echo "---" > $FP
+
+echo "$FP created" 
+code $FP
+
