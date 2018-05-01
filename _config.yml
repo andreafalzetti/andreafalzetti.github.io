@@ -16,8 +16,7 @@ unpublished: false
 title: Andrea Falzetti
 email: andrea@falzetti.me
 header-img: img/home-bg.jpg
-description: > # this means to ignore newlines until "baseurl:"
-  Full Stack Developer based in London
+description: Software Engineer, London
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://andreafalzetti.github.io" # the base hostname & protocol for your site
 twitter_username: rexromae
@@ -37,8 +36,8 @@ exclude:      ["less","node_modules","Gruntfile.js","package.json","README.md"]
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-paginate: 5
-gems:         [jekyll-paginate, jekyll-feed, jekyll-gist, jekyll-crosspost-to-medium]
+paginate: 10
+gems:         [jekyll-paginate, jekyll-feed, jekyll-gist]
 
 jekyll-crosspost_to_medium:
   enabled: true

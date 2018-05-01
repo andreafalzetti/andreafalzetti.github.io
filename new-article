@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+# This script creates a new Jekyll draft article
 # Requires:
 #  - bash v4
-#  - code
+#  - Visual Studio Code (alias code)
 
 DATE=`date +%Y-%m-%d`
 TITLE=$1
@@ -24,8 +25,8 @@ echo "categories: blog" >> $FP
 echo "tags: " >> $FP
 echo "author: 'Andrea Falzetti'" >> $FP
 echo "header-img: 'img/post-bg-01.jpg'" >> $FP
-echo "---" > $FP
+echo "---" >> $FP
 
-echo "$FP created" 
+echo "$FP created"
 code $FP
 
