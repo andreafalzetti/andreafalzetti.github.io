@@ -10,38 +10,30 @@ author: 'Andrea Falzetti'
 header-img: 'img/post-bg-01.jpg'
 ---
 
-Wheter you are working on the back-end or the front-end, you spend a lot of time using or looking for tools jor to get your job done.
+Wheter you are working on the back-end or the front-end, having the *right tool for the job*, can really make a difference some times.
 
-Today I want to share with you, the name of the tools that I use every single day.
+With this blog post, I want to share with you some of the tools that I use pretty much every day and I believe can be useful to any software developer.
 
-I will let images speak when possible to keep it quick!
-
-**tldr**: *Jump right at the bottom for names and links.*
-
-<!-- tldr -->
-
-## 1. Silver searcher
-### Search through code faster
-`$ ag`
-YAML
-
-## 2. jq, yq, xq
+## 1. jq, yq, xq
 #### Handle JSON, YAML and XML in you cli
 
 `jq`, `yq` and `xq` are command line tools that allow you dealing with JSON, YAML and XML documents directly from your shell. If you haven't seem them before you may ask why someone would want to look at some JSON in the terminal?
 
-Well, most of the time these tools are used in scripts to parse and ex of data from APIs.
+Well, most of the time they are used in scripts, generally piped to `curl` or `http` (see the second tool) to parse and extract data from API calls.
 
-In the examples below I hit a public API that returns countries VAT:
+In the examples below I hit a public API that returns countries VAT. This is the output of a GET (all countries) without using jq.
 
 ![jq-example]({{site.baseurl}}/img/2018/04/jq-1.png)
 
-Using jq
+**jq** has some built-in operators we can use to count, select, filter and much more. In the following example I simply count how many items the `.rates` array has.
 
 ![jq-example]({{site.baseurl}}/img/2018/04/jq-2.png)
 
-And filter out
+Here we search the array for a specific item that contains a property `country_code` that equals `GB`. This gives us back the whole item.
+
 ![jq-example]({{site.baseurl}}/img/2018/04/jq-3.png)
+
+We can finally exctract the values that we need and use them in a bash script!
 
 ![jq-example]({{site.baseurl}}/img/2018/04/jq-4.png)
 
@@ -63,18 +55,12 @@ VAT=$(http https://jsonvat.com | jq -r ".rates[] | select(.country_code | contai
 echo "VAT in $COUNTRY is $VAT%"
 ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac hendrerit lorem. Integer eu sagittis nisi. Nullam suscipit dictum magna ut auctor. Donec a sapien elit. Suspendisse vitae sodales est. Cras in placerat purus. Fusce quis nulla tortor. In at ornare arcu. Donec tempor nec leo venenatis consequat. Aenean suscipit sem bibendum, egestas nunc vitae, dictum ex.
-
-### 3. HTTPie
+### 2. HTTPie
 #### A friendly command line HTTP client
 
 > Its goal is to make CLI interaction with web services as human-friendly as possible. It provides a simple http command that allows for sending arbitrary HTTP requests using a simple and natural syntax, and displays colorized output. HTTPie can be used for testing, debugging, and generally interacting with HTTP servers.
 
 As you can see in the image below, I am hitting a public weather API to get the London's current weather, the command I have ran is:
-
-```
-$ http https://www.metaweather.com/api/location/search/?query\=london
-```
 
 ![httpie-example]({{site.baseurl}}/img/2018/04/httpie.png)
 
@@ -82,27 +68,28 @@ You can achieve the same result using a combination of commands, **curl** and **
 
 ![curl-jq]({{site.baseurl}}/img/2018/04/curl-jq.png)
 
-I personally use both approaches, but I go for HTTPie when I don't remember how to do something with curl. I must have googled "_curl post json_", 100 times 😂
+I personally use both approaches, but I go for HTTPie when I don't remember how to do something with curl and I'm too lazy to check the manual. I must have googled "_curl post json_", 100 times 😂
 
-With HTTPie I simply write to stdout and it will pick it up:
-
-```shell
-$ echo '{"name": "John"}' | http PATCH example.com/person/1 X-API-Token:123
-```
+With HTTPie I remember I can use few approaches such as stdout, files or [here strings](https://www.tldp.org/LDP/abs/html/x17837.html).
 
 ```shell
-$ http PUT example.com/person/1 X-API-Token:123 < person.json
+# stdout
+echo '{"name": "John"}' | http PATCH example.com/person/1 X-API-Token:123
+
+# From a file
+http PUT example.com/person/1 X-API-Token:123 < person.json
+
+# Using here strings
+http PATCH example.com/person/1 X-API-Token:123 <<< '{"name": "John"}'
 ```
 
-```shell
-$ http PATCH example.com/person/1 X-API-Token:123 <<< '{"name": "John"}'
-```
+It's easy as that!
 
-It's easy as that! You can specify what HTTP method that you want to use (PUT, POST, PATCH, etc) after the _http_ and pass any custom header after the URL, using the _key:value_ notation.
+You can specify the **HTTP method** (PUT, POST, PATCH, etc) before the URL and passing _Headers_ is also straightforward, just add `Key:Value` pairs after the URL, they will become part of the HTTP request headers.
 
 * [Get HTTPie](https://httpie.org/)
 
-### 4. choosy
+### 3. choosy
 #### Open every link in the right browser
 
 Front-end developers and QA engineers will particularly like this! [Choosy](https://www.choosyosx.com/) lets you pick what browser to use when you click on a link.
@@ -119,17 +106,40 @@ I personlly use three or four browsers (including [Brave](https://brave.com/)) f
 
 * [Get Choosy](https://www.choosyosx.com/)
 
-### 5. Spectacle
-#### Manage your OS X windows like a pro
+## 4. Ag
+### Search through code faster
 
-Ut in magna condimentum, rutrum est sed, tempus nulla. Donec vestibulum massa viverra, cursus magna ac, imperdiet magna. In sit amet nunc luctus tortor accumsan condimentum nec porttitor lorem. Nunc iaculis, mauris id auctor gravida, dui odio condimentum dui, fermentum bibendum leo orci porttitor augue.
+Also called _The Silver Searcher_, it's a tool like `grep` but optimized for developers.
 
-### 6. trailer
+When you search, it ignores by default files in `.gitignore`, for JavaScript developers is so convenient because it means you don't have to manually exclude the `node_modules` folder.
+
+<p align="center"><iframe src="https://giphy.com/embed/l4HodBpDmoMA5p9bG" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></p>
+
+I also like that the output it's nice and clear:
+
+![ag]({{site.baseurl}}/img/2018/04/ag.png)
+
+* [Get Ag](https://github.com/ggreer/the_silver_searcher)
+
+
+### 5. trailer
 #### Stay up to date on GitHub
 
-Suspendisse potenti. Vivamus cursus condimentum mattis. Maecenas sed diam enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse ut erat vel urna semper tempus. Curabitur ut euismod dui. Maecenas feugiat purus nec tristique viverra. Maecenas in lectus ligula. Phasellus vestibulum arcu a elit iaculis commodo.
+[Trailer](https://github.com/ptsochantaris/trailer) is an open-source app that brings GitHub notifications in your desktop. There are two sections, **issues** and **pull requests**.
 
-### 7. jira (zsh plugin)
+Rather than looking at emails or checking the website I prefer to to receive a push notification when someone opened or reviewed a pull request.
+
+![trailer]({{site.baseurl}}/img/2018/04/trailer-1.png)
+
+Once expanded, you can see the notifications history and jump directly at them if you like.
+
+![trailer]({{site.baseurl}}/img/2018/04/trailer-2.png)
+
+If you are scared to receive hundreds of notifications with this, don't worry! You can decide on what repositories you want to be notified.
+
+![trailer]({{site.baseurl}}/img/2018/04/trailer-3.png)
+
+### 6. jira (zsh plugin)
 
 Most of us use **Jira** these days, so why not having a little helper.
 
@@ -139,8 +149,7 @@ You can also run `jira new` to quickly create a new ticket!
 
 * [Get **jira**](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira)
 
-
-### 8. shpotify
+### 7. shpotify
 #### why should we leave the terminal?
 
 If you are a Spotify user you may find the next one useful.
@@ -155,7 +164,7 @@ markdown + alias
 jira
 
 
-### 9. now
+### 8. now
 #### one-command deployments
 
 `now` allows you to deploy to the cloud any project that has `package.json` or `Dockerfile`.
@@ -164,7 +173,7 @@ I am not a power user but I want to recommend it because it helped me a few time
 
 * [Get **now**](https://now.sh/)
 
-### 10. Dash
+### 9. Dash
 #### Offline documentation
 
 * [**Dash**](https://kapeli.com/dash) is an API documentation and code snippets manager.
@@ -178,7 +187,7 @@ They have also introduced cheat sheets for shortcuts and useful commands (e.g. `
 * [Get **Dash**](https://kapeli.com/dash)
 
 
-### 11. duet
+### 10. duet
 #### Use your iPad or iPhone as external screen
 
 When the office runs out of screens or your are at your favourite café, plug your iPad into your Mac and start [duet](https://www.duetdisplay.com/). This app, built by ex-Apple engineers, allow all iPads and iPhone with iOs 7.0+ to become proper second screens that you can manage from the Displays settings of your mac.
@@ -188,18 +197,19 @@ When the office runs out of screens or your are at your favourite café, plug yo
 
 **TL;DR**
 
-* [Silver searcher](https://github.com/ggreer/the_silver_searcher)
-* [jq, yq, xq](https://stedolan.github.io/jq/)
-* [HTTPie](https://httpie.org/)
-* [Choosy](https://www.choosyosx.com/)
-* [Spectacle](https://www.spectacleapp.com/)
-* [Trailer](https://github.com/ptsochantaris/trailer)
+* [**jq, yq, xq**](https://stedolan.github.io/jq/)
+* [**HTTPie**](https://httpie.org/)
+* [**Choosy**](https://www.choosyosx.com/)
+* [**Ag**](https://github.com/ggreer/the_silver_searcher)
+* [**Trailer**](https://github.com/ptsochantaris/trailer)
 * [**jira**](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira)
 * [**shpotify**](https://github.com/hnarayanan/shpotify)
 * [**now**](https://now.sh/)
 * [**Dash**](https://kapeli.com/dash)
-* [duet](https://www.duetdisplay.com/)
+* [**duet**](https://www.duetdisplay.com/)
 
 That's it!
 
 I hope you find them useful, if you want to recommend a tool that I haven't included, please comment below.
+
+Photo by energepic.com from Pexels
