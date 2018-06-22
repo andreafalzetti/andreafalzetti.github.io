@@ -27,12 +27,14 @@ If you are a FullStack developer too, you might find interesting some of the con
 
 Upcoming conferences that I will attend:
 
-- **[React Europe](https://www.react-europe.org/)**, Paris <i class="em em-fr"></i>
+- **[ServerlessDays London](https://london.serverlessdays.io/)**, London <i class="em em-gb"></i>
+- **[ServerlessDays Amsterdam](https://serverlessdays.amsterdam/)**, Amsterdam <i class="em em-flag-nl"></i>
 
 If you are also going, [ping me](https://twitter.com/rexromae)!
 
 Next, is what I have recently attended, you might have just missed a good one but don't worry, you can be an early-bird next year:
 
+- **[React Europe](https://www.react-europe.org/)**, Paris <i class="em em-fr"></i>
 - **[The Hacker Games](https://thehackergames.co.uk/)**, London <i class="em em-gb"></i>
 - **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 - **[Elastic{ON} Tour](https://www.elastic.co/elasticon)**, London <i class="em em-gb"></i>
