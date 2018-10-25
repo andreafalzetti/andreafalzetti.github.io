@@ -11,7 +11,7 @@ header-img: 'img/2018/10/hammer-hand-tools-measuring-tape-lite.jpg'
 crosspost_to_medium: true
 ---
 
-Wheter you are working on the back-end or the front-end, having the *right tool for the job*, can really make a difference some times.
+Whether you are working on the back-end or the front-end, having the *right tool for the job*, can really make a difference some times.
 
 With this blog post, I want to share with you some of the tools that I use pretty much every day and I believe can be useful to any software developer.
 
@@ -49,7 +49,7 @@ Here we search the array for a specific item that contains a property `country_c
 
 ![jq-example]({{site.baseurl}}/img/2018/04/jq-3.png)
 
-We can finally exctract the values that we need and use them in a bash script!
+We can finally extract the values that we need and use them in a bash script!
 
 ![jq-example]({{site.baseurl}}/img/2018/04/jq-4.png)
 
@@ -70,6 +70,11 @@ COUNTRY='GB'
 VAT=$(http https://jsonvat.com | jq -r ".rates[] | select(.country_code | contains (\"$COUNTRY\")) | .periods[0].rates.standard")
 echo "VAT in $COUNTRY is $VAT%"
 ```
+
+* [Get jq](https://stedolan.github.io/jq/)
+* [Get yq](https://yq.readthedocs.io)
+* [Get xq](https://github.com/jeffbr13/xq)
+
 
 ### 2. HTTPie
 #### A friendly command line HTTP client
@@ -116,16 +121,16 @@ I like it because it's lightweight, smart and **not intrusive**. For instance it
 
 It comes very handy when you need to open a link from the Terminal or within an Email, Slack, Trello etc.
 
-I personlly use three or four browsers (including [Brave](https://brave.com/)) for different purposes, so if you are like me, you'll really like this one. Choosy also supports Chrome profiles and incognito so if you need to test a website under different sessions / users, it can really save you some time!
-
 ![choosy]({{site.baseurl}}/img/2018/04/choosy.png)
+
+I personally use three or four browsers (including [Brave](https://brave.com/)) for different purposes, so if you are like me, you'll really like this one. Choosy also supports Chrome profiles and incognito so if you need to test a website under different sessions / users, it can really save you some time!
 
 * [Get Choosy](https://www.choosyosx.com/)
 
 ## 4. Ag
 ### Search through code faster
 
-Also called _The Silver Searcher_, it's a tool like `grep` but optimized for developers.
+Also called _The Silver Searcher_, it's a tool like `grep` but optimised for developers.
 
 When you search, it ignores by default files in `.gitignore`, for JavaScript developers is so convenient because it means you don't have to manually exclude the `node_modules` folder.
 
@@ -133,13 +138,13 @@ When you search, it ignores by default files in `.gitignore`, for JavaScript dev
 
 I also like that the output it's nice and clear:
 
-![ag]({{site.baseurl}}/img/2018/04/ag.png)
-
 * [Get Ag](https://github.com/ggreer/the_silver_searcher)
+
+![ag]({{site.baseurl}}/img/2018/04/ag.png)
 
 
 ### 5. trailer
-#### Stay up to date on GitHub
+#### Stay up to date with GitHub
 
 [Trailer](https://github.com/ptsochantaris/trailer) is an open-source app that brings GitHub notifications in your desktop. There are two sections, **issues** and **pull requests**.
 
@@ -154,6 +159,9 @@ Once expanded, you can see the notifications history and jump directly at them i
 If you are scared to receive hundreds of notifications with this, don't worry! You can decide on what repositories you want to be notified.
 
 ![trailer]({{site.baseurl}}/img/2018/04/trailer-3.png)
+
+* [Get **Trailer**](https://github.com/ptsochantaris/trailer)
+
 
 ### 6. jira (zsh plugin)
 
@@ -172,16 +180,17 @@ If you are a Spotify user you may find the next one useful.
 
 This utility allows you to *play/stop* , *search* for songs or playlists, *skip*, adjust the *volume*, and more.
 
+* [Get **shpotify**](https://github.com/hnarayanan/shpotify)
+
 ![plugin-shpotify]({{site.baseurl}}/img/2018/04/plugin-shpotify.gif)
 
-* [Get **shpotify**](https://github.com/hnarayanan/shpotify)
 
 ### 8. now
 #### one-command deployments
 
 `now` allows you to deploy to the cloud any project that has `package.json` or `Dockerfile`.
 
-I am not a power user but I want to recommend it because it helped me a few times during prototyping or when I didn't have time to build an own infrastracture (e.g. hackathons), you really want to use `now`.
+I am not a power user but I want to recommend it because it helped me a few times during prototyping or when I didn't have time to build an own infrastructure (e.g. hackathons), you really want to use `now`.
 
 * [Get **now**](https://now.sh/)
 
