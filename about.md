@@ -6,14 +6,14 @@ header-img: "img/squares.png"
 description: "Andrea Falzetti"
 ---
 
-I am an enthusiastic **Full Stack JavaScript Developer** based in *London* <i class="em em-gb"></i>. I have been professionally designing and developing web applications since 2010.
+I am an experienced **Backend Engineer** with **DevOps** skills, based in *London* <i class="em em-gb"></i>. I have been in the business of software development since 2010.
 
-I'm currently focused on **Node.js** and **React**. I have experience with **AWS**, **microservices**, **serverless**, **chat bots** and I am very interested in _machine learning_.
+My current focused on **Node.js**, **AWS**, **Terraform**, **automation**, **serverless**, **microservices**, **resiliance**, **scalability**.
 
 My first programming language was Pascal, then I learnt C, VB6, C# (I have also published an Xbox indie game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), Java, for a while I built Android apps, of course PHP with the LAMP stack which I have used at work for more than 5 years.
 
 ### Current position
-I am a **Software Engineer** at [DAZN](https://dazn.com) where I am part of the **Node.js** team.
+I am a **Software Engineer** at [DAZN](https://dazn.com) where I am part of the **Node.js** team. We are building a highly scalable, available and resiliant platform using JavaScript, AWS, Terraform, Drone, Serverless, Docker.
 
 #### Previous roles
 If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
@@ -27,13 +27,14 @@ If you are a FullStack developer too, you might find interesting some of the con
 
 Upcoming conferences that I will attend:
 
-- **[ServerlessDays London](https://london.serverlessdays.io/)**, London <i class="em em-gb"></i>
+- **[dotJS 2018](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 - **[ServerlessDays Amsterdam](https://serverlessdays.amsterdam/)**, Amsterdam <i class="em em-flag-nl"></i>
 
 If you are also going, [ping me](https://twitter.com/rexromae)!
 
 Next, is what I have recently attended, you might have just missed a good one but don't worry, you can be an early-bird next year:
 
+- **[ServerlessDays London](https://london.serverlessdays.io/)**, London <i class="em em-gb"></i>
 - **[React Europe](https://www.react-europe.org/)**, Paris <i class="em em-fr"></i>
 - **[The Hacker Games](https://thehackergames.co.uk/)**, London <i class="em em-gb"></i>
 - **[dotJS 2017](http://dotjs.io)**, Paris <i class="em em-fr"></i>
