@@ -6,17 +6,25 @@ header-img: "img/squares.png"
 description: "Andrea Falzetti"
 ---
 
-I am an experienced **Backend Engineer** with **DevOps** and **Frontend** skills, based in *London* <i class="em em-gb"></i>. I have been in the business of software development since 2010.
+I am an experienced **Backend Engineer** with **DevOps** and **Frontend** skills, based in *London* <i class="em em-gb"></i>. I have been developing software since 2010.
 
-My current focused on **Node.js**, **AWS**, **Terraform**, **automation**, **serverless**, **microservices**, **resiliance**, **scalability**, **React**.
+In my current position as **Software Engineer** at [DAZN](https://dazn.com), I am part of the backend team where we are building a highly scalable, available and resiliant live streaming platform using:
 
-My first programming language was Pascal, then I learnt C, VB6, C# (I have also published an Xbox indie game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), Java, for a while I built Android apps, of course PHP with the LAMP stack which I have used at work for more than 5 years.
+- JavaScript, React & Node.js
+- AWS
+- Terraform
+- Drone
+- Serverless
+- Docker
+- Microservices
 
-### Current position
-I am a **Software Engineer** at [DAZN](https://dazn.com) where I am part of the **Node.js** team. We are building a highly scalable, available and resiliant platform using JavaScript, AWS, Terraform, Drone, Serverless, Docker.
+I am very passionate about **automation** and **IaC**. Besides that, I love sharing in this blog, interesting pieces of work of which I'm particularly proud of.
 
-#### Previous roles
-If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
+### It all started with Pascal
+
+My first programming language was, indeed, Pascal, then I learnt C, VB6, C# (I have also published an Xbox indie game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), Java, for a while I built Android apps, of course PHP with the LAMP stack which I have used at work for more than 5 years.
+
+If you are interested to know more about my past work experiences, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
 
 ### Events
 I like to stay up to date with the latest tools, technologies and best practices about software development. One of my favourite way of doing so is through meetups and conferences. If you are in London and looking for the next interesting tech talk to listen to, check out on meetup.com [my profile](https://www.meetup.com/members/195831274/) and get inspired by the communities I have joined (they are about: `JavaScript`, `DevOps`, `AWS`, `Node.js`, `React`, `React Native` and much more).
