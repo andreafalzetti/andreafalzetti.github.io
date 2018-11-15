@@ -19,11 +19,11 @@ I am a **Software Engineer** at [DAZN](https://dazn.com) where I am part of the 
 If you are interested to know more about my past, check out [my Developer Story](http://stackoverflow.com/story/andreafalzetti) on StackOverflow or [my LinkedIn profile](https://www.linkedin.com/in/andreafalzetti).
 
 ### Events
-I like to stay up to date with the latest tools, technologies and best practices about software development. One of my favourite way of doing so is through meetups and conferences. If you are in London and looking for the next interesting tech talk to listen to, check out on meetup.com [my profile](https://www.meetup.com/members/195831274/) and get inspired by the communities I have joined (they are about: `JavaScript`, `ML`, `AWS`, `Node.js`, `React / React Native`, `Neo4j`, `Chat Bots`, `AI` and much more).
+I like to stay up to date with the latest tools, technologies and best practices about software development. One of my favourite way of doing so is through meetups and conferences. If you are in London and looking for the next interesting tech talk to listen to, check out on meetup.com [my profile](https://www.meetup.com/members/195831274/) and get inspired by the communities I have joined (they are about: `JavaScript`, `DevOps`, `AWS`, `Node.js`, `React`, `React Native` and much more).
 
 I think it's incredibly useful to meet and share ideas with people that have the same passion as you for technology and software development. People have different backgrounds, they are probably facing your same challenges, and they might have found a solution that works for you too, so don't wait anymore if you haven't joined a community or partecipated to a tech conference yet. Start today!
 
-If you are a FullStack developer too, you might find interesting some of the conferences that I am planning to attend, that's why I have decided to share this with you.
+If you are a JavaScript developer too, you might find interesting some of the conferences that I am planning to attend, that's why I have decided to share this with you.
 
 <!-- Upcoming conferences that I will attend: -->
 
