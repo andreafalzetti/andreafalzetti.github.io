@@ -6,9 +6,9 @@ header-img: "img/squares.png"
 description: "Andrea Falzetti"
 ---
 
-I am an experienced **Backend Engineer** with **DevOps** skills, based in *London* <i class="em em-gb"></i>. I have been in the business of software development since 2010.
+I am an experienced **Backend Engineer** with **DevOps** and **Frontend** skills, based in *London* <i class="em em-gb"></i>. I have been in the business of software development since 2010.
 
-My current focused on **Node.js**, **AWS**, **Terraform**, **automation**, **serverless**, **microservices**, **resiliance**, **scalability**.
+My current focused on **Node.js**, **AWS**, **Terraform**, **automation**, **serverless**, **microservices**, **resiliance**, **scalability**, **React**.
 
 My first programming language was Pascal, then I learnt C, VB6, C# (I have also published an Xbox indie game called [Xstronauta](https://www.youtube.com/watch?v=SlXwYpwPmVg)), Java, for a while I built Android apps, of course PHP with the LAMP stack which I have used at work for more than 5 years.
 
@@ -25,15 +25,13 @@ I think it's incredibly useful to meet and share ideas with people that have the
 
 If you are a FullStack developer too, you might find interesting some of the conferences that I am planning to attend, that's why I have decided to share this with you.
 
-Upcoming conferences that I will attend:
-
-- **[dotJS 2018](http://dotjs.io)**, Paris <i class="em em-fr"></i>
-- **[ServerlessDays Amsterdam](https://serverlessdays.amsterdam/)**, Amsterdam <i class="em em-flag-nl"></i>
+<!-- Upcoming conferences that I will attend: -->
 
 If you are also going, [ping me](https://twitter.com/rexromae)!
 
 Next, is what I have recently attended, you might have just missed a good one but don't worry, you can be an early-bird next year:
 
+- **[dotJS 2018](http://dotjs.io)**, Paris <i class="em em-fr"></i>
 - **[ServerlessDays London](https://london.serverlessdays.io/)**, London <i class="em em-gb"></i>
 - **[React Europe](https://www.react-europe.org/)**, Paris <i class="em em-fr"></i>
 - **[The Hacker Games](https://thehackergames.co.uk/)**, London <i class="em em-gb"></i>
