@@ -8,7 +8,7 @@ description: "Andrea Falzetti"
 
 I am an experienced **Backend Engineer** with **DevOps** and **Frontend** skills, based in *London* <i class="em em-gb"></i>. I have been developing software since 2010.
 
-In my current position as **Software Engineer** at [DAZN](https://dazn.com), I am part of the backend team where we are building a highly scalable, available and resiliant live streaming platform using:
+In my current position as **Software Engineer** at [DAZN](https://dazn.com), I am part of the backend team where we are building a highly scalable, available and resilient live streaming platform using:
 
 - JavaScript, React & Node.js
 - AWS
