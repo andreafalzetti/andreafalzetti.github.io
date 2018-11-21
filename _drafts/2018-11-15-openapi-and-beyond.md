@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'OpenAPI'
-subtitle: 'Not only documentation'
+subtitle: 'Documentation and beyond'
 date: 2018-11-15
 categories: blog
 tags:

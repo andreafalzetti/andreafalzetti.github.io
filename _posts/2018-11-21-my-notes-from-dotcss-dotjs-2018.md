@@ -1,26 +1,25 @@
 ---
 layout: post
 comments: true
-title: 'dotCSS & dotJS 2018'
-subtitle: 'My Takeaways'
-date: 2018-11-15
+title: 'My notes from dotCSS & dotJS 2018'
+date: 2018-11-21
 categories: blog
 tags:
 author: 'Andrea Falzetti'
-header-img: 'img/2018/10/hammer-hand-tools-measuring-tape-lite.jpg'
-crosspost_to_medium: false
+header-img: 'img/2018/11/dotjs-2018.png'
+crosspost_to_medium: true
 ---
 
 For the third year in a row I have attended the largest JavaScript conference in Europe: [dotJS](https://www.dotjs.io/). This time I travelled with my amazing collagues from [DAZN](https://engineering.dazn.com/) and we had a blast!
 
-In this short blog post I want to share a few of the things that I learnt during the event and I think it's worth sharing with you.
+In this short blog post I want to share a few of the things that I learnt during the event which I think it's worth sharing with you.
 
 ## Variable fonts
 
 ### What's a variable font?
 
-<!-- <p data-height="265" data-theme-id="0" data-slug-hash="YYaWop" data-default-tab="result" data-user="mandymichael" data-pen-title="Grassy Text with Variable fonts." class="codepen">See the Pen <a href="https://codepen.io/mandymichael/pen/YYaWop/">Grassy Text with Variable fonts.</a> by Mandy Michael (<a href="https://codepen.io/mandymichael">@mandymichael</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+<p data-height="265" data-theme-id="0" data-slug-hash="YYaWop" data-default-tab="result" data-user="mandymichael" data-pen-title="Grassy Text with Variable fonts." class="codepen">See the Pen <a href="https://codepen.io/mandymichael/pen/YYaWop/">Grassy Text with Variable fonts.</a> by Mandy Michael (<a href="https://codepen.io/mandymichael">@mandymichael</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 > Variable fonts are an evolution of the [OpenType](https://en.wikipedia.org/wiki/OpenType) font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single @font-face reference. _Read more: [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)_
 
@@ -39,15 +38,15 @@ If you want to learn more about it, I've collected some useful links:
 
 Figures are clear, JavaScript is growing along side with the satisfaction level of the developers using it.
 
-Altough, we all know the effort needed to cope with the JavaScript fatigue, we have the advantage of having a huge ecosystem of open source projects and great tooling today to build our JavaScript applications. You should see StateOfJs has a tool to help you decide what to learn, adopt or simply try for your next JavaScript project.
+Altough, we all know the effort needed to cope with the JavaScript fatigue, we have the advantage of having a huge ecosystem of open source projects and great tooling today to build our JavaScript applications. I suggest you to use the results of te _StateOfJs_ survey has a tool to help you decide what to learn, adopt or simply try for your next JavaScript project.
 
 Interested in the stats? Check out [2018.stateofjs.com](https://2018.stateofjs.com) 🚀
 
 ## Best of JS
 
-This is another tool that comes in handy when you are not sure about what npm module to pick or what's the new big thing to learn, this website lists all sort of JavaScript libraries, frameworks, learning resources, books for you to easily find the right tool for the job.
+This is another tool that comes in handy when you are not sure about what npm module to pick or what's the next big thing to learn, this website lists all sort of JavaScript libraries, frameworks, learning resources, books for you to easily find the right tool for the job.
 
-Next time you need a library to deal with dates, or a React Component for animations, or a Node.js API framework, or simply just to stay up to date with the complex ecosystem to reduce your JavaScript fatigue, consider paying a visit to [bestofjs.org](https://bestofjs.org)
+Next time you need a library to deal with dates, or a React Component for animations, or a Node.js API framework, or simply just to stay up to date with latest released projects, consider paying a visit to [bestofjs.org](https://bestofjs.org)
 
 ## webhint
 
@@ -75,7 +74,7 @@ Repository: [github.com/robertkrimen/otto](https://github.com/robertkrimen/otto)
 
 > A secure TypeScript runtime on V8
 
-Deno is a JavaScript runtime, or I should better say TypeScript runtime as it natively supports TypeScript. By the creator of the most popular JavaScript runtime Node.js, Ryan Dahl, **deno** is a project that aims  address all the regrets that Ryan has with Node.js.
+Deno is a JavaScript runtime, or I should better say TypeScript runtime as it natively supports TypeScript. By the creator of the most popular JavaScript runtime Node.js, Ryan Dahl, **deno** is a project that aims to address all the regrets that Ryan has with Node.js.
 
 He presented the project during this talk: [10 Things I Regret About Node.js - Ryan Dahl - JSConf EU 2018](https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en) and I find fascinating his motivation and hard work to put this together.
 
@@ -100,11 +99,11 @@ If you want to know more about **deno** or the thoughts behind it, check these o
 
 <div style="width:100%;height:0;padding-bottom:51%;position:relative;"><iframe src="https://giphy.com/embed/l1J9J5XH5htw30uLS" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/linarf-games-l1J9J5XH5htw30uLS">via GIPHY</a></p>
 
-The adoption of JavaScript in Desktop applications and videogames has recently grown a lot. During the event, Tobias Ahlin, Experience Design Director at Mojang, the company who built Minecraft, was telling us the story of their journet in building Minecraft in JavaScript to allow players to create custom mods in plain HTML, CSS and JS, which opens the door to infinite and very interactive mods.
+The adoption of JavaScript in Desktop applications and videogames has recently grown a lot. During the event, Tobias Ahlin, Experience Design Director at Mojang, the company who built Minecraft, was telling us the story of their journey in rebuilding Minecraft in JavaScript to allow players to create custom mods in plain HTML, CSS and JS, which opens the door to infinite and very interactive mods.
 
-Such adventure it's extremely challenging, especially due to the performance and compatibility issue one may encounter but it's possible and games like Battlefield 1 are proof that this is doable.
+Such adventure it's extremely challenging, especially due to the performance and compatibility issue one may encounter but it's definitelly possible and games like Battlefield 1 are proof that this is doable.
 
-In fact, believe me or not, the user interface of Battlefield 1 is built using React and MobX.
+Yes, believe me or not, the user interface of Battlefield 1 is actually built using React and MobX.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Holy CRAP! Battlefield 1 is using React + MobX for the game UI 🤯😱 <a href="https://t.co/va12fBeswE">pic.twitter.com/va12fBeswE</a></p>&mdash; Kitze 🚢️ (@thekitze) <a href="https://twitter.com/thekitze/status/977491195910938624?ref_src=twsrc%5Etfw">March 24, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -112,12 +111,13 @@ In fact, believe me or not, the user interface of Battlefield 1 is built using R
 
 ## http2
 
-We all heard that **http2** is out and it has been out for a while now. Big companies are already using it and more tools..
+We all heard that **http2** is out while now and it's great. Big companies are already using it but most of us didn't have a chance to work with it yet.
 
 It's your chance to take a look at some interesting readings and start using it:
 
-- [github.com/http2/http2-spec/wiki/Tools](https://github.com/http2/http2-spec/wiki/Tools) - Debugging tools for http2
-- [medium.com/bbc-design-engineering/http-2-is-easy-just-turn-it-on](https://medium.com/bbc-design-engineering/http-2-is-easy-just-turn-it-on-34baad2d1fb1) - HTTP/2 is easy, just turn it on…
+- [**HTTP/2 is easy, just turn it on…**](https://medium.com/bbc-design-engineering/http-2-is-easy-just-turn-it-on-34baad2d1fb1)
+- [**HTTP/2 Server Push with Node.js**](https://blog.risingstack.com/node-js-http-2-push/)
+- [**Debugging tools for http2**](https://github.com/http2/http2-spec/wiki/Tools)
 
 # Conclusions
 
@@ -127,13 +127,13 @@ The tickets for dotJS 2019 are already on sale for early birds. For the first ti
 
 > Get your ticket on [2019.dotjs.io](https://2019.dotjs.io/)
 
-# DAZN is hiring 👋
+# If you like attending or speaking at tech conferences...
 
-If you like attending or speaking at tech conferences, consider joining us at DAZN as we have a budget for that!
+Consider joining us at [DAZN](https://engineering.dazn.com/) as we have a budget for that!
 
 We are building a streaming platform at scale with some of the coolest and cutting edge technologies.
 
-We are looking for:
+We are an amazing team which is growing and looking for:
 
 - [Frontend Developer](https://engineering.dazn.com/job/frontend-developer)
 - [Backend Developer](https://engineering.dazn.com/job/backend-developer)
@@ -146,5 +146,6 @@ We are looking for:
 and much more! Check out [engineering.dazn.com](https://engineering.dazn.com/) for the full list of open positions!
 
 Feel free to DM me on [Twitter](https://twitter.com/rexromae) or [LinkedIn](https://www.linkedin.com/in/andreafalzetti) to ask more about the job. I'm more than happy to answer all your questions
+
 
 Thanks for reading 😊
