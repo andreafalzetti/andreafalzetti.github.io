@@ -16,17 +16,19 @@ In this short blog post I want to share a few of the things that I learnt during
 
 ## Variable fonts
 
-### What's a variable font?
+![grass-variable-fonts-gif]({{site.url}}/img/2018/11/grass-variable-fonts.gif)
 
-<p data-height="265" data-theme-id="0" data-slug-hash="YYaWop" data-default-tab="result" data-user="mandymichael" data-pen-title="Grassy Text with Variable fonts." class="codepen">See the Pen <a href="https://codepen.io/mandymichael/pen/YYaWop/">Grassy Text with Variable fonts.</a> by Mandy Michael (<a href="https://codepen.io/mandymichael">@mandymichael</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+[View the source in CodePen](https://codepen.io/mandymichael/pen/YYaWop/?editors=0100)
+
+### What's a variable font?
 
 > Variable fonts are an evolution of the [OpenType](https://en.wikipedia.org/wiki/OpenType) font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single @font-face reference. _Read more: [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)_
 
-This will enable designers and frontend developers to build really personalised experiences and interesting UIs with fancy effects! Accessibility can also beenfit from variable fonts! Be warned, the CodePen above will most likely trigger your laptop fans to keep the processor cool 😂
+This will enable designers and frontend developers to build really personalised experiences and interesting UIs with fancy effects! Accessibility can also benefit from variable fonts! Be warned, the CodePen above will most likely trigger your laptop fans to keep the processor cool 😂
 
 If you want to learn more about it, I've collected some useful links:
 
+- **[Variable Fonts - Supercharged](https://www.youtube.com/watch?v=B42rUMdcB7c)**
 - **[medium.com/@clagnut/get-started-with-variable-fonts](https://medium.com/@clagnut/get-started-with-variable-fonts-c055fd73ecd7)**
 - **[v-fonts.com](https://v-fonts.com/)** - A simple resource for finding and trying variable fonts
 
@@ -38,7 +40,7 @@ If you want to learn more about it, I've collected some useful links:
 
 Figures are clear, JavaScript is growing along side with the satisfaction level of the developers using it.
 
-Altough, we all know the effort needed to cope with the JavaScript fatigue, we have the advantage of having a huge ecosystem of open source projects and great tooling today to build our JavaScript applications. I suggest you to use the results of te _StateOfJs_ survey has a tool to help you decide what to learn, adopt or simply try for your next JavaScript project.
+Although, we all know the effort needed to cope with the JavaScript fatigue, we have the advantage of having a huge ecosystem of open source projects and great tooling today to build our JavaScript applications. I suggest you to use the results of te _StateOfJs_ survey has a tool to help you decide what to learn, adopt or simply try for your next JavaScript project.
 
 Interested in the stats? Check out [2018.stateofjs.com](https://2018.stateofjs.com) 🚀
 
@@ -52,7 +54,7 @@ Next time you need a library to deal with dates, or a React Component for animat
 
 > webhint is a linting tool that will help you with your site's accessibility, speed, security and more, by checking your code for best practices and common errors. Use the online scanner or the CLI to start checking your site for errors.
 
-Similar to Google Lighthouse, Microsoft **webhint** can analyze your website and give you hints for improvements around accessibility, performance, security and more. It also has a CLI and it integrates with Visual Studio Code so you can get you code statically scanned by webhint while you are coding!
+Similar to Google Lighthouse, Microsoft **webhint** can analyse your website and give you hints for improvements around accessibility, performance, security and more. It also has a CLI and it integrates with Visual Studio Code so you can get you code statically scanned by webhint while you are coding!
 
 [Try the online scanner](https://webhint.io/#scanner-input) or run webhint from your CLI: `npx hint https://example.com`
 
@@ -99,15 +101,14 @@ If you want to know more about **deno** or the thoughts behind it, check these o
 
 <div style="width:100%;height:0;padding-bottom:51%;position:relative;"><iframe src="https://giphy.com/embed/l1J9J5XH5htw30uLS" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/linarf-games-l1J9J5XH5htw30uLS">via GIPHY</a></p>
 
-The adoption of JavaScript in Desktop applications and videogames has recently grown a lot. During the event, Tobias Ahlin, Experience Design Director at Mojang, the company who built Minecraft, was telling us the story of their journey in rebuilding Minecraft in JavaScript to allow players to create custom mods in plain HTML, CSS and JS, which opens the door to infinite and very interactive mods.
+The adoption of JavaScript in Desktop applications and video games has recently grown a lot. During the event, Tobias Ahlin, Experience Design Director at Mojang, the company who built Minecraft, was telling us the story of their journey in rebuilding Minecraft in JavaScript to allow players to create custom mods in plain HTML, CSS and JS, which opens the door to infinite and very interactive mods.
 
-Such adventure it's extremely challenging, especially due to the performance and compatibility issue one may encounter but it's definitelly possible and games like Battlefield 1 are proof that this is doable.
+Such adventure it's extremely challenging, especially due to the performance and compatibility issue one may encounter but it's definitely possible and games like Battlefield 1 are proof that this is doable.
 
 Yes, believe me or not, the user interface of Battlefield 1 is actually built using React and MobX.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Holy CRAP! Battlefield 1 is using React + MobX for the game UI 🤯😱 <a href="https://t.co/va12fBeswE">pic.twitter.com/va12fBeswE</a></p>&mdash; Kitze 🚢️ (@thekitze) <a href="https://twitter.com/thekitze/status/977491195910938624?ref_src=twsrc%5Etfw">March 24, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 ## http2
 
