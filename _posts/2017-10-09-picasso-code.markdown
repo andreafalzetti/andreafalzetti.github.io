@@ -8,7 +8,6 @@ categories: blog
 tags: react, javascript, bad practices
 author:     "Andrea Falzetti"
 header-img: "img/2017/10/daniel-posthuma-255479.light.jpg"
-crosspost_to_medium: true
 ---
 
 Recently, I have been reviewing the following JavaScript code, and I found so many issues that I have decided to discuss them here. First of all, I am not trying to embarrass anyone, so I am not mentioning where this comes from. With this post, I want to use bad examples to promote and remind all of us, including myself, to use common sense and best practices when it comes to writing new code.

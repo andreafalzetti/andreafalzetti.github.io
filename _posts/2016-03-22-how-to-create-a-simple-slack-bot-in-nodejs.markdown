@@ -8,7 +8,6 @@ categories: blog
 tags: nodejs caldav slack bot
 author:     "Andrea Falzetti"
 header-img: "img/post-bg-01.jpg"
-crosspost_to_medium: true
 ---
 
 In this post I want to help you creating a *simple Slack bot with Node.js*.

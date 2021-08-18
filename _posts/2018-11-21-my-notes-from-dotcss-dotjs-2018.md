@@ -7,7 +7,6 @@ categories: blog
 tags:
 author: 'Andrea Falzetti'
 header-img: 'img/2018/11/dotjs-2018.png'
-crosspost_to_medium: true
 ---
 
 For the third year in a row I have attended the largest JavaScript conference in Europe: [dotJS](https://www.dotjs.io/). This time I travelled with my amazing collagues from [DAZN](https://engineering.dazn.com/) and we had a blast!

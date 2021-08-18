@@ -8,7 +8,6 @@ categories: blog
 tags:
 author: 'Andrea Falzetti'
 header-img: 'img/2018/10/hammer-hand-tools-measuring-tape-lite.jpg'
-crosspost_to_medium: true
 ---
 
 Whether you are working on the back-end or the front-end, having the *right tool for the job*, can really make a difference some times.

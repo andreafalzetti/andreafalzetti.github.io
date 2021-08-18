@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: 'Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2'
-crosspost_to_medium: true
 subtitle: 'With few alpha versions'
 date: 2017-05-30 09:00:00
 categories: blog

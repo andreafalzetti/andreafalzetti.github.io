@@ -8,7 +8,6 @@ categories: blog
 tags: react javascript accessibility
 author:     "Andrea Falzetti"
 header-img: "img/lum3n-187468-light.jpg"
-crosspost_to_medium: true
 ---
 
 In [one of my recent posts](https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a) I talked about how I have introduced [Storybook](https://storybook.js.org/) to the team and how we adopted it in our development lifecycle.

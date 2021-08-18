@@ -38,10 +38,3 @@ encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 paginate: 10
 gems:         [jekyll-paginate, jekyll-feed, jekyll-gist]
-
-jekyll-crosspost_to_medium:
-  enabled: true
-  cache: .jekyll-crosspost_to_medium
-  status: draft
-  license: all-rights-reserved
-  backdate: false
