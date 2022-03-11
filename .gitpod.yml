@@ -5,10 +5,6 @@ vscode:
     - streetsidesoftware.code-spell-checker
 
 tasks:
-  - init: bundle install
-    command: 
-
-tasks:
   - name: Setup
     init: bundle install
     command: bundle exec jekyll serve --watch --drafts
