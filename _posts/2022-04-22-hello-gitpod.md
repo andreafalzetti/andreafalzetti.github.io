@@ -37,7 +37,7 @@ With Gitpod, all I have to do is press this green button :)
 
 ![gitpod-btn](/img/2022/blog-gitpod-btn.png)
 
-And in matter of seconds, I am ready to write my blog post because Gitpod runs for me the commands like:
+And in matter of seconds, I have VS Code open in the cloud, Jekyll up and running thanks to Gitpod automatically running for me these commands:
 
 ```shell
 git clone ..
@@ -45,6 +45,8 @@ git clone ..
 bundle install ⬇️
 
 bundle exec Jekyll serve --watch --drafts
+
+# > open VS Code
 
 # > open browser with live preview
 ```
