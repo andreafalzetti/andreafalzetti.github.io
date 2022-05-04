@@ -6,9 +6,11 @@ header-img: "img/cloud.png"
 description: "Andrea Falzetti"
 ---
 
-I am passionate about building products and tools that bring value to people. I have been developing software since 2010.
+I am Software Engineer based in London, UK. I am passionate about building products and tools that bring value to people. I have been developing software since 2010.
 
-I am currently working as **Staff Platform Engineer** at [DAZN](https://engineering.dazn.com/), the world's first truly dedicated live sports streaming service. Initially focusing on our product's backend, building features and highly scalable APIs using AWS & Node.js, My interest in building products and tools, eventually made me move to Platform & Tooling where I focus on internal Developer Experience.
+In my current role I focus on building one of the best **developer experience** tools out there: [Gitpod](./_posts/2022-04-22-hello-gitpod.md).
+
+Previously, I worked as **Staff Platform Engineer** at [DAZN](https://engineering.dazn.com/), the world's first truly dedicated live sports streaming service. Initially focusing on our product's backend, building features and highly scalable APIs using AWS & Node.js, My interest in building products and tools, eventually made me move to Platform & Tooling where I focus on internal Developer Experience.
 
 `AWS`, `JS`, `Node`, `Go`, `Terraform`, `DX`, `serverless`, `resilience`, `chaos`, `React`.
 
