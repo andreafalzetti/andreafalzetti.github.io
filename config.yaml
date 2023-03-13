@@ -1,0 +1,31 @@
+baseURL: http://andreafalzetti.github.io
+disablePathToLower: true
+languageCode: en-gb
+title: Andrea Falzetti
+permalinks:
+  blog: /blog/:year/:month/:day/:slug/
+theme: hugo-developer-portfolio
+  
+menu:
+  main:
+    - name: About
+      URL: about
+    - name: Blog
+      URL: blog
+
+params:
+  custom_css:
+    - css/custom.css
+  plugins:
+      css:
+        - URL: 'https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css'
+      js:
+        - URL: 'https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js'
+        - URL: 'https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js'
+  home: Home
+  description: >-
+    Andrea Falzetti, Senior Software Engineer in London, UK
+  author: Andrea Falzetti, Hugo Template by samrobbins85
+  footer:
+    email: andrea@falzetti.me
+    address: 'London 🇬🇧'

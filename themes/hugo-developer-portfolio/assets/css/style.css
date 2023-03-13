@@ -1,0 +1,72 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap";
+body {
+  font-family: 'Open Sans' !important;
+}
+.uk-heading-large, h1, h2, h3 {
+  font-family: 'Open Sans' !important;
+  font-weight: 600;
+}
+.contain {
+  object-fit: contain;
+}
+
+.uk-button-text {
+  border-bottom: 1px solid #333;
+}
+
+.uk-button-text::before {
+  border-bottom: 1px solid mediumblue;
+}
+
+.footer-section h5 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.footer {
+  flex-shrink: 0;
+  background: #fafafa;
+  border-top: 1px solid #eaeaea;
+  padding-top: 5em;
+}
+
+.uk-link,
+a {
+  color: #0077aa;
+}
+
+.uk-lightbox {
+  background: rgba(0, 0, 0, 0.7);
+  /*As there isn't firefox support for this I won't use it*/
+  /*backdrop-filter: blur(8px);*/
+}
+
+.uk-lightbox-toolbar {
+  background: rgba(0, 0, 0, 0);
+}
+
+.imagemargin {
+  margin-bottom: 40px;
+}
+
+figcaption p {
+  font-size: 0.8em;
+  color: grey;
+}
+
+figure img {
+  border: solid thin black;
+  padding: 10px;
+}
+
+em {
+  color: unset;
+}
+img.experience {
+  width: 150px;
+  height: 180px;
+}
+
+.uk-card-title {
+  margin: 0 10px;
+}

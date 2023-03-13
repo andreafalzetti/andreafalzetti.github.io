@@ -1,0 +1,44 @@
+---
+banner:
+  title: 👋 I’m Andrea Falzetti
+social:
+  twitter: rexromae
+  linkedin: andreafalzetti
+  github: andreafalzetti
+  gitlab: ""
+  facebook: ""
+  instagram: rexromae
+  gmail: 
+about:
+  enable: true
+  content: Senior Software Engineer @ [Okteto](https://okteto.com) · (Ex-[Gitpod](https://gitpod.io) · Ex-[DAZN](https://dazn.com)) · Co-Founder [@OnoranzeFunebriCloud](https://onoranzefunebricloud.com) · AWS Community Builder · DevX 🔥
+  button:
+    btnText: Find out more
+    URL: "/about"
+experience:
+  enable: true
+  item:
+    - logo: /img/okteto.png
+      title: Okteto
+      company: Senior Software Engineer 
+      duration: March 2023
+    - logo: /img/gitpod.png
+      title: Gitpod
+      company: Senior Software Engineer
+      duration: March 2022
+    - logo: /img/dazn.png
+      title: DAZN
+      company: Staff Platform Engineer (DevX)
+      duration: Aug 2021
+    - logo: /img/dazn.png
+      title: DAZN
+      company: Platform Engineer (DevX)
+      duration: Jul 2020
+    - logo: /img/dazn.png
+      title: DAZN
+      company: Software Engineer
+      duration: Nov 2017
+    - logo: /img/ofc.jpg
+      title: Onoranze Funebri Cloud
+      company: Co-Founder
+      duration: Jan 2017
