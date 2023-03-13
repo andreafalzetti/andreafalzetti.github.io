@@ -1,12 +1,17 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-11-11T12:45:00Z"
-header-img: img/post-bg-05.jpg
-subtitle: in a ReactJS project
-tags: webpack react javascript
+description: in a ReactJS project
+tags: 
+  - webpack 
+  - react 
+  - javascript
 title: How to fix broken base64 image using image-webpack and file-loader
+aliases:
+    - /blog/2016/11/11/how-fix-broken-base64-image-webpack-file-loader.html
+    - /blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/
 ---
 
 ## Challenge <i class="em em-rage4"></i>

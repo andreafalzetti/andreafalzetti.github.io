@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-10-31T23:00:00Z"
-header-img: img/serverlessconf-london-2016/serverlessconf-london-2016-3.jpg
-subtitle: comments on the conference
-tags: conference serverless london
+description: comments on the conference
+tags: 
+  - conference
+  - aws 
+  - serverless
+  - london
 title: Serverlessconf London 2016
+aliases:
+    - /blog/2016/10/31/serverlessconf-london-2016.html
+    - /blog/2016/10/31/Serverlessconf-London-2016/
 ---
 
 ## ServerlessConf London 2016 <i class="em em-zap"></i>

@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-04-04T09:00:00Z"
-header-img: img/post-bg-04.jpg
-subtitle: that schedules events using text analysis API
-tags: nodejs caldav slack bot
+description: that schedules events using text analysis API
+tags:
+  - nodejs 
+  - caldav 
+  - slack
+  - bot
 title: How to create a smart Slack Bot in Node.js
+aliases:
+    - /blog/2016/04/04/how-to-create-a-smart-slack-bot-in-nodejs.html
+    - /blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/
 ---
 
 The challenge here was creating a **bot able to schedule events**. Part of our internal tools at [Activate Media](http://activate.co.uk), **PlannerBot**, so it has been named, is now a member of our team. He currently lives in Slack, online 24/7 for 365 days of the year, programmed with the idea in mind that one day he could be moved to Facebook Messenger, Skype, or any other messaging platform.
@@ -74,7 +80,7 @@ If you have Node installed on your machine, you can skip this step. If not, foll
 
 Once you have Node & npm installed, check what version you are running:
 
-![my-node-version]({{site.url}}/img/my-node-version.jpg)
+![my-node-version](/img/my-node-version.jpg)
 
 As you can see I'm using `node v4.4.2` and `npm 2.15.0`.
 

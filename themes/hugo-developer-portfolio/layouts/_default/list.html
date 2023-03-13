@@ -1,19 +1,28 @@
 {{ define "main" }} {{ partial "page-title.html" . }}
 
-<section class="uk-margin-large-bottom">
+<section class="uk-margin-medium-bottom">
   <div class="uk-container">
     {{ range .Data.Pages.ByPublishDate.Reverse }}
 
-    <div class="uk-margin-medium-bottom">
+    <div class="uk-margin-small-bottom">
       <a href="{{.Permalink | relURL}}" style="text-decoration: none">
         <div class="uk-card uk-card-default uk-width-1@m">
           <div class="card-body">
-            <div class="uk-card-header">
+            <div class="uk-card-header" style="padding: 40px">
               <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-expand">
                   <h2 class="uk-margin-remove-bottom">{{.Title}}</h2>
 
-                  <p class="uk-text-meta uk-margin-remove-top">
+                  <p class="uk-text-meta">{{.Description}}</p>
+                  <div class="tags-list"  style="float: left">
+                    {{- with .Params.tags -}} {{- if ge (len .) 1 -}} {{- range
+                    . -}}
+                    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/" style="margin-right: 8px"
+                      >#{{ . }}</a
+                    >
+                    {{ end -}} {{- end -}} {{- end -}}
+                  </div>
+                  <p class="uk-text-meta uk-margin-remove-top" style="float: right">
                     <time datetime="{{.Date}}"
                       >{{.Date.Format "Jan 2, 2006"}}</time
                     >

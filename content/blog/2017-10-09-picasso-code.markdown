@@ -1,12 +1,17 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2017-10-09T09:00:00Z"
-header-img: img/2017/10/daniel-posthuma-255479.light.jpg
-subtitle: 10 things you should NOT do when writing JavaScript code
-tags: react, javascript, bad practices
+description: 10 things you should NOT do when writing JavaScript code
+tags:
+  - react
+  - javascript
+  - bad practices
 title: The Picasso code
+aliases:
+    - /blog/2017/10/24/picasso-code.html
+    - /blog/2017/10/09/The-Picasso-code/
 ---
 
 Recently, I have been reviewing the following JavaScript code, and I found so many issues that I have decided to discuss them here. First of all, I am not trying to embarrass anyone, so I am not mentioning where this comes from. With this post, I want to use bad examples to promote and remind all of us, including myself, to use common sense and best practices when it comes to writing new code.

@@ -1,8 +1,10 @@
 ---
-categories: blog
+categories:
+  - blog
 date: 2022-04-22T17:17:00Z
-header-img: img/2022/hello-gitpod.png
-tags: blog
+tags:
+  - announcement
+  - new job
 title: Hello Gitpod
 aliases:
     - /blog/2022/04/26/hello-gitpod.html

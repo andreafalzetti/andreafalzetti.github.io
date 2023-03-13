@@ -1,12 +1,17 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2017-10-18T09:00:00Z"
-header-img: img/lum3n-187468-light.jpg
-subtitle: ""
-tags: react javascript accessibility
+description: ""
+tags:
+  - react
+  - javascript
+  - accessibility
 title: Building an accessible and re-usable React Component
+aliases:
+    - /blog/2017/10/18/building-an-accessible-and-re-usable-react-component.html
+    - /blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/
 ---
 
 In [one of my recent posts](https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a) I talked about how I have introduced [Storybook](https://storybook.js.org/) to the team and how we adopted it in our development lifecycle.

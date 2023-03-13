@@ -21,11 +21,11 @@ experience:
     - logo: /img/okteto.png
       title: Okteto
       company: Senior Software Engineer 
-      duration: March 2023
+      duration: Mar 2023
     - logo: /img/gitpod.png
       title: Gitpod
       company: Senior Software Engineer
-      duration: March 2022
+      duration: Mar 2022
     - logo: /img/dazn.png
       title: DAZN
       company: Staff Platform Engineer (DevX)
@@ -42,3 +42,15 @@ experience:
       title: Onoranze Funebri Cloud
       company: Co-Founder
       duration: Jan 2017
+    - logo: /img/activate.png
+      title: Activate Media
+      company: Software Engineer
+      duration: Aug 2013
+    - logo: /img/iad.png
+      title: Scuola IaD
+      company: Software Engineer
+      duration: Jun 2012
+    - logo: /img/freelance.png
+      title: Freelancer
+      company: Web Developer / Android
+      duration: Aug 2010

@@ -1,11 +1,15 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2018-11-21T00:00:00Z"
-header-img: img/2018/11/dotjs-2018.png
-tags: null
+tags:
+  - conference
+  - dotjs
 title: My notes from dotCSS & dotJS 2018
+aliases:
+    - /blog/2018/11/21/my-notes-from-dotcss-dotjs-2018.html
+    - /blog/2018/11/21/My-notes-from-dotCSS-dotJS-2018/
 ---
 
 For the third year in a row I have attended the largest JavaScript conference in Europe: [dotJS](https://www.dotjs.io/). This time I travelled with my amazing collagues from [DAZN](https://engineering.dazn.com/) and we had a blast!
@@ -14,7 +18,7 @@ In this short blog post I want to share a few of the things that I learnt during
 
 ## Variable fonts
 
-![grass-variable-fonts-gif]({{site.url}}/img/2018/11/grass-variable-fonts.gif)
+![grass-variable-fonts-gif](/img/2018/11/grass-variable-fonts.gif)
 
 [View the source in CodePen](https://codepen.io/mandymichael/pen/YYaWop/?editors=0100)
 
@@ -32,7 +36,7 @@ If you want to learn more about it, I've collected some useful links:
 
 ## The State of JavaScript 2018
 
-![state-of-js-2018]({{site.url}}/img/2018/11/state-of-js-2018.png)
+![state-of-js-2018](/img/2018/11/state-of-js-2018.png)
 
 > We surveyed over 20,000 JavaScript developers to figure out what they're using, what they're happy with, and what they want to learn. And the result is a unique collection of stats and insights that will hopefully help you make your own way through the JavaScript ecosystem.
 

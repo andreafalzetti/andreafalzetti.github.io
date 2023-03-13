@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2022-01-17T20:00:00Z"
-header-img: img/2021/docker-amazon-ecs.jpg
-subtitle: Deploying a Machine Learning container to AWS ECS Fargate
-tags: gfpgan, machinelearning, fargate, docker
+description: Deploying a Machine Learning container to AWS ECS Fargate
+tags: 
+    - machine learning
+    - gfpgan
+    - aws fargate
+    - docker
 title: Deploying GFPGAN to AWS using Docker and Fargate
+aliases:
+    - /blog/2022/01/17/deploying-gfpgan-to-aws-using-docker-and-fargate.html
+    - /blog/2022/01/17/Deploying-GFPGAN-to-AWS-using-Docker-and-Fargate/
 ---
 
 > This post aims to help you deploy [GFPGAN](https://github.com/TencentARC/GFPGAN) on AWS using ECS Fargate.

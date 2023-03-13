@@ -1,12 +1,17 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-10-22T00:32:00Z"
-header-img: img/post-bg-04.jpg
-subtitle: using node.js and recursion
-tags: nodejs javascript snippets
+description: using node.js and recursion
+tags: 
+  - nodejs 
+  - javascript 
+  - snippets
 title: Render ES6 javascript template literals contained in a variable
+aliases:
+    - /blog/2016/10/22/render-es6-javascript-template-literals-contained-variable.html
+    - /blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/
 ---
 
 ## Challenge <i class="em em-checkered_flag"></i>

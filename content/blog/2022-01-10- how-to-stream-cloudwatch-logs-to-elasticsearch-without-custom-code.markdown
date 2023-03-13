@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2022-01-10T20:00:00Z"
-header-img: img/2021/docker-amazon-ecs.jpg
-subtitle: ""
-tags: functionbeat, cloudwatch, elasticsearch, aws
+description: ""
+tags:
+  - aws
+  - cloudwatch
+  - functionbeat
+  - elasticsearch
 title: How to stream CloudWatch logs to Elasticsearch without custom code
+aliases:
+    - /blog/2022/01/10/how-to-stream-cloudwatch-logs-to-elasticsearch-without-custom-code.html
+    - /blog/2022/01/10/How-to-stream-CloudWatch-logs-to-Elasticsearch-without-custom-code/
 ---
 
 ## Intro

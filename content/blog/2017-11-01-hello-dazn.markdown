@@ -1,12 +1,16 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2017-11-01T09:00:00Z"
-header-img: img/2017/11/arnold-exconde-289207.light.jpg
-subtitle: ""
-tags: job
+description: ""
+tags:
+  - announcement
+  - new job
 title: Hello DAZN
+aliases:
+    - /blog/2017/11/01/hello-dazn.html
+    - /blog/2017/11/01/Hello-DAZN/
 ---
 
 Today, I am happy to announce that I have joined [DAZN](https://dazn.com) *(pronounced "Da Zone")*, a revolutionary sports streaming service.

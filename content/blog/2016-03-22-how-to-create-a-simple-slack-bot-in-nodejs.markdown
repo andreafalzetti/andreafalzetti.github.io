@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-03-22T09:00:00Z"
-header-img: img/post-bg-01.jpg
-subtitle: that interacts with a CalDAV calendar
-tags: nodejs caldav slack bot
+description: that interacts with a CalDAV calendar
+tags:
+  - nodejs 
+  - caldav 
+  - slack
+  - bot
 title: How to create a simple Slack Bot in Node.js
+aliases:
+    - /blog/2016/03/22/how-to-create-a-simple-slack-bot-in-nodejs.html
+    - /blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js
 ---
 
 In this post I want to help you creating a *simple Slack bot with Node.js*.
@@ -18,7 +24,7 @@ In this article, we are going to integrate the Slack Incoming Webhooks which all
 
 The application created in this example reads the events from a calendar and sends the daily events to a Slack channel. At [Activate Media](http://activate.co.uk) we use this bot everyday. Check out [The Activate bot story](https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292) for more informations.
 
-![slack-plannerbot-example]({{site.url}}/img/slack-plannerbot-example.jpg)
+![slack-plannerbot-example](/img/slack-plannerbot-example.jpg)
 
 ## Step 1: Install Node.js ##
 
@@ -30,7 +36,7 @@ If you have Node installed on your machine, you can skip this step. If not, foll
 
 Once you have Node & npm installed, check what version you are running:
 
-![my-node-version]({{site.url}}/img/my-node-version.jpg)
+![my-node-version](/img/my-node-version.jpg)
 
 As you can see I'm using `node v4.4.2` and `npm 2.15.0`.
 
@@ -231,7 +237,7 @@ function getTodayEvents(cb) {
 
 Our team is located in different timezones, so the message will be localized in 3 different times. You can change this in `var timezones`;
 
-<img src="{{site.url}}/img/activate-plannerbot-smartphone-view.png" alt="Screenshot" class="img-responsive" style="width: 50%;">
+<img src="/img/activate-plannerbot-smartphone-view.png" alt="Screenshot" class="img-responsive" style="width: 50%;">
 
 {{< highlight javascript >}}
 function postTodayEvents(events, cb) {
@@ -386,7 +392,7 @@ function stripslashes(str) {
 
 From the root folder of your application, run `npm start` or `node index.js`. You should see something like this:
 
-![PlannerBot-Start-Output]({{site.url}}/img/plannerbot-start-output.jpg)
+![PlannerBot-Start-Output](/img/plannerbot-start-output.jpg)
 
 Now you are ready to call your API Endpoint at your-app-domain`/today` and if you have configured everything correctly, your bot will post a message on Slack with your events for today.
 

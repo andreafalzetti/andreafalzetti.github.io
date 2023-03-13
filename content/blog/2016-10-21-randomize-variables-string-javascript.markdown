@@ -1,12 +1,17 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-10-21T12:15:00Z"
-header-img: img/post-bg-06.jpg
-subtitle: using pipe and square brakets
-tags: nodejs javascript snippets
+description: using pipe and square brakets
+tags:
+  - nodejs
+  - javascript
+  - snippets
 title: Randomize variables in a string in javascript
+aliases:
+    - /blog/2016/06/05/new-plugin-passwordless-net-node-cache-store.html
+    - /blog/2016/10/21/randomize-variables-string-javascript.html
 ---
 
 ## Challenge

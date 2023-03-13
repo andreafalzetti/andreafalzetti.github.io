@@ -1,12 +1,15 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2018-04-17T00:00:00Z"
-header-img: img/2018/10/hammer-hand-tools-measuring-tape-lite.jpg
-subtitle: DX = Developer Experience
-tags: null
+description: DX = Developer Experience
+tags:
+  - developer experience
 title: Tools to boost your DX
+aliases:
+    - /blog/2018/10/25/10-tools-to-boost-your-developer-experience.html
+    - /blog/2018/04/17/Tools-to-boost-your-DX/
 ---
 
 Whether you are working on the back-end or the front-end, having the *right tool for the job*, can really make a difference some times.

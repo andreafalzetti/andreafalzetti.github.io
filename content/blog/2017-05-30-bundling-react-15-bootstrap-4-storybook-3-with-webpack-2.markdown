@@ -1,12 +1,20 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2017-05-30T09:00:00Z"
-header-img: img/post-bg-11.jpg
-subtitle: With few alpha versions
-tags: javascript, react, storybook, webpack, bootstrap, sass
+description: With few alpha versions
+tags: 
+  - javascript
+  - react
+  - storybook
+  - webpack
+  - bootstrap
+  - sass
 title: Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2
+aliases:
+    - /blog/2017/05/30/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2.html
+    - /blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/
 ---
 
 How many times did it happen to you that you were debugging some code and at the end of the day you didn't manage to find a solution? How frustrating is that?

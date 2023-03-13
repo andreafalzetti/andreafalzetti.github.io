@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2016-06-05T19:58:00Z"
-header-img: img/post-bg-05.jpg
-subtitle: My first package published on NPM
-tags: nodejs passwordless npm package
+description: My first package published on NPM
+tags: 
+  - nodejs 
+  - passwordless 
+  - npm 
+  - open source
 title: New plugin for Passwordless.net based on Node-Cache
+aliases:
+    - /blog/2016/06/05/new-plugin-passwordless-net-node-cache-store.html
+    - /blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/
 ---
 
 Yesterday I've published my first [npm package](https://www.npmjs.com/package/passwordless-nodecache) and I'm feeling quite proud. I've been programming in NodeJS for a few months now and I have to say, I love the concept behind **npm**. The fact that you can rely on _a bunch of packages ready to be used_, installable in few seconds that are often really well written, tested and documented and last but not least open-source, is just great.

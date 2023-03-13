@@ -1,12 +1,20 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2017-04-17T19:00:00Z"
-header-img: img/macbook-stickers.jpg
-subtitle: in Slack incoming webhook attachments
-tags: javascript nodejs datadog slack chatbots webhooks
+description: in Slack incoming webhook attachments
+tags: 
+    - nodejs 
+    - javascript
+    - datadog
+    - slack 
+    - chatbots 
+    - webhooks
 title: Datadog PNG snapshot not showing
+aliases:
+    - /blog/2017/04/17/datadog-png-snapshot-not-showing.html
+    - /blog/2017/04/17/Datadog-PNG-snapshot-not-showing/
 ---
 
 ## Issue <i class="em em-rage4"></i>
@@ -14,7 +22,7 @@ If you are here, you have probably experienced the same issue I did using the [D
 
 I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:
 
-![Datadog Slack Example]({{site.url}}/img/attachment_example_datadog.png)
+![Datadog Slack Example](/img/attachment_example_datadog.png)
 
 The problem I was facing was that the image was missing or simply not displaying! But, whenever I opened the URL of the snapshot in the browser or using the [Slack Message Builder](https://api.slack.com/docs/messages/builder) there!
 

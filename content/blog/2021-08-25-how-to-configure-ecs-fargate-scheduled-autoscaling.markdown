@@ -1,12 +1,18 @@
 ---
 author: Andrea Falzetti
-categories: blog
-comments: true
+categories:
+  - blog
 date: "2021-08-25T07:35:00Z"
-header-img: img/2021/docker-amazon-ecs.jpg
-subtitle: Optimise your AWS bill leveraging Scheduled Autoscaling
-tags: aws ecs autoscaling fargate
+description: Optimise your AWS bill leveraging Scheduled Autoscaling
+tags:
+  - aws
+  - ecs
+  - autoscaling
+  - fargate
 title: How to configure ECS Fargate Scheduled Autoscaling
+aliases:
+    - /blog/2021/08/25/how-to-configure-ecs-fargate-scheduled-autoscaling.html
+    - /blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/
 ---
 
 You are looking at configuring **ECS Fargate scheduled autoscaling**, and you're feeling a bit lost?
