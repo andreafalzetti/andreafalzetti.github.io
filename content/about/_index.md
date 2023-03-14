@@ -37,13 +37,13 @@ I've experience working at enterprise level companies with millions of req/s as 
 I've also worked with the following technologies:
 
 - `PHP`
-- `gRPC`
+- `gRPC`, `Protobuf`
 - `MySql`, `Postgres`, `MongoDB`, `DynamoDB`,  `OrientDB`, `Neo4j`, `FaunaDB`
 - `Kotlin`, `Java`, `IntelliJ SDK`
 - `RabbitMQ`
 - `Elasticsearch`, `Solr`
-- `Machine Learning`, `GAN`f
-- `Tailwind`
+- `Machine Learning`, `Python`, `TensorFlow`, `GAN`
+- `Tailwind`, `Bootstrap`, `Material`, `Antd`
 
 and much more.
 

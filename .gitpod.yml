@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Hugo
+    command: |
+      hugo server
+
+ports:
+  - port: 1313
+    visibility: private
+    onOpen: open-preview
