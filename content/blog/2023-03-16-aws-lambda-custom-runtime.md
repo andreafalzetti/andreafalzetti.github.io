@@ -97,4 +97,6 @@ Let me explain:
 
 --- 
 
+Disclaimer: The cold start time will most likely increase using a custom runtime especially the one I've provided as example. In my case I've noticed `1.2 seconds` which is much higher that what other Lambdas only using Node.js experience. However, because this is not user-facing or its latency matter, for me it's not a big deal. Take it into account if you are building APIs for example.
+
 That should be it, I hope this guide is helpful to someone!
