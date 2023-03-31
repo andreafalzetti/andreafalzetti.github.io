@@ -6,7 +6,7 @@ tags:
   - aws
   - lambda
   - serverless
-title: "AWS Lambda: Lessons learned over 5 years and 100 lambda functions in production"
+title: "AWS Lambda: Lessons learned over 5 years and 100 functions in production"
 description: "Our hands-on experience: the good & the bad"
 ---
 
