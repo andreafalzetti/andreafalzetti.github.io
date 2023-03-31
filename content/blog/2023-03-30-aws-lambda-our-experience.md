@@ -10,7 +10,7 @@ title: "AWS Lambda: Lessons learned over 5 years and 100 functions in production
 description: "Our hands-on experience: the good & the bad"
 ---
 
-At [onoranzefunebricloud.com](https://onoranzefunebricloud.com) we provide funeral agencies with digital solutions to do their best work, and to build such complex tools we we use a combination of AWS services including dockerized applications in Fargate and lot of Serverless tools such as Lambda.
+At [onoranzefunebricloud.com](https://onoranzefunebricloud.com) we provide funeral agencies with digital solutions to do their best work, and to build such complex tools we use a combination of AWS services including dockerized applications in Fargate and lot of Serverless tools such as Lambda.
 
 Over the years, as we introduced more functionalities we've also grown our usage of Lambda, and as of today we count over 100 Lambda functions in production.
 
