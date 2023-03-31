@@ -43,7 +43,7 @@ I've organized the content in 4 sections:
 
 1. **Too many Lambdas**: Having too many Lambdas to update could result in a maintenance burden. For example, some of the first Lambdas we built back in 2017 were running in Node.js 14 which AWS has deprecated. We were not planning to work on those, so for us that was unplanned work that we had to undertake to avoid being stuck and blocked in making new changes to those Lambdas.
 
-2. **Expensive if misused**: Lambda is not a silver bullet, in fact, if misused it can lead to very expensive bills. Using it for high-load or long-running tasks, it will definitely make you incur in pricy bills. Choose carefully how to use it.
+2. **Expensive if misused**: Lambda is not a silver bullet, in fact, if misused it can lead to very expensive bills. Using it for high-load or long-running tasks, it will definitely make you incur in expensive bills. Choose carefully how to use it.
 
 3. **Configuration Expert**: Lambda has evolved a lot in the past 5 years. The initial concept: "take this code and run it" is slowly fading away over time, due to the addition of tons of configuration. You can still get started pretty quickly, but you can also get lost in fine tuning or configuring your function.
 
