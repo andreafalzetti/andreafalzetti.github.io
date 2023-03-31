@@ -57,7 +57,7 @@ Lambda is great for gluing together components, building event-driven systems an
 
 ### 📟 Get paged when it fails
 
-Your code will fail and you want know when that happens. We use `serverless-plugin-aws-alerts` to instrument CloudWatch alarms and dashboards for our Lambdas and [OpsGenie](https://www.atlassian.com/software/opsgenie) to page us on Slack or on our phones. 
+Your code will fail and you want to know when that happens. We use `serverless-plugin-aws-alerts` to instrument CloudWatch alarms and dashboards for our Lambdas and [OpsGenie](https://www.atlassian.com/software/opsgenie) to page us on Slack or on our phones. 
 
 You need to configure OpsGenie to use SNS and then the simplest approach is alert on failures, for example `serverless.yml`:
 
