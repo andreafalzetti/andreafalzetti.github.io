@@ -11,13 +11,17 @@ social:
   gmail: 
 about:
   enable: true
-  content: Senior Software Engineer @ [Okteto](https://okteto.com) · (Ex-[Gitpod](https://gitpod.io) · Ex-[DAZN](https://dazn.com)) · Co-Founder [@OnoranzeFunebriCloud](https://onoranzefunebricloud.com) · AWS Community Builder · DevX 🔥
+  content: Tech Lead @ [Okteto](https://okteto.com) · (Ex-[Gitpod](https://gitpod.io) · Ex-[DAZN](https://dazn.com)) · Co-Founder [@OnoranzeFunebriCloud](https://onoranzefunebricloud.com) · AWS Community Builder · DevX 🔥
   button:
     btnText: Find out more
     URL: "/about"
 experience:
   enable: true
   item:
+    - logo: /img/okteto.png
+      title: Okteto
+      company: Tech Lead
+      duration: Oct 2023
     - logo: /img/okteto.png
       title: Okteto
       company: Senior Software Engineer 
