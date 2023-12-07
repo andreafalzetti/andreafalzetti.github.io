@@ -6,7 +6,7 @@ author : "Sam Robbins"
 authorImage : "images/about/profile.jpg"
 ---
 
-👋 I'm Andrea, a Staff Software Engineer and AWS Community Builder based in London, UK. I am passionate about building products and tools that bring value to people. I have been crafting software since 2010.
+👋 I'm Andrea, a Teach Lead & Staff Software Engineer and AWS Community Builder based in Europe. I am passionate about building products and tools that bring value to people. I have been crafting software since 2010.
 
 Since 2021 I have been working within the Developer Experience space, empowering other developers have a better experience doing their work, every day.
 
