@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="10 things you should NOT do when writing JavaScript code">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">The Picasso code</h1>
+    <p class="uk-text-center uk-text-lead">10 things you should NOT do when writing JavaScript code</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/react/" style="margin-right: 8px"
+        >#react</a
+      >
+      <a href="http://localhost:1313/tags/javascript/" style="margin-right: 8px"
+        >#javascript</a
+      >
+      <a href="http://localhost:1313/tags/bad-practices/" style="margin-right: 8px"
+        >#bad practices</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Oct 09, 2017</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>Recently, I have been reviewing the following JavaScript code, and I found so many issues that I have decided to discuss them here. First of all, I am not trying to embarrass anyone, so I am not mentioning where this comes from. With this post, I want to use bad examples to promote and remind all of us, including myself, to use common sense and best practices when it comes to writing new code.</p>
+<p>We will look into JavaScript code, but the concepts apply to any language.</p>
+<p>I named it, <strong>Picasso code</strong>:</p>
+<p>{% gist andreafalzetti/1cd9e8c9cd5af3b37e8b2f77d68a87df %}
+<em>This is just a sample of the component</em></p>
+<p>With a quick read of the code above, you will immediately see that:</p>
+<h3 id="1-the-class-is-called-example">1. The class is called <code>Example</code></h3>
+<p>Always give <strong>meaningful names</strong> to classes, methods and variables. It will help your future self when you need to debug or extend the code, and more importantly, it will help your team understand you. If you copy &amp; paste from StackOverflow, have the decency to adjust the code according to your project.</p>
+<h3 id="2-arbitrary-javascript-syntax">2. Arbitrary JavaScript syntax</h3>
+<p>Be <strong>consistent</strong> in your code and avoid mixing old JavaScript syntax with ES6/ES7 all the time. A mix of callbacks, Async/Await and ES6 .then() promises can be confusing. Sometimes using an arrow function and sometimes not. Using <strong>var</strong>, <strong>let</strong> and <strong>const</strong> thoughtlessly. Reading someone else code written like this is <strong>frustrating</strong>. Don&rsquo;t do this to your team.</p>
+<h3 id="3-mix-of-import--require">3. Mix of import / require</h3>
+<p>Mixing <strong>require</strong> and <strong>import</strong> is considered a bad practice, which might also cause bugs, as pointed out by <a href="https://twitter.com/dan_abramov/status/883375646357041152">@dan_abramov</a>, <code>import</code> and <code>require</code> should not be mixed.</p>
+<!-- raw HTML omitted -->
+<h3 id="4-the-component-is-1600-lines-long">4. The component is 1600+ lines long</h3>
+<p>Way too much for what it does, the component is <strong>unreadable</strong> and <strong>untestable</strong>. All methods are coupled together. Try to keep the components short and simple. If you can, write the code using a decoupling pattern.</p>
+<h3 id="5-lack-of-readability">5. Lack of readability</h3>
+<p>I belong to the group of developers who think that comments in code are not needed. If your code is clear and organised, there is no need to explain what you&rsquo;re doing. I use <a href="http://usejsdoc.org/">JSDoc</a> comments to describe function signatures, but besides that, I don&rsquo;t comment my code. I think that being able to write easy-to-understand code is a strong skill which makes a dev a good dev. If you are not sure, the code you have just written would be easy to understand later in the future, go back to it immediately and try to make it clearer. If you can&rsquo;t make it clearer changing the code, use comments as a last resort.</p>
+<h3 id="7-no-tests-at-all">7. No tests at all</h3>
+<p>There are no tests in place to see if the code is stable and working as expected. Having any sort of automated tests will help you building a better application and providing a better experience to the final users. Tests help you shipping better code to production.</p>
+<h3 id="5-the-core-react-files-has-been-manually-changed">5. The core React files has been manually changed</h3>
+<p>In order to solve an issue he had, the developer thought that it was a good idea to change one of the React core files. <strong>Avoid this at all costs</strong>, if you have any issue with a third-party tool, raise it on their GitHub repository and try to work with them. In this instance, I have noticed that a more recent version of React Native has included the change that the developer needed so it would have been enough upgrading.</p>
+<h3 id="6-inconsistent-use-of-semicolons">6. Inconsistent use of semicolons</h3>
+<p>In JavaScript they are not mandatory, but decide, use them or not. Please do not mix. Try to be consistent with your coding style and syntax rules. A good tool to help you in such mission is <a href="https://eslint.org/">ESLint</a>.</p>
+<h3 id="8-missing-proptypes">8. Missing PropTypes</h3>
+<p>The component uses nearly 30 props and none has been defined or validated at all. PropTypes in React helps you preventing bugs, using type-checking.</p>
+<h3 id="9-the-component-connects-to-redux-directly">9. The component connects to Redux directly</h3>
+<p>It&rsquo;s a best practice to use a Container component to connect to the Redux state, in this case, the component and the container are the same things.</p>
+<h3 id="10-no-linting">10. No linting</h3>
+<p>Start using <a href="https://eslint.org/">ESLint</a>. It helps writing better quality code with fewer errors. It sets up very quickly on your machine, and you can plug it in, in your project very smoothly using an existing set of rules. One of the most popular is the <a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a>.</p>
+<h3 id="wrap-up">Wrap up</h3>
+<p>Outsiders such as Project Managers, CEOs, Investors, often ignore this or don&rsquo;t consider it an issue, but, in my opinion, <strong>it really is</strong>. Your product is not well structured or organised. It&rsquo;s is messy and unstable. It will be difficult to involve experienced developers to improve it or change it without starting from scratch, which means you have wasted a lot of time and money.</p>
+<h3 id="related-links">Related links</h3>
+<ol>
+<li><a href="https://medium.com/@andreafalzetti/building-an-accessible-and-re-usable-react-component-e9de1c4c9013">Building an accessible and re-usable React Component</a></li>
+<li><a href="https://engineering.opsgenie.com/i-wish-i-knew-these-before-diving-into-react-301e0ee2e488">I wish I knew these before diving into React</a></li>
+<li><a href="https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a">Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2</a></li>
+<li><a href="https://codeburst.io/the-first-book-on-front-end-reactive-architectures-6e58c661e5ac">The first book on Front-end Reactive Architectures</a></li>
+</ol>
+<p><a href="https://unsplash.com/photos/_Qin-dMNgFs">Photo by Daniel Posthuma on Unsplash</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

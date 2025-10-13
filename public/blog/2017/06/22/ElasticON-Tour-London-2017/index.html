@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Developer notes">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Elastic{ON} Tour London 2017</h1>
+    <p class="uk-text-center uk-text-lead">Developer notes</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/elasticsearch/" style="margin-right: 8px"
+        >#elasticsearch</a
+      >
+      <a href="http://localhost:1313/tags/conference/" style="margin-right: 8px"
+        >#conference</a
+      >
+      <a href="http://localhost:1313/tags/full-stack/" style="margin-right: 8px"
+        >#full-stack</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Jun 22, 2017</p>
+    <p class="uk-text-center">Reading time: 3 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p><a href="https://www.elastic.co/elasticon/tour/2017/london">Elastic{ON} Tour 2017</a> was held today in London at <a href="https://www.thebrewery.co.uk/">The Brewery</a>, and I had the chance to attend it. The Elastic team has done a great job in organising the event, and I would like to thank them for the beautiful day. The location and catering were great, and so was the training Lab on <a href="https://www.elastic.co/blog/timelion-timeline">Timelion</a>, pronounced &ldquo;<em>Timeline</em>&rdquo;, is a Kibana module that helps to visualise time series data.</p>
+<p>The day started with an introduction to Elastic, followed by an hands-on training on <em>Time Series with Timelion</em> for about 45 minutes.</p>
+<p><img src="/img/2017/06/elastic-tour-london-2017-timelion-android-vs-ios.jpg" alt="elastic-tour-london-2017-timelion-android-vs-ios"></p>
+<p>The lab material included a dataset of ~300,000 Apache logs entries. In the example above, we are comparing <em>iOS</em> vs. <em>Android</em> hits during the last <em>30 days</em> with an interval of <em>1d</em>.</p>
+<p>The query below instead plots the average amount of data downloaded from Great Britain in comparison with Ireland, over the past month.</p>
+<p><img src="/img/2017/06/elastic-tour-london-2017-timelion-countries-query.jpg" alt="elastic-tour-london-2017-timelion-countries-query"></p>
+<p>After the lab, the Founder &amp; CEO, <a href="http://thedudeabides.com/">Shay Banon</a>, took the stage and talked about their exciting journey, starting as a distributed search engine ending becoming not only that. Today, Elastic is the most popular <strong>Search</strong> and <strong>Logging</strong> solution for modern software applications.</p>
+<p>My goal for today was to take home some general knowledge about Elasticsearch and its stack but also put my hands into the product during the lab.</p>
+<p>Through the talks I took some notes that I think might be useful to share:</p>
+<h2 id="the-elastic-stack">The Elastic Stack</h2>
+<p>Four open-source components make the suite:</p>
+<ul>
+<li><strong>Kibana</strong> - doing the data visualisation job</li>
+<li><strong>Elasticsearch</strong> - distributed, JSON-based search and analytics engine</li>
+<li><strong>Logstash</strong> -  events and logs collection pipeline</li>
+<li><strong>Beats</strong> - lightweight agents that send data into elastic</li>
+</ul>
+<p><img src="/img/2017/06/the-elastic-stack-thumb.png" alt="the-elastic-stack-thumb"></p>
+<h2 id="facts">Facts</h2>
+<ul>
+<li>The first version of Elasticsearch, <strong>0.40</strong>, was published in August 2010.</li>
+<li>The latest version is <strong>5.4</strong> but <strong>6.0</strong> will be released soon.</li>
+<li>The search engine of Elasticsearch is based on <strong><a href="https://lucene.apache.org/core/">Apache Lucene</a></strong>.</li>
+<li>Elasticsearch is developed in <strong>Java</strong>.</li>
+<li>Kibana was originally written in <strong>Angular JS (1.4.7)</strong> and <a href="https://github.com/elastic/kibana/issues/10271">earlier this year</a> they have migrated to <strong>React</strong> 15.</li>
+<li>The company has a distributed team in 40 countries and promotes remote work.</li>
+<li>Main Headquarters are in <strong>Amsterdam</strong> 🇳🇱, <strong>San Francisco</strong> 🇺🇸 and <strong>London</strong> 🇬🇧.</li>
+</ul>
+<p><em>Sources: Ask me Anything stand at the conference <a href="https://en.wikipedia.org/wiki/Elasticsearch">Wikipedia</a>.</em></p>
+<h2 id="elastic-cloud">Elastic Cloud</h2>
+<p>Elastic Cloud is the official hosted solution for Elasticsearch and Kibana. Although many of you may be familiar with AWS Elasticsearch, the two have a very different offering.</p>
+<p>I won&rsquo;t go into many details as offers change all the time but what the Elastic team has told me is that AWS is 3-4 months behind with version updates and you are generally more limited in the configuration of the product.</p>
+<p>I think it worths giving it a try also because they offer a <a href="https://www.elastic.co/cloud/as-a-service/signup">free trial for 14 days</a> with no credit card required (❤️).</p>
+<h2 id="machine-learning-">Machine Learning 🍭</h2>
+<p>Earlier this year Elastic has announced the first release of machine learning features for the Elastic Stack. At the moment the main use case is <strong>anomaly detection</strong> but I am sure in the future we will see much more.</p>
+<p>Please note that this feature is part of <strong><a href="https://www.elastic.co/guide/en/x-pack/current/xpack-introduction.html">x-pack</a></strong>, an enterprise extension that bundles advanced features such as security, alerting, monitoring, reporting, etc.</p>
+<h2 id="apache-kafka">Apache Kafka</h2>
+<p>The company founded by the creators of <strong><a href="https://kafka.apache.org/">Apache Kafka</a></strong>, <a href="https://www.confluent.io/">confluent</a>, was one of the sponsors today. I met them, and thanks to a quick chat I found out a bit more about it. Apache Kafka is an open-source streaming platform. A typical use case is the publish / subscribe, but what caught my attention is the possibility of using Kafka as messaging bus in a microservices architecture. Find below, a couple of interesting links about this.</p>
+<h2 id="resources">Resources</h2>
+<p>Want to know more about Elastic? Here some useful (I hope)
+links:</p>
+<ul>
+<li><a href="https://www.elastic.co/elasticon/updates">More dates for the Elasti{on} Tour</a></li>
+<li><a href="http://www.youtube.com/watch?v=fEsmydn747c">dotScale 2013 - Shay Banon - Why we built ElasticSearch</a> - <strong>YouTube</strong></li>
+<li><a href="https://www.quora.com/How-did-Shay-Banon-start-writing-Elasticsearch-How-much-knowledge-does-he-have-on-programming-stuff">How did Shay Banon start writing Elasticsearch?</a> - <strong>Quora</strong></li>
+<li><a href="https://www.elastic.co/cloud/as-a-service">Elastic Cloud as a service</a> - <strong>Elastic</strong></li>
+<li><a href="https://github.com/elastic/elasticsearch">Elasticsearch repository</a> - <strong>GitHub</strong></li>
+<li><a href="https://www.elastic.co/blog/hosted-elasticsearch-services-roundup-elastic-cloud-and-amazon-elasticsearch-service">Elastic Cloud !== Amazon Elasticsearch Service</a></li>
+<li><a href="https://www.elastic.co/blog/introducing-machine-learning-for-the-elastic-stack">Introducing Machine Learning for the Elastic Stack</a></li>
+<li><a href="https://www.slideshare.net/ConfluentInc/microservices-in-the-apache-kafka-ecosystem">Microservices in the Apache Kafka Ecosystem</a></li>
+<li><a href="https://medium.com/@ulymarins/an-introduction-to-apache-kafka-and-microservices-communication-bf0a0966d63">An introduction to Apache Kafka and microservices communication</a></li>
+<li><em>I will add the link to the slides &amp; videos of the event as soon as they are published.</em></li>
+</ul>
+<h2 id="work-with-me">Work with me</h2>
+<p>By the way, if you also enjoy attending conferences while working on exciting projects check out our vacant position for a <a href="http://bit.ly/Activate-Jobs-FrontEnd">Frontend Developer at Activate</a>.</p>
+<p>Thanks for reading!</p>
+<p><img src="/img/2017/06/elastic-tour-london-2017-gadgets.jpg" alt="elastic-tour-london-2017-gadgets"></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

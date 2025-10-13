@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Optimise your AWS bill leveraging Scheduled Autoscaling">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">How to configure ECS Fargate Scheduled Autoscaling</h1>
+    <p class="uk-text-center uk-text-lead">Optimise your AWS bill leveraging Scheduled Autoscaling</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/aws/" style="margin-right: 8px"
+        >#aws</a
+      >
+      <a href="http://localhost:1313/tags/ecs/" style="margin-right: 8px"
+        >#ecs</a
+      >
+      <a href="http://localhost:1313/tags/autoscaling/" style="margin-right: 8px"
+        >#autoscaling</a
+      >
+      <a href="http://localhost:1313/tags/fargate/" style="margin-right: 8px"
+        >#fargate</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Aug 25, 2021</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>You are looking at configuring <strong>ECS Fargate scheduled autoscaling</strong>, and you&rsquo;re feeling a bit lost?</p>
+<p>That&rsquo;s how I felt a few days ago. To set this up, I struggled for a couple of days. Unfortunately, the documentation and examples I found online didn&rsquo;t help me much, so once I figured it out, I decided to share a working code example using Terraform.</p>
+<p>To be on the same page, in this post, I am assuming that you know what you are doing, and you are aware that there are <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">different methods of autoscaling</a>. We will look at configuring scheduled autoscaling which may not be the best choice for your project.</p>
+<p>Let&rsquo;s start by defining scheduled autoscaling, what it means and my use case for it. I am also very curious to know your story and how you&rsquo;ll leverage this feature. If you found this helpful, let me know in the comments.</p>
+<h2 id="what-is-scheduled-autoscaling">What is Scheduled Autoscaling?</h2>
+<p>Scheduled autoscaling means automatically increasing or decreasing the number of computing resources at a specific time of the day.</p>
+<h2 id="my-use-case-for-scheduled-autoscaling">My use case for Scheduled Autoscaling</h2>
+<p>My main goal is <strong>cost optimisation</strong>. I recently ran out of the $10,000 credits provided by AWS Activate for Startups, and the highest cost on the bill was the ECS cluster. If you&rsquo;re interested in that, I am currently writing another blog post describing more in detail that story.</p>
+<h2 id="code-example-using-terraform">Code Example (using Terraform)</h2>
+<p>Finished talking, let&rsquo;s look at some Terraform code examples.</p>
+<p>I&rsquo;ll introduce the resources that you need one by one.</p>
+<h3 id="01-create-an-autoscaling-target">01. Create an Autoscaling Target</h3>
+<p>If you want to configure autoscaling for ECS, the Autoscaling Target is your ECS Service, example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#75715e"># autoscaling.tf
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_appautoscaling_target&#34;</span> <span style="color:#e6db74">&#34;service&#34;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">service_namespace</span>  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ecs&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scalable_dimension</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ecs:service:DesiredCount&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">min_capacity</span>       <span style="color:#f92672">=</span> var.<span style="color:#a6e22e">scheduled_min_capacity</span><span style="color:#75715e"> # 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">max_capacity</span>       <span style="color:#f92672">=</span> var.<span style="color:#a6e22e">scheduled_max_capacity</span><span style="color:#75715e"> # 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">resource_id</span>        <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;service/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">local</span>.<span style="color:#a6e22e">cluster_name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">local</span>.<span style="color:#a6e22e">service_name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The code above assumes you already have your ECS service provisioned, like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#75715e"># ecs-service.tf
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_ecs_service&#34; &#34;service&#34;</span> {
+</span></span><span style="display:flex;"><span>  name    <span style="color:#f92672">=</span> <span style="color:#66d9ef">local</span>.<span style="color:#66d9ef">service_name</span>
+</span></span><span style="display:flex;"><span>  cluster <span style="color:#f92672">=</span> <span style="color:#66d9ef">local</span>.<span style="color:#66d9ef">cluster_name</span>
+</span></span><span style="display:flex;"><span>  [...<span style="color:#66d9ef">omitted</span> <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">relevant</span>...]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="02-define-your-scheduled-actions">02. Define your Scheduled Actions</h3>
+<p>To scale in and out the service, you will need at least two scheduled actions, one to increase the number of desired tasks, the second one to decrease it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#75715e"># autoscaling.tf
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>...[<span style="color:#66d9ef">aws_appautoscaling_target</span> <span style="color:#66d9ef">code</span> <span style="color:#66d9ef">above</span> <span style="color:#66d9ef">omitted</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_appautoscaling_scheduled_action&#34; &#34;scale_service_out&#34;</span> {
+</span></span><span style="display:flex;"><span>  name               <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;${local.service_name}-scale-out&#34;</span>
+</span></span><span style="display:flex;"><span>  service_namespace  <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_appautoscaling_target</span>.<span style="color:#66d9ef">service</span>.<span style="color:#66d9ef">service_namespace</span>
+</span></span><span style="display:flex;"><span>  resource_id        <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_appautoscaling_target</span>.<span style="color:#66d9ef">service</span>.<span style="color:#66d9ef">resource_id</span>
+</span></span><span style="display:flex;"><span>  scalable_dimension <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_appautoscaling_target</span>.<span style="color:#66d9ef">service</span>.<span style="color:#66d9ef">scalable_dimension</span>
+</span></span><span style="display:flex;"><span>  schedule           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cron(0 6 * * ? *)&#34;</span>
+</span></span><span style="display:flex;"><span>  timezone           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Europe/London&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">scalable_target_action</span> {
+</span></span><span style="display:flex;"><span>    min_capacity <span style="color:#f92672">=</span> <span style="color:#66d9ef">var</span>.<span style="color:#66d9ef">scheduled_max_capacity</span><span style="color:#75715e"> # 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    max_capacity <span style="color:#f92672">=</span> <span style="color:#66d9ef">var</span>.<span style="color:#66d9ef">scheduled_max_capacity</span><span style="color:#75715e"> # 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_appautoscaling_scheduled_action&#34; &#34;scale_service_in&#34;</span> {
+</span></span><span style="display:flex;"><span>  name               <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;${local.service_name}-scale-in&#34;</span>
+</span></span><span style="display:flex;"><span>  service_namespace  <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_appautoscaling_target</span>.<span style="color:#66d9ef">service</span>.<span style="color:#66d9ef">service_namespace</span>
+</span></span><span style="display:flex;"><span>  resource_id        <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_appautoscaling_target</span>.<span style="color:#66d9ef">service</span>.<span style="color:#66d9ef">resource_id</span>
+</span></span><span style="display:flex;"><span>  scalable_dimension <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_appautoscaling_target</span>.<span style="color:#66d9ef">service</span>.<span style="color:#66d9ef">scalable_dimension</span>
+</span></span><span style="display:flex;"><span>  schedule           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cron(0 21 * * ? *)&#34;</span>
+</span></span><span style="display:flex;"><span>  timezone           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Europe/London&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">scalable_target_action</span> {
+</span></span><span style="display:flex;"><span>    min_capacity <span style="color:#f92672">=</span> <span style="color:#66d9ef">var</span>.<span style="color:#66d9ef">scheduled_min_capacity</span><span style="color:#75715e"> # 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    max_capacity <span style="color:#f92672">=</span> <span style="color:#66d9ef">var</span>.<span style="color:#66d9ef">scheduled_min_capacity</span><span style="color:#75715e"> # 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  depends_on <span style="color:#f92672">=</span> [<span style="color:#66d9ef">aws_appautoscaling_scheduled_action</span>.<span style="color:#66d9ef">scale_service_out</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In my case, for the dev cluster, I shut down all tasks for most of the day, while in prod I leave at least 1 and during office hours I have up to 3.</p>
+<p>To do that, you will also need the following variables:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#75715e"># vars.tf
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">variable</span> <span style="color:#e6db74">&#34;scheduled_min_capacity&#34;</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">variable</span> <span style="color:#e6db74">&#34;scheduled_max_capacity&#34;</span> {}
+</span></span></code></pre></div><p>For development:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#75715e"># config/dev/terraform.tfvars
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>scheduled_min_capacity <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>scheduled_max_capacity <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>And prodution:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#75715e"># config/prod/terraform.tfvars
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>scheduled_min_capacity <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>scheduled_max_capacity <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p>That&rsquo;s it. Next, let&rsquo;s understand how to validate and test these changes.</p>
+<h3 id="lets-test-it">Let&rsquo;s test it</h3>
+<p>Once you deploy those resources to verify that everything works, you can, of course, stare and refresh the ECS dashboard and see the number of ECS tasks increasing and decreasing. However, if you want a more efficient way, I&rsquo;d recommend using the aws-cli, because apparently, this information is not available on AWS Console.</p>
+<p>Run this command to list the existing scheduled actions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws application-autoscaling describe-scheduled-actions --service-namespace ecs
+</span></span></code></pre></div><p>The result, should look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ScheduledActions&#34;</span>: [        
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScheduledActionName&#34;</span>: <span style="color:#e6db74">&#34;&lt;SERVICE-NAME&gt;-scale-up&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScheduledActionARN&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:autoscaling:&lt;AWS-REGION&gt;:&lt;AWS-ACCOUNT-ID&gt;:scheduledAction:&lt;ID&gt;:resource/ecs/service/&lt;CLUSTER-NAME&gt;/&lt;SERVICE-NAME&gt;:scheduledActionName/&lt;SERVICE-NAME&gt;-scale-up&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ServiceNamespace&#34;</span>: <span style="color:#e6db74">&#34;ecs&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Schedule&#34;</span>: <span style="color:#e6db74">&#34;cron(0 6 * * ? *)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ResourceId&#34;</span>: <span style="color:#e6db74">&#34;service/&lt;CLUSTER-NAME&gt;/&lt;SERVICE-NAME&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScalableDimension&#34;</span>: <span style="color:#e6db74">&#34;ecs:service:DesiredCount&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScalableTargetAction&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;MinCapacity&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;MaxCapacity&#34;</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScheduledActionName&#34;</span>: <span style="color:#e6db74">&#34;&lt;SERVICE-NAME&gt;-scale-down&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScheduledActionARN&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:autoscaling:&lt;AWS-REGION&gt;:&lt;AWS-ACCOUNT-ID&gt;:scheduledAction:&lt;ID&gt;:resource/ecs/service/&lt;CLUSTER-NAME&gt;/&lt;SERVICE-NAME&gt;:scheduledActionName/&lt;SERVICE-NAME&gt;-scale-down&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ServiceNamespace&#34;</span>: <span style="color:#e6db74">&#34;ecs&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Schedule&#34;</span>: <span style="color:#e6db74">&#34;cron(0 23 * * ? *)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ResourceId&#34;</span>: <span style="color:#e6db74">&#34;service/&lt;CLUSTER-NAME&gt;/&lt;SERVICE-NAME&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScalableDimension&#34;</span>: <span style="color:#e6db74">&#34;ecs:service:DesiredCount&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScalableTargetAction&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;MinCapacity&#34;</span>: <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;MaxCapacity&#34;</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        } 
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can also check recent autoscaling activities (although this is also available on the ECS service Events page);</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws application-autoscaling describe-scaling-activities --service-namespace ecs
+</span></span></code></pre></div><p>output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ScalingActivities&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ActivityId&#34;</span>: <span style="color:#e6db74">&#34;a7edfe9b-b924-4468-a129-736ce0a06078&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ServiceNamespace&#34;</span>: <span style="color:#e6db74">&#34;ecs&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ResourceId&#34;</span>: <span style="color:#e6db74">&#34;service/&lt;CLUSTER-NAME&gt;/&lt;SERVICE-NAME&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ScalableDimension&#34;</span>: <span style="color:#e6db74">&#34;ecs:service:DesiredCount&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;Setting desired count to 1.&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Cause&#34;</span>: <span style="color:#e6db74">&#34;minimum capacity was set to 1&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;StartTime&#34;</span>: <span style="color:#e6db74">&#34;2021-08-24T06:00:16.520000+01:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;EndTime&#34;</span>: <span style="color:#e6db74">&#34;2021-08-24T06:00:47.551000+01:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;StatusCode&#34;</span>: <span style="color:#e6db74">&#34;Successful&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;StatusMessage&#34;</span>: <span style="color:#e6db74">&#34;Successfully set desired count to 1. Change successfully fulfilled by ecs.&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
+<p>Scheduled autoscaling is a simple way to introduce autoscaling in your ECS cluster.</p>
+<p>I find the concept of saving and optimising resources exciting. The idea of turning off the machine when we don&rsquo;t need it sounds the right thing to do.</p>
+<p>I wouldn&rsquo;t necessarily recommend using scheduled autoscaling to solve scalability challenges. For example, if you have unpredictable workloads, you might find <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html">Tracking Autoscaling</a> more suited.</p>
+<p>I hope you found this helpful. 🙏</p>
+<h3 id="sources">Sources</h3>
+<p>I used the following docs/blogs to learn how to configure scheduled autoscaling, and you might find them helpful too:</p>
+<ul>
+<li><a href="https://keita.blog/2018/01/29/aws-application-auto-scaling-for-ecs-with-terraform/">https://keita.blog/2018/01/29/aws-application-auto-scaling-for-ecs-with-terraform/</a></li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/appautoscaling_scheduled_action">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/appautoscaling_scheduled_action</a></li>
+<li><a href="https://gist.github.com/toricls/fea9d8a4eb606a27f6666a1abc6a6fd8">https://gist.github.com/toricls/fea9d8a4eb606a27f6666a1abc6a6fd8</a></li>
+</ul>
+<p>Also available on <a href="https://dev.to/andreafalzetti/how-to-configure-ecs-fargate-scheduled-autoscaling-556c">https://dev.to/andreafalzetti/how-to-configure-ecs-fargate-scheduled-autoscaling-556c</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

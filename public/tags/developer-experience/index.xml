@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer Experience on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/developer-experience/</link>
+    <description>Recent content in Developer Experience on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 17 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/developer-experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tools to boost your DX</title>
+      <link>http://localhost:1313/blog/2018/04/17/Tools-to-boost-your-DX/</link>
+      <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2018/04/17/Tools-to-boost-your-DX/</guid>
+      <description>&lt;p&gt;Whether you are working on the back-end or the front-end, having the &lt;em&gt;right tool for the job&lt;/em&gt;, can really make a difference some times.&lt;/p&gt;&#xA;&lt;p&gt;With this blog post, I want to share with you some of the tools that I use pretty much every day and I believe can be useful to any software developer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;&lt;strong&gt;jq, yq, xq&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://httpie.org/&#34;&gt;&lt;strong&gt;HTTPie&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.choosyosx.com/&#34;&gt;&lt;strong&gt;Choosy&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;&lt;strong&gt;Ag&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ptsochantaris/trailer&#34;&gt;&lt;strong&gt;Trailer&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira&#34;&gt;&lt;strong&gt;jira&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/hnarayanan/shpotify&#34;&gt;&lt;strong&gt;shpotify&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://now.sh/&#34;&gt;&lt;strong&gt;now&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kapeli.com/dash&#34;&gt;&lt;strong&gt;Dash&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.duetdisplay.com/&#34;&gt;&lt;strong&gt;duet&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-jq-yq-xq&#34;&gt;1. jq, yq, xq&lt;/h2&gt;&#xA;&lt;h4 id=&#34;handle-json-yaml-and-xml-in-the-terminal&#34;&gt;Handle JSON, YAML and XML in the terminal&lt;/h4&gt;&#xA;&lt;p&gt;&lt;code&gt;jq&lt;/code&gt;, &lt;code&gt;yq&lt;/code&gt; and &lt;code&gt;xq&lt;/code&gt; are command line tools that allow you dealing with JSON, YAML and XML documents directly from your shell. If you haven&amp;rsquo;t seen them before you may ask why someone would want to look at some JSON in the terminal?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

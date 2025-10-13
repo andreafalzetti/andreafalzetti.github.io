@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/javascript/</link>
+    <description>Recent content in Javascript on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 18 Oct 2017 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building an accessible and re-usable React Component</title>
+      <link>http://localhost:1313/blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/</link>
+      <pubDate>Wed, 18 Oct 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a&#34;&gt;one of my recent posts&lt;/a&gt; I talked about how I have introduced &lt;a href=&#34;https://storybook.js.org/&#34;&gt;Storybook&lt;/a&gt; to the team and how we adopted it in our development lifecycle.&lt;/p&gt;&#xA;&lt;p&gt;In this article, I want to share with you, my experience building an accessible &lt;strong&gt;custom input React component&lt;/strong&gt; and how I found Storybook a useful dev tool that helped me achieve my goal.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start!&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenge-&#34;&gt;Challenge 🤓&lt;/h2&gt;&#xA;&lt;p&gt;In this project, several views are sharing a similar piece of UI, a box with an icon and some text. In some cases, it also contains a button and an additional paragraph of text. I want the &lt;strong&gt;box&lt;/strong&gt; to be a separate React Component so I can re-use it across the application. I need to identify all common features and pass them as &lt;em&gt;props&lt;/em&gt; to the component so it will be able to behave differently in each instance. Given that this component will be a custom input, I want to make sure that the element is &lt;strong&gt;visible and usable&lt;/strong&gt; from &lt;strong&gt;screen readers&lt;/strong&gt;, it won&amp;rsquo;t take too long, and it will make a big difference for many users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Picasso code</title>
+      <link>http://localhost:1313/blog/2017/10/09/The-Picasso-code/</link>
+      <pubDate>Mon, 09 Oct 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/09/The-Picasso-code/</guid>
+      <description>&lt;p&gt;Recently, I have been reviewing the following JavaScript code, and I found so many issues that I have decided to discuss them here. First of all, I am not trying to embarrass anyone, so I am not mentioning where this comes from. With this post, I want to use bad examples to promote and remind all of us, including myself, to use common sense and best practices when it comes to writing new code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2</title>
+      <link>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</link>
+      <pubDate>Tue, 30 May 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</guid>
+      <description>&lt;p&gt;How many times did it happen to you that you were debugging some code and at the end of the day you didn&amp;rsquo;t manage to find a solution? How frustrating is that?&lt;/p&gt;&#xA;&lt;p&gt;Good news is, you will feel so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.&lt;/p&gt;&#xA;&lt;p&gt;Today, it was one of those days for me. I have spent long hours trying to make something work, and I eventually found a solution, so I thought it was a good thing to share it with the community.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Datadog PNG snapshot not showing</title>
+      <link>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</link>
+      <pubDate>Mon, 17 Apr 2017 19:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</guid>
+      <description>&lt;h2 id=&#34;issue&#34;&gt;Issue &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you have probably experienced the same issue I did using the &lt;a href=&#34;http://docs.datadoghq.com/api/#graph-snapshot&#34;&gt;Datadog programmatic API  v1&lt;/a&gt; to generate PNG snapshot of your metrics.&lt;/p&gt;&#xA;&lt;p&gt;I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/attachment_example_datadog.png&#34; alt=&#34;Datadog Slack Example&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The problem I was facing was that the image was missing or simply not displaying! But, whenever I opened the URL of the snapshot in the browser or using the &lt;a href=&#34;https://api.slack.com/docs/messages/builder&#34;&gt;Slack Message Builder&lt;/a&gt; there!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an extensible Chat Bot using JavaScript &amp; YAML</title>
+      <link>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</link>
+      <pubDate>Sun, 08 Jan 2017 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</guid>
+      <description>&lt;p&gt;In this post, I will share with you my experience in designing and coding an &lt;strong&gt;extensible&lt;/strong&gt; chat bot using &lt;strong&gt;YAML&lt;/strong&gt; and &lt;strong&gt;JavaScript&lt;/strong&gt;. I will show you that it&amp;rsquo;s not always required to use AI, ML, or NPL to make a great bot. This won&amp;rsquo;t be a step-by-step guide. My goal is to give you an overview of a project like this and inspire you to build your own.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/building-extensible-chat-bot-using-javascript-yaml/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build a JavaScript Microservices platform</title>
+      <link>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</link>
+      <pubDate>Sat, 31 Dec 2016 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Microservices&lt;/strong&gt; is one of the most popular topics in software development these days, as&lt;/p&gt;&#xA;&lt;p&gt;well as &lt;strong&gt;JavaScript&lt;/strong&gt; and &lt;strong&gt;chat bots&lt;/strong&gt;. In this post, I share my experience in designing and implementing a platform using a microservices architecture. I will also talk about which tools were picked for this platform and how they work together. Let’s start by giving you some context about the project.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/how-build-javascript-microservices-platform/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to fix broken base64 image using image-webpack and file-loader</title>
+      <link>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</link>
+      <pubDate>Fri, 11 Nov 2016 12:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you are probably trying to setup webpack in order to handle your images. The problem I was experiencing and tyring to document here is, after installing &lt;strong&gt;image-webpack&lt;/strong&gt; and &lt;strong&gt;file-loader&lt;/strong&gt; and using &lt;code&gt;&amp;lt;img src={require(&#39;logo.png&#39;)}/&amp;gt;&lt;/code&gt; the browser was displaying a broken image (encoded in base64).&lt;/p&gt;&#xA;&lt;p&gt;I have followed &lt;a href=&#34;http://www.davidmeents.com/how-to-set-up-webpack-image-loader/&#34;&gt;this article&lt;/a&gt; written by David which helps setting up &lt;strong&gt;webpack&lt;/strong&gt; and &lt;strong&gt;image-webpack-loader&lt;/strong&gt;, the problem I had was that the browser was displaying a broken image so after a little research I&amp;rsquo;ve found &lt;a href=&#34;https://github.com/webpack/file-loader/issues/35&#34;&gt;webpack/file-loader/issue/35&lt;/a&gt; which explains the reason of this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Render ES6 javascript template literals contained in a variable</title>
+      <link>http://localhost:1313/blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/</link>
+      <pubDate>Sat, 22 Oct 2016 00:32:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In the current project I&amp;rsquo;m working on, at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate&lt;/a&gt;, I am using &lt;code&gt;node.js&lt;/code&gt; and I have variables coming from a yaml file that contain ES6-like template literals, for example:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;messages:&#xA;- &amp;#34;Hey, ${user.name}, how are you feeling today?&amp;#34;&#xA;- &amp;#34;What&amp;#39;s the weather like in ${user.profile.city}?&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and I need to render the variables before sending the message to the client. As you might know, template literals, in order to be rendered need to be wrapped by backtick quotes, for example:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Randomize variables in a string in javascript</title>
+      <link>http://localhost:1313/blog/2016/10/21/Randomize-variables-in-a-string-in-javascript/</link>
+      <pubDate>Fri, 21 Oct 2016 12:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/21/Randomize-variables-in-a-string-in-javascript/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;&#xA;&lt;p&gt;I have a string that looks like:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;[Hi|Hello|Hey] ${user.name}! Would you like to [go for a walk|to the park]?&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;I need to render the text randomising the action (&lt;em&gt;go for a walk&lt;/em&gt; &lt;strong&gt;or&lt;/strong&gt; &lt;em&gt;to the park&lt;/em&gt;) so that the message looks slightly different every time that is sent. Each block of square brackets could contain &lt;em&gt;N&lt;/em&gt; variables (eg. &lt;code&gt;[walk|run|swim|play tennis]&lt;/code&gt;) and each message can contain multiple blocks of random substrings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

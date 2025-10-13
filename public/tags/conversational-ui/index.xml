@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conversational Ui on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/conversational-ui/</link>
+    <description>Recent content in Conversational Ui on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 08 Jan 2017 13:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/conversational-ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building an extensible Chat Bot using JavaScript &amp; YAML</title>
+      <link>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</link>
+      <pubDate>Sun, 08 Jan 2017 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</guid>
+      <description>&lt;p&gt;In this post, I will share with you my experience in designing and coding an &lt;strong&gt;extensible&lt;/strong&gt; chat bot using &lt;strong&gt;YAML&lt;/strong&gt; and &lt;strong&gt;JavaScript&lt;/strong&gt;. I will show you that it&amp;rsquo;s not always required to use AI, ML, or NPL to make a great bot. This won&amp;rsquo;t be a step-by-step guide. My goal is to give you an overview of a project like this and inspire you to build your own.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/building-extensible-chat-bot-using-javascript-yaml/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

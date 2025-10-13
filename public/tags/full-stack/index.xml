@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Full-Stack on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/full-stack/</link>
+    <description>Recent content in Full-Stack on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 22 Jun 2017 22:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/full-stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elastic{ON} Tour London 2017</title>
+      <link>http://localhost:1313/blog/2017/06/22/ElasticON-Tour-London-2017/</link>
+      <pubDate>Thu, 22 Jun 2017 22:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/06/22/ElasticON-Tour-London-2017/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.elastic.co/elasticon/tour/2017/london&#34;&gt;Elastic{ON} Tour 2017&lt;/a&gt; was held today in London at &lt;a href=&#34;https://www.thebrewery.co.uk/&#34;&gt;The Brewery&lt;/a&gt;, and I had the chance to attend it. The Elastic team has done a great job in organising the event, and I would like to thank them for the beautiful day. The location and catering were great, and so was the training Lab on &lt;a href=&#34;https://www.elastic.co/blog/timelion-timeline&#34;&gt;Timelion&lt;/a&gt;, pronounced &amp;ldquo;&lt;em&gt;Timeline&lt;/em&gt;&amp;rdquo;, is a Kibana module that helps to visualise time series data.&lt;/p&gt;&#xA;&lt;p&gt;The day started with an introduction to Elastic, followed by an hands-on training on &lt;em&gt;Time Series with Timelion&lt;/em&gt; for about 45 minutes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

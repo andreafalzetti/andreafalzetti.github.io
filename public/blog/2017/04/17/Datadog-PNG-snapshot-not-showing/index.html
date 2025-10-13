@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="in Slack incoming webhook attachments">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Datadog PNG snapshot not showing</h1>
+    <p class="uk-text-center uk-text-lead">in Slack incoming webhook attachments</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/nodejs/" style="margin-right: 8px"
+        >#nodejs</a
+      >
+      <a href="http://localhost:1313/tags/javascript/" style="margin-right: 8px"
+        >#javascript</a
+      >
+      <a href="http://localhost:1313/tags/datadog/" style="margin-right: 8px"
+        >#datadog</a
+      >
+      <a href="http://localhost:1313/tags/slack/" style="margin-right: 8px"
+        >#slack</a
+      >
+      <a href="http://localhost:1313/tags/chatbots/" style="margin-right: 8px"
+        >#chatbots</a
+      >
+      <a href="http://localhost:1313/tags/webhooks/" style="margin-right: 8px"
+        >#webhooks</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Apr 17, 2017</p>
+    <p class="uk-text-center">Reading time: 1 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <h2 id="issue">Issue <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>If you are here, you have probably experienced the same issue I did using the <a href="http://docs.datadoghq.com/api/#graph-snapshot">Datadog programmatic API  v1</a> to generate PNG snapshot of your metrics.</p>
+<p>I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:</p>
+<p><img src="/img/attachment_example_datadog.png" alt="Datadog Slack Example"></p>
+<p>The problem I was facing was that the image was missing or simply not displaying! But, whenever I opened the URL of the snapshot in the browser or using the <a href="https://api.slack.com/docs/messages/builder">Slack Message Builder</a> there!</p>
+<p>I eventually found out that it was a problem of <strong>time</strong>.</p>
+<h3 id="solution-delay">Solution: Delay <!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
+<p>Add a delay of <em>few seconds</em> before displaying the image or before calling the Slack API to send the attachment will solve the issue. This time is needed for Datadog to generate the actual image file. I am currently using a 60 seconds delay, just to make sure it doesn&rsquo;t happen again.</p>
+<p>A more elegant solution would be requesting the image, checking the size of the document or maybe the content-type and only then using the snapshot URL provided by Datadog. For the moment, the delay just works for me.</p>
+<p>Sounds stupid, but I wasted at least half an hour on this. Hopefully, you will find this article before wasting any of your time!</p>
+<p>Happy coding! <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

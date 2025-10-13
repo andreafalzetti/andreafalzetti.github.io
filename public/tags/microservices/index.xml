@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microservices on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/microservices/</link>
+    <description>Recent content in Microservices on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 31 Dec 2016 08:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build a JavaScript Microservices platform</title>
+      <link>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</link>
+      <pubDate>Sat, 31 Dec 2016 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Microservices&lt;/strong&gt; is one of the most popular topics in software development these days, as&lt;/p&gt;&#xA;&lt;p&gt;well as &lt;strong&gt;JavaScript&lt;/strong&gt; and &lt;strong&gt;chat bots&lt;/strong&gt;. In this post, I share my experience in designing and implementing a platform using a microservices architecture. I will also talk about which tools were picked for this platform and how they work together. Let’s start by giving you some context about the project.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/how-build-javascript-microservices-platform/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

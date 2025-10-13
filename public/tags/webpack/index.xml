@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webpack on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/webpack/</link>
+    <description>Recent content in Webpack on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2017 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2</title>
+      <link>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</link>
+      <pubDate>Tue, 30 May 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</guid>
+      <description>&lt;p&gt;How many times did it happen to you that you were debugging some code and at the end of the day you didn&amp;rsquo;t manage to find a solution? How frustrating is that?&lt;/p&gt;&#xA;&lt;p&gt;Good news is, you will feel so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.&lt;/p&gt;&#xA;&lt;p&gt;Today, it was one of those days for me. I have spent long hours trying to make something work, and I eventually found a solution, so I thought it was a good thing to share it with the community.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to fix broken base64 image using image-webpack and file-loader</title>
+      <link>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</link>
+      <pubDate>Fri, 11 Nov 2016 12:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you are probably trying to setup webpack in order to handle your images. The problem I was experiencing and tyring to document here is, after installing &lt;strong&gt;image-webpack&lt;/strong&gt; and &lt;strong&gt;file-loader&lt;/strong&gt; and using &lt;code&gt;&amp;lt;img src={require(&#39;logo.png&#39;)}/&amp;gt;&lt;/code&gt; the browser was displaying a broken image (encoded in base64).&lt;/p&gt;&#xA;&lt;p&gt;I have followed &lt;a href=&#34;http://www.davidmeents.com/how-to-set-up-webpack-image-loader/&#34;&gt;this article&lt;/a&gt; written by David which helps setting up &lt;strong&gt;webpack&lt;/strong&gt; and &lt;strong&gt;image-webpack-loader&lt;/strong&gt;, the problem I had was that the browser was displaying a broken image so after a little research I&amp;rsquo;ve found &lt;a href=&#34;https://github.com/webpack/file-loader/issues/35&#34;&gt;webpack/file-loader/issue/35&lt;/a&gt; which explains the reason of this.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

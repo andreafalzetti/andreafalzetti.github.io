@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Leverage Docker and Serverless Framework">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Combining Node.js and Python in a Single AWS Lambda Function</h1>
+    <p class="uk-text-center uk-text-lead">Leverage Docker and Serverless Framework</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/aws/" style="margin-right: 8px"
+        >#aws</a
+      >
+      <a href="http://localhost:1313/tags/lambda/" style="margin-right: 8px"
+        >#lambda</a
+      >
+      <a href="http://localhost:1313/tags/nodejs/" style="margin-right: 8px"
+        >#nodejs</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Mar 16, 2023</p>
+    <p class="uk-text-center">Reading time: 3 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>Recently, I encountered a situation where I needed to run a Python script from a Node.js runtime using AWS Lambda.</p>
+<p>AWS supports several <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtimes for Lambda</a> including Node.js, Python, Java, .Net, Go, Ruby and also Custom Runtime.</p>
+<p>In my case I was already using <code>nodejs16.x</code> which of course, does not come with Python installed. After cosindering using Lambda layers or trying to compile the <code>.py</code> script into some stand-alone binary (which failed due to missing Python dependencies on the Lambda anyway), I&rsquo;ve decided to give a try to the <a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html">Custom Runtime</a>.</p>
+<p>Initially, I was put off by the possible amout of work involved into configuring a custom image, I guessed it would require at least a Dockerfile, publish the image to a registry and then instruct my Lambda to use that image, configure IAM permissions, etc.. Luckily, with <a href="https://www.serverless.com/">Serverless.com</a> I figured the framework itself would do most of the heavy lifting so it turned out to be easier than expected. I presume doing the same with Terraform would require a little bit more of code.</p>
+<p>I&rsquo;ve decided to put together this blog post to help out folks doing something similar given that it wasn&rsquo;t so easy to find docs about this.</p>
+<p>Let&rsquo;s go through the steps required:</p>
+<ol>
+<li>Create a <code>Dockerfile</code></li>
+<li>Publish the image to ECR</li>
+<li>Instrument your Lambda to use the new custom runtime</li>
+</ol>
+<h2 id="create-a-dockerfile-for-a-custom-aws-lambda-runtime">Create a Dockerfile for a custom AWS Lambda runtime</h2>
+<p>This is simple as writing any Dockerfile, it&rsquo;s helpful to know that you can use AWS built images as starting point for your image. This is my example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">public.ecr.aws/lambda/nodejs:16</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> yum install -y python3 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    pip3 install --upgrade pip requests<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;lib/functions/index.handler&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>To find other AWS Lambda base images, check out: <a href="https://gallery.ecr.aws/lambda">Amazon ECR Public Gallery &gt; Lambda</a>.</p>
+<p>You could give it a go and build the image manually, but it&rsquo;s not required as the Serverless Framework will be doing that for us.</p>
+<h2 id="publish-the-image-to-ecr">Publish the image to ECR</h2>
+<p>If you haven&rsquo;t used ECR before, don&rsquo;t worry. It&rsquo;s a docker-compatible image registry which is available in your AWS account which can host public and private images.</p>
+<p>All you have to do is add this snippet to your <code>serverless.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">provider</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ecr</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">images</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">node16-python3-runtime</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./</span>
+</span></span></code></pre></div><p>Please note:</p>
+<ol>
+<li><code>node16-python3-runtime</code> is an arbitrary name I gave to my image, feel free to rename it to whatever is best in your use-case.</li>
+<li><code>path</code> is the path to the directory containing the <code>Dockerfile</code></li>
+</ol>
+<p>Once you run <code>serverless deploy</code>, the tool will build the image for you, and publish the image to AWS ECR. If successful, once you open ECR in your AWS console, it should look something like the following:</p>
+<p><img src="/img/ecr-custom-lambda-runtime.png" alt="ecr-custom-lambda-runtime.png"></p>
+<h2 id="instrument-your-lambda-to-use-the-new-custom-runtime">Instrument your Lambda to use the new custom runtime</h2>
+<p>This is the final part, but it requires attention because it&rsquo;s very different from how you would usually define your Lambda and its handler in <code>serverless.yml</code>.</p>
+<p>First of all: make sure to remove the <code>handler:</code> property that you usually have.</p>
+<p>Second, add the property <code>image</code> as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">functions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">yourLambdaName</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">node16-python3-runtime</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">command</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">lib/functions/index.handler</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">entryPoint</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#e6db74">&#39;/lambda-entrypoint.sh&#39;</span>      
+</span></span></code></pre></div><p>Let me explain:</p>
+<ol>
+<li><code>yourLambdaName</code> should be renamed of course with the name of your own lambda</li>
+<li><code>name: node16-python3-runtime</code> this should match the name of the image you created before, in <code>provider.ecr.image</code></li>
+<li><code>command</code> is the command executed when the docker container starts, it should point to the handler function</li>
+<li><code>entryPoint</code> keep is as it is, to allow the Lambda service to know what to do</li>
+</ol>
+<hr>
+<p>Disclaimer: The cold start time will most likely increase using a custom runtime especially the one I&rsquo;ve provided as example. In my case I&rsquo;ve noticed <code>1.2 seconds</code> which is much higher that what other Lambdas only using Node.js experience. However, because this is not user-facing or its latency matter, for me it&rsquo;s not a big deal. Take it into account if you are building APIs for example.</p>
+<p>That should be it, I hope this guide is helpful to someone!</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

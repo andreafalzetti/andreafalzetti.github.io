@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conference on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/conference/</link>
+    <description>Recent content in Conference on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 21 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My notes from dotCSS &amp; dotJS 2018</title>
+      <link>http://localhost:1313/blog/2018/11/21/My-notes-from-dotCSS-dotJS-2018/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2018/11/21/My-notes-from-dotCSS-dotJS-2018/</guid>
+      <description>&lt;p&gt;For the third year in a row I have attended the largest JavaScript conference in Europe: &lt;a href=&#34;https://www.dotjs.io/&#34;&gt;dotJS&lt;/a&gt;. This time I travelled with my amazing collagues from &lt;a href=&#34;https://engineering.dazn.com/&#34;&gt;DAZN&lt;/a&gt; and we had a blast!&lt;/p&gt;&#xA;&lt;p&gt;In this short blog post I want to share a few of the things that I learnt during the event which I think it&amp;rsquo;s worth sharing with you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;variable-fonts&#34;&gt;Variable fonts&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018/11/grass-variable-fonts.gif&#34; alt=&#34;grass-variable-fonts-gif&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://codepen.io/mandymichael/pen/YYaWop/?editors=0100&#34;&gt;View the source in CodePen&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;whats-a-variable-font&#34;&gt;What&amp;rsquo;s a variable font?&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Variable fonts are an evolution of the &lt;a href=&#34;https://en.wikipedia.org/wiki/OpenType&#34;&gt;OpenType&lt;/a&gt; font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single @font-face reference. &lt;em&gt;Read more: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elastic{ON} Tour London 2017</title>
+      <link>http://localhost:1313/blog/2017/06/22/ElasticON-Tour-London-2017/</link>
+      <pubDate>Thu, 22 Jun 2017 22:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/06/22/ElasticON-Tour-London-2017/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.elastic.co/elasticon/tour/2017/london&#34;&gt;Elastic{ON} Tour 2017&lt;/a&gt; was held today in London at &lt;a href=&#34;https://www.thebrewery.co.uk/&#34;&gt;The Brewery&lt;/a&gt;, and I had the chance to attend it. The Elastic team has done a great job in organising the event, and I would like to thank them for the beautiful day. The location and catering were great, and so was the training Lab on &lt;a href=&#34;https://www.elastic.co/blog/timelion-timeline&#34;&gt;Timelion&lt;/a&gt;, pronounced &amp;ldquo;&lt;em&gt;Timeline&lt;/em&gt;&amp;rdquo;, is a Kibana module that helps to visualise time series data.&lt;/p&gt;&#xA;&lt;p&gt;The day started with an introduction to Elastic, followed by an hands-on training on &lt;em&gt;Time Series with Timelion&lt;/em&gt; for about 45 minutes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serverlessconf London 2016</title>
+      <link>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</link>
+      <pubDate>Mon, 31 Oct 2016 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</guid>
+      <description>&lt;h2 id=&#34;serverlessconf-london-2016&#34;&gt;ServerlessConf London 2016 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;First of all, I have to thank the &lt;a href=&#34;http://awsuguk.org&#34;&gt;@AWSUserGroupUK&lt;/a&gt; meetup group for giving me the great opportunity to join this amazing conference.&lt;/p&gt;&#xA;&lt;p&gt;It has been the &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;rd edition of the &lt;a href=&#34;http://serverlessconf.io&#34;&gt;ServerlessConf&lt;/a&gt;, the first was held in New York &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;, the second in Tokyo &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; and this in London &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

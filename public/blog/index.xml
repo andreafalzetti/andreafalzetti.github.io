@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Andrea Falzetti</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blog on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 02 May 2024 22:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Lambda: TypeError: Wrong arguments</title>
+      <link>http://localhost:1313/blog/2024/05/02/AWS-Lambda-TypeError-Wrong-arguments/</link>
+      <pubDate>Thu, 02 May 2024 22:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024/05/02/AWS-Lambda-TypeError-Wrong-arguments/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve faced the following error for a few hours, until I realized how simple the solution was.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2024-05-02T20:03:06.574Z&#x9;b8a190ca-89fd-4dc5-a277-a0fa06b35091&#x9;ERROR&#x9;Invoke Error &#x9;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errorType&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TypeError&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errorMessage&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Wrong arguments&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stack&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TypeError: Wrong arguments&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at RAPIDClient.postInvocationResponse (file:///var/runtime/index.mjs:434:27)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at complete (file:///var/runtime/index.mjs:811:16)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at done (file:///var/runtime/index.mjs:835:11)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at succeed (file:///var/runtime/index.mjs:839:9)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at file:///var/runtime/index.mjs:872:20&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After checking line by line, I noticed that I was accessing an environment variable that was &lt;strong&gt;not definied&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AWS Lambda: Lessons learned over 5 years and 100 functions in production</title>
+      <link>http://localhost:1313/blog/2023/03/30/AWS-Lambda-Lessons-learned-over-5-years-and-100-functions-in-production/</link>
+      <pubDate>Thu, 30 Mar 2023 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2023/03/30/AWS-Lambda-Lessons-learned-over-5-years-and-100-functions-in-production/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://onoranzefunebricloud.com&#34;&gt;onoranzefunebricloud.com&lt;/a&gt; we provide funeral agencies with digital solutions to do their best work, and to build such complex tools we use a combination of AWS services including dockerized applications in Fargate and lot of Serverless tools such as Lambda.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, as we introduced more functionalities we&amp;rsquo;ve also grown our usage of Lambda, and as of today we count over 100 Lambda functions in production.&lt;/p&gt;&#xA;&lt;p&gt;In this post I want to share the lessons learned, the good and the bad.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Combining Node.js and Python in a Single AWS Lambda Function</title>
+      <link>http://localhost:1313/blog/2023/03/16/Combining-Node.js-and-Python-in-a-Single-AWS-Lambda-Function/</link>
+      <pubDate>Thu, 16 Mar 2023 22:53:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2023/03/16/Combining-Node.js-and-Python-in-a-Single-AWS-Lambda-Function/</guid>
+      <description>&lt;p&gt;Recently, I encountered a situation where I needed to run a Python script from a Node.js runtime using AWS Lambda.&lt;/p&gt;&#xA;&lt;p&gt;AWS supports several &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html&#34;&gt;runtimes for Lambda&lt;/a&gt; including Node.js, Python, Java, .Net, Go, Ruby and also Custom Runtime.&lt;/p&gt;&#xA;&lt;p&gt;In my case I was already using &lt;code&gt;nodejs16.x&lt;/code&gt; which of course, does not come with Python installed. After cosindering using Lambda layers or trying to compile the &lt;code&gt;.py&lt;/code&gt; script into some stand-alone binary (which failed due to missing Python dependencies on the Lambda anyway), I&amp;rsquo;ve decided to give a try to the &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html&#34;&gt;Custom Runtime&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello Gitpod</title>
+      <link>http://localhost:1313/blog/2022/04/22/Hello-Gitpod/</link>
+      <pubDate>Fri, 22 Apr 2022 17:17:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2022/04/22/Hello-Gitpod/</guid>
+      <description>&lt;p&gt;I meant to write this blog post a month ago, but&amp;hellip; life happened :)&lt;/p&gt;&#xA;&lt;p&gt;I generally write technical articles on my blog rather than talking about my personal life, but 4 years ago, I wrote &lt;a href=&#34;https://andreafalzetti.github.io/blog/2017/11/01/hello-dazn.html&#34;&gt;Hello DAZN&lt;/a&gt;, and I want to keep up with the tradition, so&amp;hellip; Hello Gitpod 🧡&lt;/p&gt;&#xA;&lt;p&gt;At the beginning of March this year, I&amp;rsquo;ve joined &lt;a href=&#34;https://gitpod.io&#34;&gt;gitpod.io&lt;/a&gt; ✨&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2022/gitpod.png&#34; alt=&#34;gitpod&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve spent the last few years at DAZN, focusing on DevX (Developer Experience), empowering fellow engineers to get their job done smoothly and efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying GFPGAN to AWS using Docker and Fargate</title>
+      <link>http://localhost:1313/blog/2022/01/17/Deploying-GFPGAN-to-AWS-using-Docker-and-Fargate/</link>
+      <pubDate>Mon, 17 Jan 2022 20:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2022/01/17/Deploying-GFPGAN-to-AWS-using-Docker-and-Fargate/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post aims to help you deploy &lt;a href=&#34;https://github.com/TencentARC/GFPGAN&#34;&gt;GFPGAN&lt;/a&gt; on AWS using ECS Fargate.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-gfpgan&#34;&gt;What is GFPGAN?!&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve recently discovered this fantastic Machine Learning project trained and designed to restore faces.&lt;/p&gt;&#xA;&lt;p&gt;The project&amp;rsquo;s headline is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;GFPGAN aims at developing Practical Algorithms for Real-world Face Restoration.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In short, given a blurred, damaged, or low-quality photo of a person&amp;rsquo;s face, the algorithm it&amp;rsquo;s able to restore the face and improve its quality.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to stream CloudWatch logs to Elasticsearch without custom code</title>
+      <link>http://localhost:1313/blog/2022/01/10/How-to-stream-CloudWatch-logs-to-Elasticsearch-without-custom-code/</link>
+      <pubDate>Mon, 10 Jan 2022 20:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2022/01/10/How-to-stream-CloudWatch-logs-to-Elasticsearch-without-custom-code/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I want to share the approach I have been using to ship logs from AWS CloudWatch to Elasticsearch without writing a single line of code.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;&#xA;&lt;p&gt;In my side-project, I use a combination of Lambdas and Fargate tasks which both write JSON-formatted logs to CloudWatch.&lt;/p&gt;&#xA;&lt;p&gt;I use CloudWatch to debug application errors while I use Elasticsearch for storing custom events such as User Actions (e.g. User X created resource Y).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to configure ECS Fargate Scheduled Autoscaling</title>
+      <link>http://localhost:1313/blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/</link>
+      <pubDate>Wed, 25 Aug 2021 07:35:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/</guid>
+      <description>&lt;p&gt;You are looking at configuring &lt;strong&gt;ECS Fargate scheduled autoscaling&lt;/strong&gt;, and you&amp;rsquo;re feeling a bit lost?&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s how I felt a few days ago. To set this up, I struggled for a couple of days. Unfortunately, the documentation and examples I found online didn&amp;rsquo;t help me much, so once I figured it out, I decided to share a working code example using Terraform.&lt;/p&gt;&#xA;&lt;p&gt;To be on the same page, in this post, I am assuming that you know what you are doing, and you are aware that there are &lt;a href=&#34;https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html&#34;&gt;different methods of autoscaling&lt;/a&gt;. We will look at configuring scheduled autoscaling which may not be the best choice for your project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My notes from dotCSS &amp; dotJS 2018</title>
+      <link>http://localhost:1313/blog/2018/11/21/My-notes-from-dotCSS-dotJS-2018/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2018/11/21/My-notes-from-dotCSS-dotJS-2018/</guid>
+      <description>&lt;p&gt;For the third year in a row I have attended the largest JavaScript conference in Europe: &lt;a href=&#34;https://www.dotjs.io/&#34;&gt;dotJS&lt;/a&gt;. This time I travelled with my amazing collagues from &lt;a href=&#34;https://engineering.dazn.com/&#34;&gt;DAZN&lt;/a&gt; and we had a blast!&lt;/p&gt;&#xA;&lt;p&gt;In this short blog post I want to share a few of the things that I learnt during the event which I think it&amp;rsquo;s worth sharing with you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;variable-fonts&#34;&gt;Variable fonts&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018/11/grass-variable-fonts.gif&#34; alt=&#34;grass-variable-fonts-gif&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://codepen.io/mandymichael/pen/YYaWop/?editors=0100&#34;&gt;View the source in CodePen&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;whats-a-variable-font&#34;&gt;What&amp;rsquo;s a variable font?&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Variable fonts are an evolution of the &lt;a href=&#34;https://en.wikipedia.org/wiki/OpenType&#34;&gt;OpenType&lt;/a&gt; font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single @font-face reference. &lt;em&gt;Read more: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tools to boost your DX</title>
+      <link>http://localhost:1313/blog/2018/04/17/Tools-to-boost-your-DX/</link>
+      <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2018/04/17/Tools-to-boost-your-DX/</guid>
+      <description>&lt;p&gt;Whether you are working on the back-end or the front-end, having the &lt;em&gt;right tool for the job&lt;/em&gt;, can really make a difference some times.&lt;/p&gt;&#xA;&lt;p&gt;With this blog post, I want to share with you some of the tools that I use pretty much every day and I believe can be useful to any software developer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;&lt;strong&gt;jq, yq, xq&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://httpie.org/&#34;&gt;&lt;strong&gt;HTTPie&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.choosyosx.com/&#34;&gt;&lt;strong&gt;Choosy&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ggreer/the_silver_searcher&#34;&gt;&lt;strong&gt;Ag&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ptsochantaris/trailer&#34;&gt;&lt;strong&gt;Trailer&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira&#34;&gt;&lt;strong&gt;jira&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/hnarayanan/shpotify&#34;&gt;&lt;strong&gt;shpotify&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://now.sh/&#34;&gt;&lt;strong&gt;now&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kapeli.com/dash&#34;&gt;&lt;strong&gt;Dash&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.duetdisplay.com/&#34;&gt;&lt;strong&gt;duet&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-jq-yq-xq&#34;&gt;1. jq, yq, xq&lt;/h2&gt;&#xA;&lt;h4 id=&#34;handle-json-yaml-and-xml-in-the-terminal&#34;&gt;Handle JSON, YAML and XML in the terminal&lt;/h4&gt;&#xA;&lt;p&gt;&lt;code&gt;jq&lt;/code&gt;, &lt;code&gt;yq&lt;/code&gt; and &lt;code&gt;xq&lt;/code&gt; are command line tools that allow you dealing with JSON, YAML and XML documents directly from your shell. If you haven&amp;rsquo;t seen them before you may ask why someone would want to look at some JSON in the terminal?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello DAZN</title>
+      <link>http://localhost:1313/blog/2017/11/01/Hello-DAZN/</link>
+      <pubDate>Wed, 01 Nov 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/11/01/Hello-DAZN/</guid>
+      <description>&lt;p&gt;Today, I am happy to announce that I have joined &lt;a href=&#34;https://dazn.com&#34;&gt;DAZN&lt;/a&gt; &lt;em&gt;(pronounced &amp;ldquo;Da Zone&amp;rdquo;)&lt;/em&gt;, a revolutionary sports streaming service.&lt;/p&gt;&#xA;&lt;p&gt;After four years of service at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate&lt;/a&gt;, I have decided to try a different experience. In my time at Activate, as a developer, I had the opportunity to learn and grow a lot. Activate provided me with an extraordinarily &lt;strong&gt;flexible&lt;/strong&gt; and &lt;strong&gt;challenging&lt;/strong&gt; environment. Working with their clients and partner startups was a chance to strengthen my skills, learning every day, experimenting and introducing new technologies to the team. The company has supported me both professionally and personally during this time, and I am very grateful for that. Thanks, Activate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an accessible and re-usable React Component</title>
+      <link>http://localhost:1313/blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/</link>
+      <pubDate>Wed, 18 Oct 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a&#34;&gt;one of my recent posts&lt;/a&gt; I talked about how I have introduced &lt;a href=&#34;https://storybook.js.org/&#34;&gt;Storybook&lt;/a&gt; to the team and how we adopted it in our development lifecycle.&lt;/p&gt;&#xA;&lt;p&gt;In this article, I want to share with you, my experience building an accessible &lt;strong&gt;custom input React component&lt;/strong&gt; and how I found Storybook a useful dev tool that helped me achieve my goal.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start!&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenge-&#34;&gt;Challenge 🤓&lt;/h2&gt;&#xA;&lt;p&gt;In this project, several views are sharing a similar piece of UI, a box with an icon and some text. In some cases, it also contains a button and an additional paragraph of text. I want the &lt;strong&gt;box&lt;/strong&gt; to be a separate React Component so I can re-use it across the application. I need to identify all common features and pass them as &lt;em&gt;props&lt;/em&gt; to the component so it will be able to behave differently in each instance. Given that this component will be a custom input, I want to make sure that the element is &lt;strong&gt;visible and usable&lt;/strong&gt; from &lt;strong&gt;screen readers&lt;/strong&gt;, it won&amp;rsquo;t take too long, and it will make a big difference for many users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Picasso code</title>
+      <link>http://localhost:1313/blog/2017/10/09/The-Picasso-code/</link>
+      <pubDate>Mon, 09 Oct 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/09/The-Picasso-code/</guid>
+      <description>&lt;p&gt;Recently, I have been reviewing the following JavaScript code, and I found so many issues that I have decided to discuss them here. First of all, I am not trying to embarrass anyone, so I am not mentioning where this comes from. With this post, I want to use bad examples to promote and remind all of us, including myself, to use common sense and best practices when it comes to writing new code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elastic{ON} Tour London 2017</title>
+      <link>http://localhost:1313/blog/2017/06/22/ElasticON-Tour-London-2017/</link>
+      <pubDate>Thu, 22 Jun 2017 22:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/06/22/ElasticON-Tour-London-2017/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.elastic.co/elasticon/tour/2017/london&#34;&gt;Elastic{ON} Tour 2017&lt;/a&gt; was held today in London at &lt;a href=&#34;https://www.thebrewery.co.uk/&#34;&gt;The Brewery&lt;/a&gt;, and I had the chance to attend it. The Elastic team has done a great job in organising the event, and I would like to thank them for the beautiful day. The location and catering were great, and so was the training Lab on &lt;a href=&#34;https://www.elastic.co/blog/timelion-timeline&#34;&gt;Timelion&lt;/a&gt;, pronounced &amp;ldquo;&lt;em&gt;Timeline&lt;/em&gt;&amp;rdquo;, is a Kibana module that helps to visualise time series data.&lt;/p&gt;&#xA;&lt;p&gt;The day started with an introduction to Elastic, followed by an hands-on training on &lt;em&gt;Time Series with Timelion&lt;/em&gt; for about 45 minutes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2</title>
+      <link>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</link>
+      <pubDate>Tue, 30 May 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</guid>
+      <description>&lt;p&gt;How many times did it happen to you that you were debugging some code and at the end of the day you didn&amp;rsquo;t manage to find a solution? How frustrating is that?&lt;/p&gt;&#xA;&lt;p&gt;Good news is, you will feel so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.&lt;/p&gt;&#xA;&lt;p&gt;Today, it was one of those days for me. I have spent long hours trying to make something work, and I eventually found a solution, so I thought it was a good thing to share it with the community.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Datadog PNG snapshot not showing</title>
+      <link>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</link>
+      <pubDate>Mon, 17 Apr 2017 19:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</guid>
+      <description>&lt;h2 id=&#34;issue&#34;&gt;Issue &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you have probably experienced the same issue I did using the &lt;a href=&#34;http://docs.datadoghq.com/api/#graph-snapshot&#34;&gt;Datadog programmatic API  v1&lt;/a&gt; to generate PNG snapshot of your metrics.&lt;/p&gt;&#xA;&lt;p&gt;I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/attachment_example_datadog.png&#34; alt=&#34;Datadog Slack Example&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The problem I was facing was that the image was missing or simply not displaying! But, whenever I opened the URL of the snapshot in the browser or using the &lt;a href=&#34;https://api.slack.com/docs/messages/builder&#34;&gt;Slack Message Builder&lt;/a&gt; there!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an extensible Chat Bot using JavaScript &amp; YAML</title>
+      <link>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</link>
+      <pubDate>Sun, 08 Jan 2017 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</guid>
+      <description>&lt;p&gt;In this post, I will share with you my experience in designing and coding an &lt;strong&gt;extensible&lt;/strong&gt; chat bot using &lt;strong&gt;YAML&lt;/strong&gt; and &lt;strong&gt;JavaScript&lt;/strong&gt;. I will show you that it&amp;rsquo;s not always required to use AI, ML, or NPL to make a great bot. This won&amp;rsquo;t be a step-by-step guide. My goal is to give you an overview of a project like this and inspire you to build your own.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/building-extensible-chat-bot-using-javascript-yaml/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build a JavaScript Microservices platform</title>
+      <link>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</link>
+      <pubDate>Sat, 31 Dec 2016 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Microservices&lt;/strong&gt; is one of the most popular topics in software development these days, as&lt;/p&gt;&#xA;&lt;p&gt;well as &lt;strong&gt;JavaScript&lt;/strong&gt; and &lt;strong&gt;chat bots&lt;/strong&gt;. In this post, I share my experience in designing and implementing a platform using a microservices architecture. I will also talk about which tools were picked for this platform and how they work together. Let’s start by giving you some context about the project.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/how-build-javascript-microservices-platform/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to fix broken base64 image using image-webpack and file-loader</title>
+      <link>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</link>
+      <pubDate>Fri, 11 Nov 2016 12:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you are probably trying to setup webpack in order to handle your images. The problem I was experiencing and tyring to document here is, after installing &lt;strong&gt;image-webpack&lt;/strong&gt; and &lt;strong&gt;file-loader&lt;/strong&gt; and using &lt;code&gt;&amp;lt;img src={require(&#39;logo.png&#39;)}/&amp;gt;&lt;/code&gt; the browser was displaying a broken image (encoded in base64).&lt;/p&gt;&#xA;&lt;p&gt;I have followed &lt;a href=&#34;http://www.davidmeents.com/how-to-set-up-webpack-image-loader/&#34;&gt;this article&lt;/a&gt; written by David which helps setting up &lt;strong&gt;webpack&lt;/strong&gt; and &lt;strong&gt;image-webpack-loader&lt;/strong&gt;, the problem I had was that the browser was displaying a broken image so after a little research I&amp;rsquo;ve found &lt;a href=&#34;https://github.com/webpack/file-loader/issues/35&#34;&gt;webpack/file-loader/issue/35&lt;/a&gt; which explains the reason of this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serverlessconf London 2016</title>
+      <link>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</link>
+      <pubDate>Mon, 31 Oct 2016 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</guid>
+      <description>&lt;h2 id=&#34;serverlessconf-london-2016&#34;&gt;ServerlessConf London 2016 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;First of all, I have to thank the &lt;a href=&#34;http://awsuguk.org&#34;&gt;@AWSUserGroupUK&lt;/a&gt; meetup group for giving me the great opportunity to join this amazing conference.&lt;/p&gt;&#xA;&lt;p&gt;It has been the &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;rd edition of the &lt;a href=&#34;http://serverlessconf.io&#34;&gt;ServerlessConf&lt;/a&gt;, the first was held in New York &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;, the second in Tokyo &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; and this in London &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Render ES6 javascript template literals contained in a variable</title>
+      <link>http://localhost:1313/blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/</link>
+      <pubDate>Sat, 22 Oct 2016 00:32:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In the current project I&amp;rsquo;m working on, at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate&lt;/a&gt;, I am using &lt;code&gt;node.js&lt;/code&gt; and I have variables coming from a yaml file that contain ES6-like template literals, for example:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;messages:&#xA;- &amp;#34;Hey, ${user.name}, how are you feeling today?&amp;#34;&#xA;- &amp;#34;What&amp;#39;s the weather like in ${user.profile.city}?&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and I need to render the variables before sending the message to the client. As you might know, template literals, in order to be rendered need to be wrapped by backtick quotes, for example:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Randomize variables in a string in javascript</title>
+      <link>http://localhost:1313/blog/2016/10/21/Randomize-variables-in-a-string-in-javascript/</link>
+      <pubDate>Fri, 21 Oct 2016 12:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/21/Randomize-variables-in-a-string-in-javascript/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;&#xA;&lt;p&gt;I have a string that looks like:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;[Hi|Hello|Hey] ${user.name}! Would you like to [go for a walk|to the park]?&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;I need to render the text randomising the action (&lt;em&gt;go for a walk&lt;/em&gt; &lt;strong&gt;or&lt;/strong&gt; &lt;em&gt;to the park&lt;/em&gt;) so that the message looks slightly different every time that is sent. Each block of square brackets could contain &lt;em&gt;N&lt;/em&gt; variables (eg. &lt;code&gt;[walk|run|swim|play tennis]&lt;/code&gt;) and each message can contain multiple blocks of random substrings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New plugin for Passwordless.net based on Node-Cache</title>
+      <link>http://localhost:1313/blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/</link>
+      <pubDate>Sun, 05 Jun 2016 19:58:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/</guid>
+      <description>&lt;p&gt;Yesterday I&amp;rsquo;ve published my first &lt;a href=&#34;https://www.npmjs.com/package/passwordless-nodecache&#34;&gt;npm package&lt;/a&gt; and I&amp;rsquo;m feeling quite proud. I&amp;rsquo;ve been programming in NodeJS for a few months now and I have to say, I love the concept behind &lt;strong&gt;npm&lt;/strong&gt;. The fact that you can rely on &lt;em&gt;a bunch of packages ready to be used&lt;/em&gt;, installable in few seconds that are often really well written, tested and documented and last but not least open-source, is just great.&lt;/p&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ve decided that I had to contribute with a plugin for &lt;a href=&#34;passwordless.net&#34;&gt;passwordless.net&lt;/a&gt; that supports &lt;a href=&#34;https://www.npmjs.com/package/node-cache&#34;&gt;node-cache&lt;/a&gt;. My plugin, &lt;strong&gt;passwordless-nodecache&lt;/strong&gt; is available on &lt;a href=&#34;https://www.npmjs.com/package/passwordless-nodecache&#34;&gt;npmjs.com&lt;/a&gt; and it&amp;rsquo;s listed in the &lt;a href=&#34;https://passwordless.net/plugins&#34;&gt;Plugins page&lt;/a&gt; of passwordless.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to create a smart Slack Bot in Node.js</title>
+      <link>http://localhost:1313/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/</link>
+      <pubDate>Mon, 04 Apr 2016 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/</guid>
+      <description>&lt;p&gt;The challenge here was creating a &lt;strong&gt;bot able to schedule events&lt;/strong&gt;. Part of our internal tools at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate Media&lt;/a&gt;, &lt;strong&gt;PlannerBot&lt;/strong&gt;, so it has been named, is now a member of our team. He currently lives in Slack, online 24/7 for 365 days of the year, programmed with the idea in mind that one day he could be moved to Facebook Messenger, Skype, or any other messaging platform.&lt;/p&gt;&#xA;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;&#xA;&lt;p&gt;In this case I give a partial information, so the &lt;strong&gt;bot will ask me&lt;/strong&gt; the missing details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to create a simple Slack Bot in Node.js</title>
+      <link>http://localhost:1313/blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js/</link>
+      <pubDate>Tue, 22 Mar 2016 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js/</guid>
+      <description>&lt;p&gt;In this post I want to help you creating a &lt;em&gt;simple Slack bot with Node.js&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Slack has created two different integrations methods, &lt;strong&gt;Incoming/Outcoming Webhooks&lt;/strong&gt; and &lt;strong&gt;Bot Users&lt;/strong&gt;. If you are interested in the latter case, please read my article about [&lt;em&gt;Creating a Slack User Bot&lt;/em&gt;]({% post_url&#xA;2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).&lt;/p&gt;&#xA;&lt;p&gt;In this article, we are going to integrate the Slack Incoming Webhooks which allows you to &lt;strong&gt;send data into Slack&lt;/strong&gt; in real-time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

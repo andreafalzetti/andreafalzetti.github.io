@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webhooks on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/webhooks/</link>
+    <description>Recent content in Webhooks on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 17 Apr 2017 19:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/webhooks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datadog PNG snapshot not showing</title>
+      <link>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</link>
+      <pubDate>Mon, 17 Apr 2017 19:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</guid>
+      <description>&lt;h2 id=&#34;issue&#34;&gt;Issue &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you have probably experienced the same issue I did using the &lt;a href=&#34;http://docs.datadoghq.com/api/#graph-snapshot&#34;&gt;Datadog programmatic API  v1&lt;/a&gt; to generate PNG snapshot of your metrics.&lt;/p&gt;&#xA;&lt;p&gt;I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/attachment_example_datadog.png&#34; alt=&#34;Datadog Slack Example&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The problem I was facing was that the image was missing or simply not displaying! But, whenever I opened the URL of the snapshot in the browser or using the &lt;a href=&#34;https://api.slack.com/docs/messages/builder&#34;&gt;Slack Message Builder&lt;/a&gt; there!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

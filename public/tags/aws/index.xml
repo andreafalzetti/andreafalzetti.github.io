@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/aws/</link>
+    <description>Recent content in Aws on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 02 May 2024 22:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Lambda: TypeError: Wrong arguments</title>
+      <link>http://localhost:1313/blog/2024/05/02/AWS-Lambda-TypeError-Wrong-arguments/</link>
+      <pubDate>Thu, 02 May 2024 22:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024/05/02/AWS-Lambda-TypeError-Wrong-arguments/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve faced the following error for a few hours, until I realized how simple the solution was.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2024-05-02T20:03:06.574Z&#x9;b8a190ca-89fd-4dc5-a277-a0fa06b35091&#x9;ERROR&#x9;Invoke Error &#x9;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errorType&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TypeError&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errorMessage&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Wrong arguments&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stack&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TypeError: Wrong arguments&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at RAPIDClient.postInvocationResponse (file:///var/runtime/index.mjs:434:27)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at complete (file:///var/runtime/index.mjs:811:16)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at done (file:///var/runtime/index.mjs:835:11)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at succeed (file:///var/runtime/index.mjs:839:9)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at file:///var/runtime/index.mjs:872:20&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After checking line by line, I noticed that I was accessing an environment variable that was &lt;strong&gt;not definied&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AWS Lambda: Lessons learned over 5 years and 100 functions in production</title>
+      <link>http://localhost:1313/blog/2023/03/30/AWS-Lambda-Lessons-learned-over-5-years-and-100-functions-in-production/</link>
+      <pubDate>Thu, 30 Mar 2023 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2023/03/30/AWS-Lambda-Lessons-learned-over-5-years-and-100-functions-in-production/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://onoranzefunebricloud.com&#34;&gt;onoranzefunebricloud.com&lt;/a&gt; we provide funeral agencies with digital solutions to do their best work, and to build such complex tools we use a combination of AWS services including dockerized applications in Fargate and lot of Serverless tools such as Lambda.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, as we introduced more functionalities we&amp;rsquo;ve also grown our usage of Lambda, and as of today we count over 100 Lambda functions in production.&lt;/p&gt;&#xA;&lt;p&gt;In this post I want to share the lessons learned, the good and the bad.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Combining Node.js and Python in a Single AWS Lambda Function</title>
+      <link>http://localhost:1313/blog/2023/03/16/Combining-Node.js-and-Python-in-a-Single-AWS-Lambda-Function/</link>
+      <pubDate>Thu, 16 Mar 2023 22:53:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2023/03/16/Combining-Node.js-and-Python-in-a-Single-AWS-Lambda-Function/</guid>
+      <description>&lt;p&gt;Recently, I encountered a situation where I needed to run a Python script from a Node.js runtime using AWS Lambda.&lt;/p&gt;&#xA;&lt;p&gt;AWS supports several &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html&#34;&gt;runtimes for Lambda&lt;/a&gt; including Node.js, Python, Java, .Net, Go, Ruby and also Custom Runtime.&lt;/p&gt;&#xA;&lt;p&gt;In my case I was already using &lt;code&gt;nodejs16.x&lt;/code&gt; which of course, does not come with Python installed. After cosindering using Lambda layers or trying to compile the &lt;code&gt;.py&lt;/code&gt; script into some stand-alone binary (which failed due to missing Python dependencies on the Lambda anyway), I&amp;rsquo;ve decided to give a try to the &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html&#34;&gt;Custom Runtime&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to stream CloudWatch logs to Elasticsearch without custom code</title>
+      <link>http://localhost:1313/blog/2022/01/10/How-to-stream-CloudWatch-logs-to-Elasticsearch-without-custom-code/</link>
+      <pubDate>Mon, 10 Jan 2022 20:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2022/01/10/How-to-stream-CloudWatch-logs-to-Elasticsearch-without-custom-code/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I want to share the approach I have been using to ship logs from AWS CloudWatch to Elasticsearch without writing a single line of code.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;&#xA;&lt;p&gt;In my side-project, I use a combination of Lambdas and Fargate tasks which both write JSON-formatted logs to CloudWatch.&lt;/p&gt;&#xA;&lt;p&gt;I use CloudWatch to debug application errors while I use Elasticsearch for storing custom events such as User Actions (e.g. User X created resource Y).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to configure ECS Fargate Scheduled Autoscaling</title>
+      <link>http://localhost:1313/blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/</link>
+      <pubDate>Wed, 25 Aug 2021 07:35:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/</guid>
+      <description>&lt;p&gt;You are looking at configuring &lt;strong&gt;ECS Fargate scheduled autoscaling&lt;/strong&gt;, and you&amp;rsquo;re feeling a bit lost?&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s how I felt a few days ago. To set this up, I struggled for a couple of days. Unfortunately, the documentation and examples I found online didn&amp;rsquo;t help me much, so once I figured it out, I decided to share a working code example using Terraform.&lt;/p&gt;&#xA;&lt;p&gt;To be on the same page, in this post, I am assuming that you know what you are doing, and you are aware that there are &lt;a href=&#34;https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html&#34;&gt;different methods of autoscaling&lt;/a&gt;. We will look at configuring scheduled autoscaling which may not be the best choice for your project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serverlessconf London 2016</title>
+      <link>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</link>
+      <pubDate>Mon, 31 Oct 2016 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</guid>
+      <description>&lt;h2 id=&#34;serverlessconf-london-2016&#34;&gt;ServerlessConf London 2016 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;First of all, I have to thank the &lt;a href=&#34;http://awsuguk.org&#34;&gt;@AWSUserGroupUK&lt;/a&gt; meetup group for giving me the great opportunity to join this amazing conference.&lt;/p&gt;&#xA;&lt;p&gt;It has been the &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;rd edition of the &lt;a href=&#34;http://serverlessconf.io&#34;&gt;ServerlessConf&lt;/a&gt;, the first was held in New York &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;, the second in Tokyo &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; and this in London &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

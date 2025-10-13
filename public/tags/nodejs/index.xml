@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nodejs on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/nodejs/</link>
+    <description>Recent content in Nodejs on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 16 Mar 2023 22:53:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Combining Node.js and Python in a Single AWS Lambda Function</title>
+      <link>http://localhost:1313/blog/2023/03/16/Combining-Node.js-and-Python-in-a-Single-AWS-Lambda-Function/</link>
+      <pubDate>Thu, 16 Mar 2023 22:53:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2023/03/16/Combining-Node.js-and-Python-in-a-Single-AWS-Lambda-Function/</guid>
+      <description>&lt;p&gt;Recently, I encountered a situation where I needed to run a Python script from a Node.js runtime using AWS Lambda.&lt;/p&gt;&#xA;&lt;p&gt;AWS supports several &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html&#34;&gt;runtimes for Lambda&lt;/a&gt; including Node.js, Python, Java, .Net, Go, Ruby and also Custom Runtime.&lt;/p&gt;&#xA;&lt;p&gt;In my case I was already using &lt;code&gt;nodejs16.x&lt;/code&gt; which of course, does not come with Python installed. After cosindering using Lambda layers or trying to compile the &lt;code&gt;.py&lt;/code&gt; script into some stand-alone binary (which failed due to missing Python dependencies on the Lambda anyway), I&amp;rsquo;ve decided to give a try to the &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html&#34;&gt;Custom Runtime&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Datadog PNG snapshot not showing</title>
+      <link>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</link>
+      <pubDate>Mon, 17 Apr 2017 19:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/04/17/Datadog-PNG-snapshot-not-showing/</guid>
+      <description>&lt;h2 id=&#34;issue&#34;&gt;Issue &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you have probably experienced the same issue I did using the &lt;a href=&#34;http://docs.datadoghq.com/api/#graph-snapshot&#34;&gt;Datadog programmatic API  v1&lt;/a&gt; to generate PNG snapshot of your metrics.&lt;/p&gt;&#xA;&lt;p&gt;I have integrated Datadog metrics in Slack using snapshots and incoming webhooks as shown below:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/attachment_example_datadog.png&#34; alt=&#34;Datadog Slack Example&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The problem I was facing was that the image was missing or simply not displaying! But, whenever I opened the URL of the snapshot in the browser or using the &lt;a href=&#34;https://api.slack.com/docs/messages/builder&#34;&gt;Slack Message Builder&lt;/a&gt; there!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an extensible Chat Bot using JavaScript &amp; YAML</title>
+      <link>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</link>
+      <pubDate>Sun, 08 Jan 2017 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/01/08/Building-an-extensible-Chat-Bot-using-JavaScript-YAML/</guid>
+      <description>&lt;p&gt;In this post, I will share with you my experience in designing and coding an &lt;strong&gt;extensible&lt;/strong&gt; chat bot using &lt;strong&gt;YAML&lt;/strong&gt; and &lt;strong&gt;JavaScript&lt;/strong&gt;. I will show you that it&amp;rsquo;s not always required to use AI, ML, or NPL to make a great bot. This won&amp;rsquo;t be a step-by-step guide. My goal is to give you an overview of a project like this and inspire you to build your own.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/building-extensible-chat-bot-using-javascript-yaml/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build a JavaScript Microservices platform</title>
+      <link>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</link>
+      <pubDate>Sat, 31 Dec 2016 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/12/31/How-to-build-a-JavaScript-Microservices-platform/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Microservices&lt;/strong&gt; is one of the most popular topics in software development these days, as&lt;/p&gt;&#xA;&lt;p&gt;well as &lt;strong&gt;JavaScript&lt;/strong&gt; and &lt;strong&gt;chat bots&lt;/strong&gt;. In this post, I share my experience in designing and implementing a platform using a microservices architecture. I will also talk about which tools were picked for this platform and how they work together. Let’s start by giving you some context about the project.&lt;/p&gt;&#xA;&lt;p&gt;…&lt;/p&gt;&#xA;&lt;p&gt;Read the full article on &lt;a href=&#34;https://hub.packtpub.com/how-build-javascript-microservices-platform/&#34;&gt;PacktPub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Render ES6 javascript template literals contained in a variable</title>
+      <link>http://localhost:1313/blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/</link>
+      <pubDate>Sat, 22 Oct 2016 00:32:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/22/Render-ES6-javascript-template-literals-contained-in-a-variable/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In the current project I&amp;rsquo;m working on, at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate&lt;/a&gt;, I am using &lt;code&gt;node.js&lt;/code&gt; and I have variables coming from a yaml file that contain ES6-like template literals, for example:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;messages:&#xA;- &amp;#34;Hey, ${user.name}, how are you feeling today?&amp;#34;&#xA;- &amp;#34;What&amp;#39;s the weather like in ${user.profile.city}?&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and I need to render the variables before sending the message to the client. As you might know, template literals, in order to be rendered need to be wrapped by backtick quotes, for example:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Randomize variables in a string in javascript</title>
+      <link>http://localhost:1313/blog/2016/10/21/Randomize-variables-in-a-string-in-javascript/</link>
+      <pubDate>Fri, 21 Oct 2016 12:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/21/Randomize-variables-in-a-string-in-javascript/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;&#xA;&lt;p&gt;I have a string that looks like:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;[Hi|Hello|Hey] ${user.name}! Would you like to [go for a walk|to the park]?&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;I need to render the text randomising the action (&lt;em&gt;go for a walk&lt;/em&gt; &lt;strong&gt;or&lt;/strong&gt; &lt;em&gt;to the park&lt;/em&gt;) so that the message looks slightly different every time that is sent. Each block of square brackets could contain &lt;em&gt;N&lt;/em&gt; variables (eg. &lt;code&gt;[walk|run|swim|play tennis]&lt;/code&gt;) and each message can contain multiple blocks of random substrings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New plugin for Passwordless.net based on Node-Cache</title>
+      <link>http://localhost:1313/blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/</link>
+      <pubDate>Sun, 05 Jun 2016 19:58:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/</guid>
+      <description>&lt;p&gt;Yesterday I&amp;rsquo;ve published my first &lt;a href=&#34;https://www.npmjs.com/package/passwordless-nodecache&#34;&gt;npm package&lt;/a&gt; and I&amp;rsquo;m feeling quite proud. I&amp;rsquo;ve been programming in NodeJS for a few months now and I have to say, I love the concept behind &lt;strong&gt;npm&lt;/strong&gt;. The fact that you can rely on &lt;em&gt;a bunch of packages ready to be used&lt;/em&gt;, installable in few seconds that are often really well written, tested and documented and last but not least open-source, is just great.&lt;/p&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ve decided that I had to contribute with a plugin for &lt;a href=&#34;passwordless.net&#34;&gt;passwordless.net&lt;/a&gt; that supports &lt;a href=&#34;https://www.npmjs.com/package/node-cache&#34;&gt;node-cache&lt;/a&gt;. My plugin, &lt;strong&gt;passwordless-nodecache&lt;/strong&gt; is available on &lt;a href=&#34;https://www.npmjs.com/package/passwordless-nodecache&#34;&gt;npmjs.com&lt;/a&gt; and it&amp;rsquo;s listed in the &lt;a href=&#34;https://passwordless.net/plugins&#34;&gt;Plugins page&lt;/a&gt; of passwordless.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to create a smart Slack Bot in Node.js</title>
+      <link>http://localhost:1313/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/</link>
+      <pubDate>Mon, 04 Apr 2016 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/</guid>
+      <description>&lt;p&gt;The challenge here was creating a &lt;strong&gt;bot able to schedule events&lt;/strong&gt;. Part of our internal tools at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate Media&lt;/a&gt;, &lt;strong&gt;PlannerBot&lt;/strong&gt;, so it has been named, is now a member of our team. He currently lives in Slack, online 24/7 for 365 days of the year, programmed with the idea in mind that one day he could be moved to Facebook Messenger, Skype, or any other messaging platform.&lt;/p&gt;&#xA;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;&#xA;&lt;p&gt;In this case I give a partial information, so the &lt;strong&gt;bot will ask me&lt;/strong&gt; the missing details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to create a simple Slack Bot in Node.js</title>
+      <link>http://localhost:1313/blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js/</link>
+      <pubDate>Tue, 22 Mar 2016 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js/</guid>
+      <description>&lt;p&gt;In this post I want to help you creating a &lt;em&gt;simple Slack bot with Node.js&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Slack has created two different integrations methods, &lt;strong&gt;Incoming/Outcoming Webhooks&lt;/strong&gt; and &lt;strong&gt;Bot Users&lt;/strong&gt;. If you are interested in the latter case, please read my article about [&lt;em&gt;Creating a Slack User Bot&lt;/em&gt;]({% post_url&#xA;2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).&lt;/p&gt;&#xA;&lt;p&gt;In this article, we are going to integrate the Slack Incoming Webhooks which allows you to &lt;strong&gt;send data into Slack&lt;/strong&gt; in real-time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

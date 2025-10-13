@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/open-source/</link>
+    <description>Recent content in Open Source on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 05 Jun 2016 19:58:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New plugin for Passwordless.net based on Node-Cache</title>
+      <link>http://localhost:1313/blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/</link>
+      <pubDate>Sun, 05 Jun 2016 19:58:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/06/05/New-plugin-for-Passwordless.net-based-on-Node-Cache/</guid>
+      <description>&lt;p&gt;Yesterday I&amp;rsquo;ve published my first &lt;a href=&#34;https://www.npmjs.com/package/passwordless-nodecache&#34;&gt;npm package&lt;/a&gt; and I&amp;rsquo;m feeling quite proud. I&amp;rsquo;ve been programming in NodeJS for a few months now and I have to say, I love the concept behind &lt;strong&gt;npm&lt;/strong&gt;. The fact that you can rely on &lt;em&gt;a bunch of packages ready to be used&lt;/em&gt;, installable in few seconds that are often really well written, tested and documented and last but not least open-source, is just great.&lt;/p&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ve decided that I had to contribute with a plugin for &lt;a href=&#34;passwordless.net&#34;&gt;passwordless.net&lt;/a&gt; that supports &lt;a href=&#34;https://www.npmjs.com/package/node-cache&#34;&gt;node-cache&lt;/a&gt;. My plugin, &lt;strong&gt;passwordless-nodecache&lt;/strong&gt; is available on &lt;a href=&#34;https://www.npmjs.com/package/passwordless-nodecache&#34;&gt;npmjs.com&lt;/a&gt; and it&amp;rsquo;s listed in the &lt;a href=&#34;https://passwordless.net/plugins&#34;&gt;Plugins page&lt;/a&gt; of passwordless.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

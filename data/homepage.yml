@@ -11,7 +11,7 @@ social:
   gmail: 
 about:
   enable: true
-  content: Senior Software Engineer @ [Okteto](https://okteto.com) · (Ex-[Gitpod](https://gitpod.io) · Ex-[DAZN](https://dazn.com)) · Co-Founder [@OnoranzeFunebriCloud](https://onoranzefunebricloud.com) · AWS Community Builder · DevX 🔥
+  content: Co-Founder & CTO [@OnoranzeFunebriCloud](https://onoranzefunebricloud.com) · (Ex-[Okteto](https://okteto.com) · Ex-[Gitpod](https://gitpod.io) · Ex-[DAZN](https://dazn.com)) · AWS Community Builders alum · DevX 🔥
   button:
     btnText: Find out more
     URL: "/about"
@@ -40,7 +40,7 @@ experience:
       duration: Nov 2017
     - logo: /img/ofc.jpg
       title: Onoranze Funebri Cloud
-      company: Co-Founder
+      company: Co-Founder & CTO
       duration: Jan 2017
     - logo: /img/activate.png
       title: Activate Media

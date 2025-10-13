@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fargate on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/fargate/</link>
+    <description>Recent content in Fargate on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 25 Aug 2021 07:35:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/fargate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to configure ECS Fargate Scheduled Autoscaling</title>
+      <link>http://localhost:1313/blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/</link>
+      <pubDate>Wed, 25 Aug 2021 07:35:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2021/08/25/How-to-configure-ECS-Fargate-Scheduled-Autoscaling/</guid>
+      <description>&lt;p&gt;You are looking at configuring &lt;strong&gt;ECS Fargate scheduled autoscaling&lt;/strong&gt;, and you&amp;rsquo;re feeling a bit lost?&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s how I felt a few days ago. To set this up, I struggled for a couple of days. Unfortunately, the documentation and examples I found online didn&amp;rsquo;t help me much, so once I figured it out, I decided to share a working code example using Terraform.&lt;/p&gt;&#xA;&lt;p&gt;To be on the same page, in this post, I am assuming that you know what you are doing, and you are aware that there are &lt;a href=&#34;https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html&#34;&gt;different methods of autoscaling&lt;/a&gt;. We will look at configuring scheduled autoscaling which may not be the best choice for your project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

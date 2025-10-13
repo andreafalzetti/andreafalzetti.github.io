@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Serverless on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/serverless/</link>
+    <description>Recent content in Serverless on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 02 May 2024 22:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Lambda: TypeError: Wrong arguments</title>
+      <link>http://localhost:1313/blog/2024/05/02/AWS-Lambda-TypeError-Wrong-arguments/</link>
+      <pubDate>Thu, 02 May 2024 22:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024/05/02/AWS-Lambda-TypeError-Wrong-arguments/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve faced the following error for a few hours, until I realized how simple the solution was.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2024-05-02T20:03:06.574Z&#x9;b8a190ca-89fd-4dc5-a277-a0fa06b35091&#x9;ERROR&#x9;Invoke Error &#x9;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errorType&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TypeError&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errorMessage&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Wrong arguments&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stack&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TypeError: Wrong arguments&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at RAPIDClient.postInvocationResponse (file:///var/runtime/index.mjs:434:27)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at complete (file:///var/runtime/index.mjs:811:16)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at done (file:///var/runtime/index.mjs:835:11)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at succeed (file:///var/runtime/index.mjs:839:9)&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at file:///var/runtime/index.mjs:872:20&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After checking line by line, I noticed that I was accessing an environment variable that was &lt;strong&gt;not definied&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AWS Lambda: Lessons learned over 5 years and 100 functions in production</title>
+      <link>http://localhost:1313/blog/2023/03/30/AWS-Lambda-Lessons-learned-over-5-years-and-100-functions-in-production/</link>
+      <pubDate>Thu, 30 Mar 2023 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2023/03/30/AWS-Lambda-Lessons-learned-over-5-years-and-100-functions-in-production/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://onoranzefunebricloud.com&#34;&gt;onoranzefunebricloud.com&lt;/a&gt; we provide funeral agencies with digital solutions to do their best work, and to build such complex tools we use a combination of AWS services including dockerized applications in Fargate and lot of Serverless tools such as Lambda.&lt;/p&gt;&#xA;&lt;p&gt;Over the years, as we introduced more functionalities we&amp;rsquo;ve also grown our usage of Lambda, and as of today we count over 100 Lambda functions in production.&lt;/p&gt;&#xA;&lt;p&gt;In this post I want to share the lessons learned, the good and the bad.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serverlessconf London 2016</title>
+      <link>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</link>
+      <pubDate>Mon, 31 Oct 2016 23:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/10/31/Serverlessconf-London-2016/</guid>
+      <description>&lt;h2 id=&#34;serverlessconf-london-2016&#34;&gt;ServerlessConf London 2016 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;First of all, I have to thank the &lt;a href=&#34;http://awsuguk.org&#34;&gt;@AWSUserGroupUK&lt;/a&gt; meetup group for giving me the great opportunity to join this amazing conference.&lt;/p&gt;&#xA;&lt;p&gt;It has been the &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;rd edition of the &lt;a href=&#34;http://serverlessconf.io&#34;&gt;ServerlessConf&lt;/a&gt;, the first was held in New York &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;, the second in Tokyo &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; and this in London &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

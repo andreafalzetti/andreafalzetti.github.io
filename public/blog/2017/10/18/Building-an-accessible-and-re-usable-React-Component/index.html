@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Andrea Falzetti, Senior Software Engineer in 🇪🇺">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Building an accessible and re-usable React Component</h1>
+    <p class="uk-text-center uk-text-lead"></p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/react/" style="margin-right: 8px"
+        >#react</a
+      >
+      <a href="http://localhost:1313/tags/javascript/" style="margin-right: 8px"
+        >#javascript</a
+      >
+      <a href="http://localhost:1313/tags/accessibility/" style="margin-right: 8px"
+        >#accessibility</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Oct 18, 2017</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>In <a href="https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a">one of my recent posts</a> I talked about how I have introduced <a href="https://storybook.js.org/">Storybook</a> to the team and how we adopted it in our development lifecycle.</p>
+<p>In this article, I want to share with you, my experience building an accessible <strong>custom input React component</strong> and how I found Storybook a useful dev tool that helped me achieve my goal.</p>
+<p>Let&rsquo;s start!</p>
+<h2 id="challenge-">Challenge 🤓</h2>
+<p>In this project, several views are sharing a similar piece of UI, a box with an icon and some text. In some cases, it also contains a button and an additional paragraph of text. I want the <strong>box</strong> to be a separate React Component so I can re-use it across the application. I need to identify all common features and pass them as <em>props</em> to the component so it will be able to behave differently in each instance. Given that this component will be a custom input, I want to make sure that the element is <strong>visible and usable</strong> from <strong>screen readers</strong>, it won&rsquo;t take too long, and it will make a big difference for many users.</p>
+<p><img src="/img/2017/07/interactive-bot-button-designs.jpg" alt="interactive-bot-button-designs"></p>
+<h2 id="scaffolding-">Scaffolding 👷</h2>
+<p>First, we need a <strong>name</strong> for our new component. Then a folder and file structure.</p>
+<p><img src="/img/2017/07/interactive-box-folder-stracture.jpg" alt="interactive-box-folder-stracture"></p>
+<p>This style comes from a boilerplate I have been using, it&rsquo;s called <a href="https://github.com/davezuko/react-redux-starter-kit">react-redux-starter-kit</a>. The project has now been abandoned but I still suggest you to check it out as it was really well done 💪</p>
+<p>I won&rsquo;t include the code of the actual box as that is not the purpose of this article. Below you can see how I exported the component and how I have used it.</p>
+<p>Export</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// src/components/InteractiveBox/index.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">InteractiveBoxButton</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./InteractiveBoxButton&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">InteractiveBoxContainer</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./InteractiveBoxContainer&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">InteractiveBoxButton</span>, <span style="color:#a6e22e">InteractiveBoxContainer</span> }
+</span></span></code></pre></div><p>Import</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// src/routes/MyRoute123/components/MyRoute123.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">InteractiveBoxButton</span>, <span style="color:#a6e22e">InteractiveBoxContainer</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;components/InteractiveBox&#39;</span>
+</span></span></code></pre></div><p>The next step is to create the <strong>stories</strong> for the component, in Storybook. A story is a scenario or particular configuration in which our component will render. The idea here is to create a story for each different case. Although this can take a bit longer than just building the component, I found this process very helpful to me in helping to discover all props and edge cases I needed to cover. It resulted in both better SASS and JavaScript code.</p>
+<p>Moreover, you will end up with a bunch of visual tests for your component, which comes in handy in different occasions. I have talked about it in <a href="https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a#4949">my last blog post</a></p>
+<p>These are the stories that I have created so far:</p>
+<p><img src="/img/2017/07/interactive-box-stories.jpg" alt="interactive-box-stories"></p>
+<h2 id="state-management">State management</h2>
+<p>To handle the state of the component, so which option is selected, I decided to build a wrapper component which will act as &ldquo;selector&rdquo; and it will orchestrate the rendering of the child boxes. I kept the main component standalone, so I can use it even if I don&rsquo;t need to click handlers or change of state in my application.</p>
+<p>{% gist andreafalzetti/240d933f864c8674ede656e80abf844d %}</p>
+<h2 id="accessibility">Accessibility</h2>
+<p>During the <a href="https://www.meetup.com/halfstack/">HalfStack</a> June meetup: <a href="https://www.meetup.com/halfstack/events/238826210/">Accessibility and GraphQL</a>, one of the speakers, <a href="http://macr.ae/">Callum Macrae</a>, gave a talk about accessibility and screen readers. I admit that until that moment I didn&rsquo;t know much about this and didn&rsquo;t pay attention to this matter when building UI. Thanks to his talk and some practice at home I learnt how to use a screen reader, in particular, VoiceOver on Mac and now I use it to test my code, especially when I build custom input elements.</p>
+<h2 id="custom-input-fields-">Custom input fields 🤔</h2>
+<p>As <a href="https://twitter.com/samccone">@samccone</a> said in the tweet below, don&rsquo;t try to be clever with your inputs! It&rsquo;s very easy to screw things up, especially regarding accessibility. Unless you learnt how to deal with it appropriately, I would recommend you to stay away from building form masks or custom input on your own.</p>
+<!-- raw HTML omitted -->
+<p>In my case, the input didn&rsquo;t involve any typing which means we just need to inform the screen reader of the presence of our component and make it clickable. Given that I am using standard text elements and regular buttons inside the component, they will be automatically discovered and read out to the user. It was enough adding <code>role='button'</code> and an <code>aria-label='Description of the element'</code> to the div container to make it visible and clickable to screen readers. It&rsquo;s straightforward, but it gets missed most of the time, at least for what my experience can say.</p>
+<p>Besides being ethically correct for me and very satisfying knowing that we are allowing everybody to use the interfaces we build, it is also an important business decision as there is a high number of users with accessibility issues.</p>
+<p>I hope this post has been useful to you and you got my point. Next time you build a custom UI element, don&rsquo;t forget to at least <strong>test it with a screen reader</strong>. If your Company or Team can afford it, I would recommend running some accessibility tests with a real user. I will leave some useful links below.</p>
+<h2 id="useful-links">Useful links</h2>
+<ol>
+<li><strong><a href="https://www.npmjs.com/package/a11y">a11y</a></strong> (tool)</li>
+<li><a href="https://www.w3.org/WAI/ER/tools/">Web Accessibility Evaluation Tools List</a></li>
+<li><a href="http://a11yproject.com/">The A11Y Project</a> ()</li>
+</ol>
+<ul>
+<li><a href="http://a11yproject.com/posts/accessible-data-tables/">How–to: Create accessible data tables</a></li>
+<li><a href="http://a11yproject.com/posts/placeholder-input-elements/">How-to: Use Placeholder Attributes</a></li>
+<li><a href="http://a11yproject.com/posts/skip-nav-links/">How–to: Use Skip Navigation links</a></li>
+<li><a href="http://a11yproject.com/posts/title-attributes/">How–to: Use TITLE attributes</a></li>
+<li><a href="http://a11yproject.com/posts/how-to-use-application-role/">How–to: Use role=&lsquo;application&rsquo;</a></li>
+<li><a href="http://a11yproject.com/posts/how-to-hide-content/">How-to: Hide Content</a></li>
+</ul>
+<ol>
+<li><a href="https://www.usertesting.com/blog/2014/03/04/the-value-of-involving-people-with-disabilities-in-user-research/">The Value of Involving People with Disabilities in User Research</a> (blog post)</li>
+<li><a href="http://rosenfeldmedia.com/books/a-web-for-everyone/">A Web for Everyone</a> (book)</li>
+<li><a href="http://rosenfeldmedia.com/a-web-for-everyone/make-accessibility-easy/">Make accessibility easy, and the world will be more accessible</a> (Accessibility in PDF)</li>
+</ol>
+<p>Photo credits: <a href="https://unsplash.com/photos/ck3HFWw2OiM">@lum3n</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

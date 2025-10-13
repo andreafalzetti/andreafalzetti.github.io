@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="comments on the conference">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Serverlessconf London 2016</h1>
+    <p class="uk-text-center uk-text-lead">comments on the conference</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/conference/" style="margin-right: 8px"
+        >#conference</a
+      >
+      <a href="http://localhost:1313/tags/aws/" style="margin-right: 8px"
+        >#aws</a
+      >
+      <a href="http://localhost:1313/tags/serverless/" style="margin-right: 8px"
+        >#serverless</a
+      >
+      <a href="http://localhost:1313/tags/london/" style="margin-right: 8px"
+        >#london</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Oct 31, 2016</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <h2 id="serverlessconf-london-2016">ServerlessConf London 2016 <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>First of all, I have to thank the <a href="http://awsuguk.org">@AWSUserGroupUK</a> meetup group for giving me the great opportunity to join this amazing conference.</p>
+<p>It has been the <!-- raw HTML omitted --><!-- raw HTML omitted -->rd edition of the <a href="http://serverlessconf.io">ServerlessConf</a>, the first was held in New York <!-- raw HTML omitted --><!-- raw HTML omitted -->, the second in Tokyo <!-- raw HTML omitted --><!-- raw HTML omitted --> and this in London <!-- raw HTML omitted --><!-- raw HTML omitted -->.</p>
+<p>The main sponsor was <em>certainly</em> Amazon so we have seen a lot of AWS stuff but besides sponsoring the event they have also done most of the effort so far in providing serverless solutions to the market. Other players such as Microsoft, Google and IBM are following with their products.</p>
+<h2 id="openwhisk">OpenWhisk</h2>
+<p>IBM has presented their <!-- raw HTML omitted --><!-- raw HTML omitted --> event-based platform which allows to trigger and run serverless functions. An interesting fact is that the platform is mainly built in <a href="http://www.scala-lang.org/"><strong>Scala</strong></a> and they used Node.js to prototype it. They explained the reason behind the decision of moving from Node to Scala for production and it&rsquo;s because they believe Scala is more reliable than Node (ok, it&rsquo;s time for me to look into Scala <!-- raw HTML omitted --><!-- raw HTML omitted -->). It&rsquo;s worth knowing that OpenWhisk is the only solution at the moment supports multiple languages such as Node, Swift and anything you can wrap in a Docker image, as they are able to run Docker images for you.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> Talk: <a href="https://www.youtube.com/watch?v=S-fY1exdbao&amp;list=UUqlcVgk8SkUmve4Kw4xSlgw"><em>OpenWhisk Under the Hood - Stephen Fink</em></a></p>
+<h2 id="azure-functions">Azure functions</h2>
+<p>Microsoft had a very interactive demo while presenting their product, <a href="https://azure.microsoft.com/en-gb/services/functions/"><strong>Azure functions</strong></a> and <a href="https://azure.microsoft.com/en-gb/documentation/articles/web-sites-create-web-jobs/"><strong>WebJobs</strong></a>. A web interface and a command line tool allow to deploy and test serverless functions, pretty cool.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> Talk: <a href="https://www.youtube.com/watch?v=yJ9KnTw1kyc&amp;list=UUqlcVgk8SkUmve4Kw4xSlgw"><em>The making of Azure Functions - Chris Anderson</em></a></p>
+<h2 id="google-cloud-functions">Google Cloud Functions</h2>
+<p>Google as well has lunched a Lambda-like service called Google Cloud Functions, they had a talk (which I have unfortunately missed) but you can read more about their product, <a href="https://cloud.google.com/functions/">here</a>.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> Talk: <a href="https://www.youtube.com/watch?v=BybYim0HRmY&amp;list=PLnwBrRU5CSTmM4OsUzDaog2pqadQSxKBv"><em>Serverless Microservices with Google Cloud Functions - Bret McGowen</em></a></p>
+<h2 id="the-workshop">The Workshop</h2>
+<p>There were other two workshops but I chose &ldquo;<strong>Building a Serverless Messenger Bot on AWS Using the Messenger Platform and the Serverless Framework</strong>&rdquo; hosted by <a href="https://twitter.com/mpuittinen">Mikael Puittinen</a> the CTO of <a href="http://sc5.io">SC5</a> and <a href="https://twitter.com/hopeatussi">Eetu Tuomala</a>, they introduced us to <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">AWS Lambda</a>, the <a href="https://serverless.com/">serverless framework</a> and we managed to create a serverless Messenger Bot using their boilerplate which is open source and available <a href="https://github.com/SC5/serverless-messenger-boilerplate">here</a>.</p>
+<p>They designed the workshop in order to have us coding as less as possible and they achieved it especially using <a href="http://wit.ai">Wit.ai</a> which provides an easy way for designing conversation flows using stories and machine learning. I already had some experience on this because when Facebook released the Messenger API I have implemented a <a href="https://github.com/andreafalzetti/FB-LyricsBot">LyricsBot</a> for fun and few months before I have used Wit.ai to [create a smart Slack Bot in Node.js]({% post_url 2016-03-22-how-to-create-a-simple-slack-bot-in-nodejs %})
+that we use at <a href="http://activate.co.uk">Activate</a>, as explained in <a href="https://medium.com/@activatemedia/the-activate-bot-story-cecfc4764292">this article</a>.</p>
+<p><a href="https://github.com/SC5/serverless-messenger-boilerplate"><img src="/img/serverlessconf-london-2016/serverless-messenger-bot.png" alt="bot-architecture"></a></p>
+<h2 id="serverless">Serverless <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>It&rsquo;s not here to replace or pretend to be better than existing solutions, as any new technology it might be good for some and not appropriate for other cases, serverless is a way of simplifying software development. You focus on the actual business logic of your code and you forget about everything else. You write small microservices that can be 1 or 2 lambda functions and you <strong>use services</strong>. I particularly liked this quote from one of the talks:</p>
+<blockquote>
+<p>&ldquo;Build Apps with Services not Servers&rdquo; <a href="https://twitter.com/danilop">@danilop</a></p></blockquote>
+<p>Which, in essence, is a statement to describe serverless. When you build your next application, think about what <strong>services</strong> can you make serverless, so you have to focus only on the important bit, only on the important code that makes the difference in your company. You don&rsquo;t want to build your authentication layer anymore, you don&rsquo;t want to build a message bus again, you don&rsquo;t want to worry about installing and updating dependencies on a virtual machine, or worrying about access policies anymore.</p>
+<p>I agree with <a href="https://twitter.com/mipsytipsy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Charity Majors</a>, founder of <a href="http://parse.com">parse.com</a> when during her talk she said that <em>serverless</em> is an <strong>ambiguous</strong> name that doesn&rsquo;t reflect the real concept behind it, because, at the end, the functions still run on servers.</p>
+<p>With serverless architectures, we hand over the <strong>responsibility</strong> of running the servers. If now we are comfortable buying virtual machines that run on someone else hardware on which hosting providers install the OS and give us access to it, serverless is a step further. The provider also installs the <strong>dependencies</strong> and <strong>framework</strong> that we need in order to run our software. Ah, and they also keep it up to date, ed and secure. <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="the-serverless-framework">The Serverless Framework</h2>
+<p>It&rsquo;s a tool built in Node.js that allows developers building serverless architectures on AWS Lambda and more. It helps <strong>provisioning</strong>, <strong>scaling</strong> and <strong>deploying</strong> faster. It works with multiple providers including AWS, Google Cloud Functions, OpenWhisk and it&rsquo;s configurable with a <em>yaml</em> file. Their CTO, <a href="https://twitter.com/flomotlik">Florian Motlik</a>, had a very interesting talk at the conference during which he announced that a lot of features are coming soon, so it definitely worth keeping on eye this. You can read more about it on <a href="https://serverless.com/">serverless.com</a>. In my opinion, it&rsquo;s really <strong>powerful</strong> and absolutely necessary especially if you are using Node.js.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> Talk: <a href="https://www.youtube.com/watch?v=ygGmigMBVfI"><em>Getting the most out of the Serverless Framework - Florian Motlik</em></a></p>
+<h2 id="future-for-me">Future (for me) <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>I am taking the <a href="https://aws.amazon.com/certification/certified-developer-associate/">AWS Certified Developer - Associate</a> course on <a href="https://acloud.guru/courses">aCloud.guru</a> which I highly recommend, it&rsquo;s really nice and well done. Once I have a better understanding of all AWS services I might use serverless at work or in a side project.</p>
+<p>At the same time I am watching a course about <em>ECMAScript6</em> on <a href="https://ES6.io/friend/AFALZETTI">ES6.io</a>, again really good quality, if you use JavaScript you should definitely consider it.</p>
+<p>I am also using Lambda functions to create a few skills for my Amazon Alexa, it&rsquo;s working fine but I am waiting for some good inspiration so I can make something useful out of it <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="thanks">Thanks <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Thanks to the organisers of the event and to all the staff at the venue!</p>
+<p>Thanks to <a href="http://activate.co.uk">Activate Media</a> for supporting me.</p>
+<p>And also thanks for reading! If you find any typo or mistake, please send me a pull request <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="photos-and-videos">Photos and videos</h2>
+<p><a href="https://www.youtube.com/watch?v=wJqBn9axSe4">Here</a> are a short reminder video and a <a href="https://www.youtube.com/watch?v=dCuVBV0lPYY">VLOG</a> of the event.</p>
+<p><img src="/img/serverlessconf-london-2016/serverlessconf-london-2016-6.jpg" alt="serverless-conf-photo"></p>
+<p><img src="/img/serverlessconf-london-2016/serverlessconf-london-2016-7.jpg" alt="serverless-conf-photo"></p>
+<p><img src="/img/serverlessconf-london-2016/serverlessconf-london-2016-12.jpg" alt="serverless-conf-photo"></p>
+<p><img src="/img/serverlessconf-london-2016/serverlessconf-london-2016-13.jpg" alt="serverless-conf-photo"></p>
+<p><img src="/img/serverlessconf-london-2016/serverlessconf-london-2016-14.jpg" alt="serverless-conf-photo"></p>
+<p><img src="/img/serverlessconf-london-2016/serverlessconf-london-2016-15.jpg" alt="serverless-conf-photo"></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

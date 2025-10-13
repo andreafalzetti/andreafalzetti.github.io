@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caldav on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/caldav/</link>
+    <description>Recent content in Caldav on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 04 Apr 2016 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/caldav/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to create a smart Slack Bot in Node.js</title>
+      <link>http://localhost:1313/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/</link>
+      <pubDate>Mon, 04 Apr 2016 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/</guid>
+      <description>&lt;p&gt;The challenge here was creating a &lt;strong&gt;bot able to schedule events&lt;/strong&gt;. Part of our internal tools at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate Media&lt;/a&gt;, &lt;strong&gt;PlannerBot&lt;/strong&gt;, so it has been named, is now a member of our team. He currently lives in Slack, online 24/7 for 365 days of the year, programmed with the idea in mind that one day he could be moved to Facebook Messenger, Skype, or any other messaging platform.&lt;/p&gt;&#xA;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;&#xA;&lt;p&gt;In this case I give a partial information, so the &lt;strong&gt;bot will ask me&lt;/strong&gt; the missing details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to create a simple Slack Bot in Node.js</title>
+      <link>http://localhost:1313/blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js/</link>
+      <pubDate>Tue, 22 Mar 2016 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/22/How-to-create-a-simple-Slack-Bot-in-Node.js/</guid>
+      <description>&lt;p&gt;In this post I want to help you creating a &lt;em&gt;simple Slack bot with Node.js&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Slack has created two different integrations methods, &lt;strong&gt;Incoming/Outcoming Webhooks&lt;/strong&gt; and &lt;strong&gt;Bot Users&lt;/strong&gt;. If you are interested in the latter case, please read my article about [&lt;em&gt;Creating a Slack User Bot&lt;/em&gt;]({% post_url&#xA;2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).&lt;/p&gt;&#xA;&lt;p&gt;In this article, we are going to integrate the Slack Incoming Webhooks which allows you to &lt;strong&gt;send data into Slack&lt;/strong&gt; in real-time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

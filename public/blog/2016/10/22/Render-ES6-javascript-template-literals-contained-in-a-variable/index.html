@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="using node.js and recursion">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Render ES6 javascript template literals contained in a variable</h1>
+    <p class="uk-text-center uk-text-lead">using node.js and recursion</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/nodejs/" style="margin-right: 8px"
+        >#nodejs</a
+      >
+      <a href="http://localhost:1313/tags/javascript/" style="margin-right: 8px"
+        >#javascript</a
+      >
+      <a href="http://localhost:1313/tags/snippets/" style="margin-right: 8px"
+        >#snippets</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Oct 22, 2016</p>
+    <p class="uk-text-center">Reading time: 2 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <h2 id="challenge">Challenge <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>In the current project I&rsquo;m working on, at <a href="http://activate.co.uk">Activate</a>, I am using <code>node.js</code> and I have variables coming from a yaml file that contain ES6-like template literals, for example:</p>
+<pre tabindex="0"><code>messages:
+- &#34;Hey, ${user.name}, how are you feeling today?&#34;
+- &#34;What&#39;s the weather like in ${user.profile.city}?&#34;
+</code></pre><p>and I need to render the variables before sending the message to the client. As you might know, template literals, in order to be rendered need to be wrapped by backtick quotes, for example:</p>
+<pre tabindex="0"><code>let user = { name: &#34;Andrea&#34; };
+const greeting = `Hey, ${user.name}, how are you feeling today?`;
+console.log(greeting); // Hey, Andrea, how are you feeling today?
+</code></pre><p>Unfortunately, if the text that contains your template literals come from an external source (for example from an API call that returns a JSON, or from a file like in my case): <strong>automatic render will NOT happen</strong> and you will end up with <code>${user.name}</code> as actual text of your string.</p>
+<h3 id="solution-open-source">Solution: Open source <!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
+<p>When I found out that my plan of using ES6 template literals poorely failed <!-- raw HTML omitted --><!-- raw HTML omitted -->, as every <em>good developer</em> <!-- raw HTML omitted --><!-- raw HTML omitted --> would do, I googled for an existing solution to my problem, and &hellip; I have found <a href="https://github.com/guillaumevincent/es6-template-render/blob/master/index.js">es6-template-render</a> which is basically a simple <em>find &amp; replace</em> with the only problem that it was a <strong>really simple</strong> find and replace so it won&rsquo;t support objects like <code>${user.profile.city}</code> but only strings such as <code>Hello ${name}</code> - which clearly was not enough for me <!-- raw HTML omitted --><!-- raw HTML omitted -->.</p>
+<p>Last week I have been to <a href="http://conferences.oreilly.com/oscon">OSCON 2016</a>, an open soure convention organised by the publisher <a href="http://www.oreilly.com/">O&rsquo;Reilly</a> so what is the best thing I could eventually do here to solve my problem?</p>
+<p>Of course <strong>contributing to the open source community</strong> with a pull request <!-- raw HTML omitted --><!-- raw HTML omitted -->!</p>
+<p>I have implemented a nice recursive function that finds all the variables and if it finds an object it will iterate through its keys and follow each other object again and again until rendering everything at any level.</p>
+<p>Here&rsquo;s the code, now merged into the <a href="https://github.com/guillaumevincent/es6-template-render">main repository</a>, so please have a look at it, if you have any suggestion on how to improve it, or make it more readable, it would be great to hear from you <!-- raw HTML omitted --><!-- raw HTML omitted -->.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">_recursive_rendering</span>(<span style="color:#a6e22e">string</span>, <span style="color:#a6e22e">context</span>, <span style="color:#a6e22e">stack</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">context</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#a6e22e">key</span>)) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">context</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;object&#34;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">_recursive_rendering</span>(<span style="color:#a6e22e">string</span>, <span style="color:#a6e22e">context</span>[<span style="color:#a6e22e">key</span>], (<span style="color:#a6e22e">stack</span><span style="color:#f92672">?</span><span style="color:#a6e22e">stack</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;.&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">+</span> <span style="color:#a6e22e">key</span>);
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">find</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\\$\\{\\s*&#39;</span> <span style="color:#f92672">+</span> (<span style="color:#a6e22e">stack</span><span style="color:#f92672">?</span><span style="color:#a6e22e">stack</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#39;.&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\\s*\\}&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">re</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RegExp(<span style="color:#a6e22e">find</span>, <span style="color:#e6db74">&#39;g&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">re</span>, <span style="color:#a6e22e">context</span>[<span style="color:#a6e22e">key</span>]);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">string</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Special thanks go to <a href="https://github.com/guillaumevincent">@guillaumevincent</a> and <a href="https://github.com/gabrielperales">@gabrielperales</a> that have respectively created and made ES5-compatible the original code.</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

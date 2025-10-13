@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Our hands-on experience: the good &amp; the bad">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">AWS Lambda: Lessons learned over 5 years and 100 functions in production</h1>
+    <p class="uk-text-center uk-text-lead">Our hands-on experience: the good &amp; the bad</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/aws/" style="margin-right: 8px"
+        >#aws</a
+      >
+      <a href="http://localhost:1313/tags/lambda/" style="margin-right: 8px"
+        >#lambda</a
+      >
+      <a href="http://localhost:1313/tags/serverless/" style="margin-right: 8px"
+        >#serverless</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Mar 30, 2023</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>At <a href="https://onoranzefunebricloud.com">onoranzefunebricloud.com</a> we provide funeral agencies with digital solutions to do their best work, and to build such complex tools we use a combination of AWS services including dockerized applications in Fargate and lot of Serverless tools such as Lambda.</p>
+<p>Over the years, as we introduced more functionalities we&rsquo;ve also grown our usage of Lambda, and as of today we count over 100 Lambda functions in production.</p>
+<p>In this post I want to share the lessons learned, the good and the bad.</p>
+<p>I&rsquo;ve organized the content in 4 sections:</p>
+<ol>
+<li>The good</li>
+<li>The bad</li>
+<li>Recommendations</li>
+<li>Conclusions</li>
+</ol>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a8m6rnlfptfughh5b8hy.png" alt="130 aws lambdas"></p>
+<hr>
+<h2 id="the-good">The good</h2>
+<ol>
+<li>
+<p><strong>Zero daily operations &amp; no downtime</strong>: Over 5 years we never had a downtime on the services built on Lambda. The product has been very reliable for us and we are always confident it will scale for us, when needed, without any manual operation on our side. Wait! Lambda doesn&rsquo;t scale indefinitely! There are soft and hard limits to keep in mind, for example, by default you can have up to 1000 concurrent Lambdas running in a given AWS region at any given time. We have a predictable work load, that&rsquo;s why I have this confidence. Check out <a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html">Lambda quotas</a> to know more.</p>
+</li>
+<li>
+<p>💰 <strong>Affordable</strong>: For a long time we were paying $0! Until our startup got traction, our AWS bills have been very low thanks to using Lambda and the generous <a href="https://aws.amazon.com/lambda/pricing/">AWS free tier</a>.</p>
+</li>
+<li>
+<p><strong>Tiny codebase ➡️ Easy to contribute to</strong>: Having services separated into each own repository and its own set of Lambdas in our experience has simplified and made easier to contribute to a project. The learning curve of the codebase is very small because the codebase is tiny!</p>
+</li>
+<li>
+<p><strong>Separation of concerns</strong>: Having services deployed as an independent Lambda means for us having decoupled components which meant individual contributors felt safe in modifying, deploying a service without the worry of breaking another one. If something went wrong, only an isolated service would be affected and it would be easier to debug.</p>
+</li>
+<li>
+<p><strong>Versatile</strong>: Lambda is very flexible in terms of what you can do with it. In a <a href="https://dev.to/andreafalzetti/combining-nodejs-and-python-in-a-single-aws-lambda-function-53bl">recent blog post</a> I&rsquo;ve even shared how I am using a runtime with multiple programming languages.</p>
+</li>
+</ol>
+<p>## The bad</p>
+<ol>
+<li>
+<p><strong>Too many Lambdas</strong>: Having too many Lambdas to update could result in a maintenance burden. For example, some of the first Lambdas we built back in 2017 were running in Node.js 14 which AWS has deprecated. We were not planning to work on those, so for us that was unplanned work that we had to undertake to avoid being stuck and blocked in making new changes to those Lambdas.</p>
+</li>
+<li>
+<p><strong>Expensive if misused</strong>: Lambda is not a silver bullet, in fact, if misused it can lead to very expensive bills. Using it for high-load or long-running tasks, it will definitely make you incur in expensive bills. Choose carefully how to use it.</p>
+</li>
+<li>
+<p><strong>Configuration Expert</strong>: Lambda has evolved a lot in the past 5 years. The initial concept: &ldquo;take this code and run it&rdquo; is slowly fading away over time, due to the addition of tons of configuration. You can still get started pretty quickly, but you can also get lost in fine tuning or configuring your function.</p>
+</li>
+</ol>
+<h2 id="recommendations">Recommendations</h2>
+<h3 id="-choose-with-care">🎯 Choose, with care</h3>
+<p>Do not default to Lambda for everything. This is a mistake I did at the beginning, building REST APIs on Lambda might not be the best decision, especially when you grow and scale, you might regret it.</p>
+<p>Lambda is great for gluing together components, building event-driven systems and much more, but for long-running and intense compute processes, it might make sense only in certain scenarios.</p>
+<h3 id="-get-paged-when-it-fails">📟 Get paged when it fails</h3>
+<p>Your code will fail and you want to know when that happens. We use <code>serverless-plugin-aws-alerts</code> to instrument CloudWatch alarms and dashboards for our Lambdas and <a href="https://www.atlassian.com/software/opsgenie">OpsGenie</a> to page us on Slack or on our phones.</p>
+<p>You need to configure OpsGenie to use SNS and then the simplest approach is alert on failures, for example <code>serverless.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">custom</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Lambda Alarms</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">alerts</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">stages</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">prod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">dashboards</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">topics</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">alarm</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">topic</span>: <span style="color:#ae81ff">arn:aws:sns:${self:provider.region}:${aws:accountId}:opsgenie</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">definitions</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">functionErrors</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#39;AWS/Lambda&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">metric</span>: <span style="color:#ae81ff">Errors</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">statistic</span>: <span style="color:#ae81ff">Sum</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">period</span>: <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">evaluationPeriods</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">datapointsToAlarm</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">comparisonOperator</span>: <span style="color:#ae81ff">GreaterThanOrEqualToThreshold</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">treatMissingData</span>: <span style="color:#ae81ff">missing</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">alarms</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">functionErrors</span>
+</span></span></code></pre></div><p>This alert is quite aggressive, it will page you as soon as there&rsquo;s an error, you can tune that to your preference.</p>
+<h3 id="-debug-locally">🛠️ Debug locally</h3>
+<p>We use VSCode and Serverless to run and debug our code as if it was running in Lambda. Example <code>.vscode/launch.json</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.0&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;configurations&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;node&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;request&#34;</span>: <span style="color:#e6db74">&#34;launch&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;console&#34;</span>: <span style="color:#e6db74">&#34;integratedTerminal&#34;</span>,            
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;hello&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;env&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;AWS_PROFILE&#34;</span>: <span style="color:#e6db74">&#34;&lt;YOUR_PROFILE&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;SLS_DEBUG&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>,
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;program&#34;</span>: <span style="color:#e6db74">&#34;${workspaceFolder}/node_modules/.bin/sls&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;args&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;invoke&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;local&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-s&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dev&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-f&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;hello&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-p&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;./examples/event.json&#34;</span>
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        }       
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In <code>./examples/event.json</code> you can store your test event, such as API Gateway or CloudWatch payloads.</p>
+<p>Another approach, can be using <a href="https://www.openfaas.com/">OpenFaaS</a> but this is a tool that I didn&rsquo;t have the opportunity to try yet.</p>
+<h3 id="-keep-it-small">📦 Keep it small!</h3>
+<p>We use <code>serverless-esbuild</code> to reduce the bundle size, it makes deployments and cold time faster.</p>
+<h3 id="-stay-up-to-date">📚 Stay up to date</h3>
+<p>You will find having up to date knowledge very handy the next time you&rsquo;re taking an important decision for example using or not Lambda or any other AWS service. I recommend following Yan&rsquo;s work on <a href="https://twitter.com/theburningmonk">Twitter</a> and his website <a href="https://theburningmonk.com/">theburningmonk.com</a>.</p>
+<p>Another valuable asset is <a href="https://acloudguru.com/videos/aws-this-week">AWS This Week</a> by the folks of ACloudGuru.</p>
+<hr>
+<h2 id="conclusions">Conclusions</h2>
+<p>Lambda is a great tool if leveraged correctly, at the same time it&rsquo;s not a silver bullet.</p>
+<p>I suggest you to listen in to some podcasts and read few more blog posts if the concept is still blurred.</p>
+<p><a href="https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html">Getting started</a> if fairly simple, especially with the <a href="https://www.serverless.com/">Serverless Framework</a></p>
+<p>What are you waiting for? Give it a try.</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

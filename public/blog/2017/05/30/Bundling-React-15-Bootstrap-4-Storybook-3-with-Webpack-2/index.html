@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="With few alpha versions">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2</h1>
+    <p class="uk-text-center uk-text-lead">With few alpha versions</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/javascript/" style="margin-right: 8px"
+        >#javascript</a
+      >
+      <a href="http://localhost:1313/tags/react/" style="margin-right: 8px"
+        >#react</a
+      >
+      <a href="http://localhost:1313/tags/storybook/" style="margin-right: 8px"
+        >#storybook</a
+      >
+      <a href="http://localhost:1313/tags/webpack/" style="margin-right: 8px"
+        >#webpack</a
+      >
+      <a href="http://localhost:1313/tags/bootstrap/" style="margin-right: 8px"
+        >#bootstrap</a
+      >
+      <a href="http://localhost:1313/tags/sass/" style="margin-right: 8px"
+        >#sass</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on May 30, 2017</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>How many times did it happen to you that you were debugging some code and at the end of the day you didn&rsquo;t manage to find a solution? How frustrating is that?</p>
+<p>Good news is, you will feel so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.</p>
+<p>Today, it was one of those days for me. I have spent long hours trying to make something work, and I eventually found a solution, so I thought it was a good thing to share it with the community.</p>
+<h2 id="challenge">Challenge</h2>
+<p>I&rsquo;m building a new React app and I have been using <a href="https://github.com/davezuko/react-redux-starter-kit">react-redux-starter-kit</a> for a couple of ReactJS projects now, and I really like it. A few days ago they released an update which brings <code>React 15.5.4</code>, <code>Webpack 2.5.1</code> and last but not least <code>Bootstrap 4.0.0-alpha</code>. When I saw this update, I had just started a new project, like, the week before, and I thought it could be worth it spending a few hours merging their changes, well I did it, and I am very happy now with the outcome.</p>
+<p>If you are a fan of Storybook you know that the current version does not work well with Webpack 2 so I started looking around for a solution, but I could find one. Thanks to <a href="https://github.com/storybooks/storybook/issues/1046#issuecomment-304324567">this</a> GitHub issue I realised that they are working on a major update which will support the latest version of Webpack and will be out soon.</p>
+<p>Let me summarise you my journey.</p>
+<h2 id="ingredients">Ingredients</h2>
+<ol>
+<li>react-redux-starter-kit <a href="https://github.com/davezuko/react-redux-starter-kit"><!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+<li>bootstrap v4.0.0-alpha <a href="https://github.com/twbs/bootstrap/tree/v4-npm"><!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+<li>storybook 3 alpha (rc2) <a href="https://github.com/storybooks/storybook/issues/1046#issuecomment-304360179"><!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+<li>reactstrap <a href="https://github.com/reactstrap/reactstrap"><!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+</ol>
+<p>You can get all of them bundled in the <a href="https://github.com/andreafalzetti/react-redux-starter-kit">repository</a> that I have forked for this purpose.</p>
+<h2 id="bootstrap-sass">Bootstrap SASS</h2>
+<p>Let&rsquo;s discuss about CSS and styles. At <a href="http://activate.co.uk">work</a> we have been using Bootstrap for many years now. We initially approached it using the pre-bundled CSS version, later we introduced LESS, and at that point, we were able to include in the bundle only the components that we actually needed. Now that Bootstrap has moved to SASS we think it&rsquo;s the good time for us to switch too.</p>
+<p>For this reason, I was so euphoric to see that the starter-kit that I have chosen has decided to embrace Bootstrap too, which means that I finally have the chance to work with the latest version of Bootstrap: <strong>4</strong>.</p>
+<p>Although Bootstrap 4 is still in alpha version - it seems stable enough for us to start using it, especially because <a href="https://reactstrap.github.io/">reactstrap</a> appears to support it well and it has good support.</p>
+<h2 id="storybook">Storybook</h2>
+<p>I found out about Storybook during the last <a href="https://www.youtube.com/watch?v=UxbQ-cGnoCE&amp;index=1&amp;list=PLW6ORi0XZU0BL3Up9mXpP75ilJBDOjMsQ">React London Meetup</a> at Facebook, and I immediately fall in love with it. If it&rsquo;s the first time you hear about it, I can tell that it fits very well in our development workflow at Activate, where I build some React components and a designer can focus on styling them without worrying about the JavaScript code. Storybook gives a quick visual feedback helping us building and testing more efficiently.</p>
+<p>Good news for you is, a new version of Storybook (3.0) will be out soon, and if you are a Webpack 2 user, the integration between those two will be much smoother.</p>
+<h4 id="dynamically-loaded-stories">Dynamically loaded stories</h4>
+<p>I want my Storybook Stories to live within the component folder, so my approach was to load the stories dynamically as explained in the <a href="">documentation</a>. You just need to change a few lines in the Storybook configuration file, as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// ./storybook/config.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">configure</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@storybook/react&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">context</span>(<span style="color:#e6db74">&#39;../src/components&#39;</span>, <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">/\.stories\.js$/</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadStories</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../stories&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">keys</span>().<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">filename</span>) =&gt; <span style="color:#a6e22e">req</span>(<span style="color:#a6e22e">filename</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">configure</span>(<span style="color:#a6e22e">loadStories</span>, <span style="color:#a6e22e">module</span>);
+</span></span></code></pre></div><p>Then, create a stories container file in your component. For instance, I have created five stories for my component, each representing a different state.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// ./src/components/MyBeautifulButton/MyBeautifulButton.stories.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">storiesOf</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@storybook/react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">action</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@storybook/addon-actions&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">linkTo</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@storybook/addon-links&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./MyBeautifulButton&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Story</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">icon</span> }) =&gt; (
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test&#39;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user&#39;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Story</span>.<span style="color:#a6e22e">propTypes</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">isRequired</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">icon</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">isRequired</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">storiesOf</span>(<span style="color:#e6db74">&#39;MyBeautifulButton&#39;</span>, <span style="color:#a6e22e">module</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;Incomplete&#39;</span>, () =&gt; (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;User&#34;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">status</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  ))
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;Started&#39;</span>, () =&gt; (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;User&#34;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">status</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;50&#39;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  ))  
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;Next&#39;</span>, () =&gt; (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;User&#34;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">status</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#a6e22e">isNext</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  ))  
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;Completed&#39;</span>, () =&gt; (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;User&#34;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">status</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">100</span>} <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  ))
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;Disabled&#39;</span>, () =&gt; (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyBeautifulButton</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;User&#34;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">disabled</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">true</span>} <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  ));
+</span></span></code></pre></div><h3 id="output">Output</h3>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2017/05/storybook-3-state-started.jpg" alt="storybook-3-result"></p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2017/05/storybook-3-state-completed.jpg" alt="storybook-3-result"></p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2017/05/storybook-3-bootstrap-buttons.jpg" alt="storybook-3-result"></p>
+<h2 id="customise-bootstrap">Customise Bootstrap</h2>
+<p>I consider a best practice chaining the SASS variables that Bootstrap uses to build the CSS instead of doing an override of the class style that we want to change. For instance, the height and background colour of the navbar can be easily changed assigning new values to the SASS variables that Bootstrap will use in its core files:</p>
+<pre tabindex="0"><code>$navbar-height: 150px;
+$navbar-default-bg: $brand-primary;
+</code></pre><p>It is also very handy assigning new brand colours, to use across the stylesheets:</p>
+<pre tabindex="0"><code>$brand-primary:         #58C7D6 !default; // Blue
+$brand-success:         #75C158 !default; // Green
+$brand-info:            #E6BE31 !default; // Yellow
+$brand-warning:         #ee7e2d !default; // Orange
+$brand-danger:          #d9534f !default; // Red
+</code></pre><p>You don&rsquo;t want to touch the original Bootstrap files, so you can create a file in your assets (e.g. <code>/styles/_bootstrap.scss</code>) and place there all the variables you wish to change.</p>
+<p>It will be enough importing this file before the Bootstrap one in the <code>main.scss</code> file, to make the magic:</p>
+<pre tabindex="0"><code>@import &#39;base&#39;;
+@import &#34;bootstrap.scss&#34;;
+@import &#39;~bootstrap/scss/bootstrap.scss&#39;;
+
+// Some best-practice CSS that&#39;s useful for most apps
+// Just remove them if they&#39;re not what you want
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+</code></pre><h2 id="conclusions">Conclusions</h2>
+<p>I hope that with this post I made clear the followins thoughts:</p>
+<ul>
+<li>Bootstrap 4 will be out soon, let&rsquo;s start looking into it</li>
+<li>SASS rocks</li>
+<li>Storybook is cool</li>
+<li>Storybook works with Webpack 2</li>
+<li>React is great and JavaScript is a LOT of fun</li>
+<li>When you have one of those days, just keep on, solution will arrive.</li>
+</ul>
+<h2 id="work-with-me">Work with me</h2>
+<p>By the way, if you also love using cutting edge technologies to solve new real world challenges every day check out our vacant position for a <a href="http://bit.ly/Activate-Jobs-FrontEnd">Frontend Developer at Activate</a>, our startup studio needs you!</p>
+<p>Thanks for reading!</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

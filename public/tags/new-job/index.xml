@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>New Job on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/new-job/</link>
+    <description>Recent content in New Job on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 22 Apr 2022 17:17:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/new-job/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Gitpod</title>
+      <link>http://localhost:1313/blog/2022/04/22/Hello-Gitpod/</link>
+      <pubDate>Fri, 22 Apr 2022 17:17:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2022/04/22/Hello-Gitpod/</guid>
+      <description>&lt;p&gt;I meant to write this blog post a month ago, but&amp;hellip; life happened :)&lt;/p&gt;&#xA;&lt;p&gt;I generally write technical articles on my blog rather than talking about my personal life, but 4 years ago, I wrote &lt;a href=&#34;https://andreafalzetti.github.io/blog/2017/11/01/hello-dazn.html&#34;&gt;Hello DAZN&lt;/a&gt;, and I want to keep up with the tradition, so&amp;hellip; Hello Gitpod 🧡&lt;/p&gt;&#xA;&lt;p&gt;At the beginning of March this year, I&amp;rsquo;ve joined &lt;a href=&#34;https://gitpod.io&#34;&gt;gitpod.io&lt;/a&gt; ✨&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2022/gitpod.png&#34; alt=&#34;gitpod&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve spent the last few years at DAZN, focusing on DevX (Developer Experience), empowering fellow engineers to get their job done smoothly and efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello DAZN</title>
+      <link>http://localhost:1313/blog/2017/11/01/Hello-DAZN/</link>
+      <pubDate>Wed, 01 Nov 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/11/01/Hello-DAZN/</guid>
+      <description>&lt;p&gt;Today, I am happy to announce that I have joined &lt;a href=&#34;https://dazn.com&#34;&gt;DAZN&lt;/a&gt; &lt;em&gt;(pronounced &amp;ldquo;Da Zone&amp;rdquo;)&lt;/em&gt;, a revolutionary sports streaming service.&lt;/p&gt;&#xA;&lt;p&gt;After four years of service at &lt;a href=&#34;http://activate.co.uk&#34;&gt;Activate&lt;/a&gt;, I have decided to try a different experience. In my time at Activate, as a developer, I had the opportunity to learn and grow a lot. Activate provided me with an extraordinarily &lt;strong&gt;flexible&lt;/strong&gt; and &lt;strong&gt;challenging&lt;/strong&gt; environment. Working with their clients and partner startups was a chance to strengthen my skills, learning every day, experimenting and introducing new technologies to the team. The company has supported me both professionally and personally during this time, and I am very grateful for that. Thanks, Activate.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

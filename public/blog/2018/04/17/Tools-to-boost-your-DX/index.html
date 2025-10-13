@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="DX = Developer Experience">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Tools to boost your DX</h1>
+    <p class="uk-text-center uk-text-lead">DX = Developer Experience</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/developer-experience/" style="margin-right: 8px"
+        >#developer experience</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Apr 17, 2018</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>Whether you are working on the back-end or the front-end, having the <em>right tool for the job</em>, can really make a difference some times.</p>
+<p>With this blog post, I want to share with you some of the tools that I use pretty much every day and I believe can be useful to any software developer.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li><a href="https://stedolan.github.io/jq/"><strong>jq, yq, xq</strong></a></li>
+<li><a href="https://httpie.org/"><strong>HTTPie</strong></a></li>
+<li><a href="https://www.choosyosx.com/"><strong>Choosy</strong></a></li>
+<li><a href="https://github.com/ggreer/the_silver_searcher"><strong>Ag</strong></a></li>
+<li><a href="https://github.com/ptsochantaris/trailer"><strong>Trailer</strong></a></li>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira"><strong>jira</strong></a></li>
+<li><a href="https://github.com/hnarayanan/shpotify"><strong>shpotify</strong></a></li>
+<li><a href="https://now.sh/"><strong>now</strong></a></li>
+<li><a href="https://kapeli.com/dash"><strong>Dash</strong></a></li>
+<li><a href="https://www.duetdisplay.com/"><strong>duet</strong></a></li>
+</ul>
+<hr>
+<h2 id="1-jq-yq-xq">1. jq, yq, xq</h2>
+<h4 id="handle-json-yaml-and-xml-in-the-terminal">Handle JSON, YAML and XML in the terminal</h4>
+<p><code>jq</code>, <code>yq</code> and <code>xq</code> are command line tools that allow you dealing with JSON, YAML and XML documents directly from your shell. If you haven&rsquo;t seen them before you may ask why someone would want to look at some JSON in the terminal?</p>
+<p>Well, most of the time they are used in scripts, generally piped to <code>curl</code> or <code>http</code> (see the second tool) to parse and extract data from API calls.</p>
+<p>In the examples below I hit a public API that returns countries VAT. This is the output of a GET (all countries) without using jq.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/jq-1.png" alt="jq-example"></p>
+<p><strong>jq</strong> has some built-in operators we can use to count, select, filter and much more. In the following example I simply count how many items the <code>.rates</code> array has.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/jq-2.png" alt="jq-example"></p>
+<p>Here we search the array for a specific item that contains a property <code>country_code</code> that equals <code>GB</code>. This gives us back the whole item.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/jq-3.png" alt="jq-example"></p>
+<p>We can finally extract the values that we need and use them in a bash script!</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/jq-4.png" alt="jq-example"></p>
+<p>Here are the commands I have used above, feel free to experiment with them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 1</span>
+</span></span><span style="display:flex;"><span>http https://jsonvat.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2</span>
+</span></span><span style="display:flex;"><span>http https://jsonvat.com | jq <span style="color:#e6db74">&#34;.rates | length&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3</span>
+</span></span><span style="display:flex;"><span>http https://jsonvat.com | jq -r <span style="color:#e6db74">&#34;.rates[] | select(.country_code | contains (\&#34;</span>$COUNTRY<span style="color:#e6db74">\&#34;)) | .periods[0].rates.standard&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#4</span>
+</span></span><span style="display:flex;"><span>COUNTRY<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;GB&#39;</span>
+</span></span><span style="display:flex;"><span>VAT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>http https://jsonvat.com | jq -r <span style="color:#e6db74">&#34;.rates[] | select(.country_code | contains (\&#34;</span>$COUNTRY<span style="color:#e6db74">\&#34;)) | .periods[0].rates.standard&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;VAT in </span>$COUNTRY<span style="color:#e6db74"> is </span>$VAT<span style="color:#e6db74">%&#34;</span>
+</span></span></code></pre></div><ul>
+<li><a href="https://stedolan.github.io/jq/">Get jq</a></li>
+<li><a href="https://yq.readthedocs.io">Get yq</a></li>
+<li><a href="https://github.com/jeffbr13/xq">Get xq</a></li>
+</ul>
+<h3 id="2-httpie">2. HTTPie</h3>
+<h4 id="a-friendly-command-line-http-client">A friendly command line HTTP client</h4>
+<blockquote>
+<p>Its goal is to make CLI interaction with web services as human-friendly as possible. It provides a simple http command that allows for sending arbitrary HTTP requests using a simple and natural syntax, and displays colorized output. HTTPie can be used for testing, debugging, and generally interacting with HTTP servers.</p></blockquote>
+<p>As you can see in the image below, I am hitting a public weather API to get the London&rsquo;s current weather, the command I have ran is:</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/httpie.png" alt="httpie-example"></p>
+<p>You can achieve the same result using a combination of commands, <strong>curl</strong> and <strong>jq</strong>, mentioned above.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/curl-jq.png" alt="curl-jq"></p>
+<p>I personally use both approaches, but I use <code>http</code> when I can&rsquo;t remember how to do some specific requests using <code>curl</code> and I&rsquo;m too lazy to check the manual. I must have googled &ldquo;<em>curl post json</em>&rdquo; hundreds of times 😂</p>
+<p>With HTTPie I remember I can use few approaches such as stdout, files or <a href="https://www.tldp.org/LDP/abs/html/x17837.html">here strings</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># stdout</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;{&#34;name&#34;: &#34;John&#34;}&#39;</span> | http PATCH example.com/person/1 X-API-Token:123
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># From a file</span>
+</span></span><span style="display:flex;"><span>http PUT example.com/person/1 X-API-Token:123 &lt; person.json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Using here strings</span>
+</span></span><span style="display:flex;"><span>http PATCH example.com/person/1 X-API-Token:123 <span style="color:#f92672">&lt;&lt;&lt;</span> <span style="color:#e6db74">&#39;{&#34;name&#34;: &#34;John&#34;}&#39;</span>
+</span></span></code></pre></div><p>It&rsquo;s easy as that!</p>
+<p>You can specify the <strong>HTTP method</strong> (PUT, POST, PATCH, etc) before the URL and passing <em>Headers</em> is also straightforward, just add <code>Key:Value</code> pairs after the URL, they will become part of the HTTP request headers.</p>
+<ul>
+<li><a href="https://httpie.org/">Get HTTPie</a></li>
+</ul>
+<h3 id="3-choosy">3. choosy</h3>
+<h4 id="open-every-link-in-the-right-browser">Open every link in the right browser</h4>
+<p>Front-end developers and QA engineers will particularly like this! <a href="https://www.choosyosx.com/">Choosy</a> lets you pick what browser to use when you click on a link.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/choosy.gif" alt="choosy"></p>
+<p>I like it because it&rsquo;s lightweight, smart and <strong>not intrusive</strong>. For instance it won&rsquo;t prompt you to choose a browser if you are already in one, or it will not display browsers that are not open, this means if you keep your favourite one on, you won&rsquo;t need to decide every time, choosy will use that.</p>
+<p>It comes very handy when you need to open a link from the Terminal or within an Email, Slack, Trello etc.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/choosy.png" alt="choosy"></p>
+<p>I personally use three or four browsers (including <a href="https://brave.com/">Brave</a>) for different purposes, so if you are like me, you&rsquo;ll really like this one. Choosy also supports Chrome profiles and incognito so if you need to test a website under different sessions / users, it can really save you some time!</p>
+<ul>
+<li><a href="https://www.choosyosx.com/">Get Choosy</a></li>
+</ul>
+<h2 id="4-ag">4. Ag</h2>
+<h3 id="search-through-code-faster">Search through code faster</h3>
+<p>Also called <em>The Silver Searcher</em>, it&rsquo;s a tool like <code>grep</code> but optimised for developers.</p>
+<p>When you search, it ignores by default files in <code>.gitignore</code>, for JavaScript developers is so convenient because it means you don&rsquo;t have to manually exclude the <code>node_modules</code> folder.</p>
+<!-- raw HTML omitted -->
+<p>I also like that the output it&rsquo;s nice and clear:</p>
+<ul>
+<li><a href="https://github.com/ggreer/the_silver_searcher">Get Ag</a></li>
+</ul>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/ag.png" alt="ag"></p>
+<h3 id="5-trailer">5. trailer</h3>
+<h4 id="stay-up-to-date-with-github">Stay up to date with GitHub</h4>
+<p><a href="https://github.com/ptsochantaris/trailer">Trailer</a> is an open-source app that brings GitHub notifications in your desktop. There are two sections, <strong>issues</strong> and <strong>pull requests</strong>.</p>
+<p>Rather than looking at emails or checking the website I prefer to to receive a push notification when someone opened or reviewed a pull request.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/trailer-1.png" alt="trailer"></p>
+<p>Once expanded, you can see the notifications history and jump directly at them if you like.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/trailer-2.png" alt="trailer"></p>
+<p>If you are scared to receive hundreds of notifications with this, don&rsquo;t worry! You can decide on what repositories you want to be notified.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/trailer-3.png" alt="trailer"></p>
+<ul>
+<li><a href="https://github.com/ptsochantaris/trailer">Get <strong>Trailer</strong></a></li>
+</ul>
+<h3 id="6-jira-zsh-plugin">6. jira (zsh plugin)</h3>
+<p>Most of us use <strong>Jira</strong> these days, so why not having a little helper.</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/plugin-jira.gif" alt="plugin-jira"></p>
+<p>You can also run <code>jira new</code> to quickly create a new ticket!</p>
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira">Get <strong>jira</strong></a></li>
+</ul>
+<h3 id="7-shpotify">7. shpotify</h3>
+<h4 id="why-should-we-leave-the-terminal">why should we leave the terminal?</h4>
+<p>If you are a Spotify user you may find the next one useful.</p>
+<p>This utility allows you to <em>play/stop</em> , <em>search</em> for songs or playlists, <em>skip</em>, adjust the <em>volume</em>, and more.</p>
+<ul>
+<li><a href="https://github.com/hnarayanan/shpotify">Get <strong>shpotify</strong></a></li>
+</ul>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/plugin-shpotify.gif" alt="plugin-shpotify"></p>
+<h3 id="8-now">8. now</h3>
+<h4 id="one-command-deployments">one-command deployments</h4>
+<p><code>now</code> allows you to deploy to the cloud any project that has <code>package.json</code> or <code>Dockerfile</code>.</p>
+<p>I am not a power user but I want to recommend it because it helped me a few times during prototyping or when I didn&rsquo;t have time to build an own infrastructure (e.g. hackathons), you really want to use <code>now</code>.</p>
+<ul>
+<li><a href="https://now.sh/">Get <strong>now</strong></a></li>
+</ul>
+<h3 id="9-dash">9. Dash</h3>
+<h4 id="offline-documentation">Offline documentation</h4>
+<ul>
+<li><a href="https://kapeli.com/dash"><strong>Dash</strong></a> is an API documentation and code snippets manager.</li>
+</ul>
+<p>Documentation for a load of frameworks and libraries have been imported, and it works offline.</p>
+<p>They have also introduced cheat sheets for shortcuts and useful commands (e.g. <code>vim</code>, <code>Kubernetes</code>, etc).</p>
+<p><img src="%7B%7Bsite.baseurl%7D%7D/img/2018/04/dash.png" alt="dash"></p>
+<ul>
+<li><a href="https://kapeli.com/dash">Get <strong>Dash</strong></a></li>
+</ul>
+<h3 id="10-duet">10. duet</h3>
+<h4 id="use-your-ipad-or-iphone-as-external-screen">Use your iPad or iPhone as external screen</h4>
+<p>When the office runs out of screens or your are at your favourite café, plug your iPad into your Mac and start <a href="https://www.duetdisplay.com/">duet</a>. This app, built by ex-Apple engineers, allow all iPads and iPhone with iOs 7.0+ to become proper second screens that you can manage from the Displays settings of your mac.</p>
+<ul>
+<li><a href="https://www.duetdisplay.com/">Get Duet</a></li>
+</ul>
+<p>That&rsquo;s it!</p>
+<p>I hope you find them useful, if you want to recommend a tool that I haven&rsquo;t included, please comment below.</p>
+<p>Photo by <a href="http://www.energepic.com/tools-on-a-workbench/">energepic.com</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

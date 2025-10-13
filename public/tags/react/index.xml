@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on Andrea Falzetti</title>
+    <link>http://localhost:1313/tags/react/</link>
+    <description>Recent content in React on Andrea Falzetti</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 18 Oct 2017 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building an accessible and re-usable React Component</title>
+      <link>http://localhost:1313/blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/</link>
+      <pubDate>Wed, 18 Oct 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/18/Building-an-accessible-and-re-usable-React-Component/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://medium.com/@andreafalzetti/bundling-react-15-bootstrap-4-storybook-3-with-webpack-2-d65383e1825a&#34;&gt;one of my recent posts&lt;/a&gt; I talked about how I have introduced &lt;a href=&#34;https://storybook.js.org/&#34;&gt;Storybook&lt;/a&gt; to the team and how we adopted it in our development lifecycle.&lt;/p&gt;&#xA;&lt;p&gt;In this article, I want to share with you, my experience building an accessible &lt;strong&gt;custom input React component&lt;/strong&gt; and how I found Storybook a useful dev tool that helped me achieve my goal.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start!&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenge-&#34;&gt;Challenge 🤓&lt;/h2&gt;&#xA;&lt;p&gt;In this project, several views are sharing a similar piece of UI, a box with an icon and some text. In some cases, it also contains a button and an additional paragraph of text. I want the &lt;strong&gt;box&lt;/strong&gt; to be a separate React Component so I can re-use it across the application. I need to identify all common features and pass them as &lt;em&gt;props&lt;/em&gt; to the component so it will be able to behave differently in each instance. Given that this component will be a custom input, I want to make sure that the element is &lt;strong&gt;visible and usable&lt;/strong&gt; from &lt;strong&gt;screen readers&lt;/strong&gt;, it won&amp;rsquo;t take too long, and it will make a big difference for many users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Picasso code</title>
+      <link>http://localhost:1313/blog/2017/10/09/The-Picasso-code/</link>
+      <pubDate>Mon, 09 Oct 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/09/The-Picasso-code/</guid>
+      <description>&lt;p&gt;Recently, I have been reviewing the following JavaScript code, and I found so many issues that I have decided to discuss them here. First of all, I am not trying to embarrass anyone, so I am not mentioning where this comes from. With this post, I want to use bad examples to promote and remind all of us, including myself, to use common sense and best practices when it comes to writing new code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bundling React 15, Bootstrap 4, Storybook 3 with Webpack 2</title>
+      <link>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</link>
+      <pubDate>Tue, 30 May 2017 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2017/05/30/Bundling-React-15-Bootstrap-4-Storybook-3-with-Webpack-2/</guid>
+      <description>&lt;p&gt;How many times did it happen to you that you were debugging some code and at the end of the day you didn&amp;rsquo;t manage to find a solution? How frustrating is that?&lt;/p&gt;&#xA;&lt;p&gt;Good news is, you will feel so much better when you find the solution to your issue and everything will look easier. Your skills have just levelled up.&lt;/p&gt;&#xA;&lt;p&gt;Today, it was one of those days for me. I have spent long hours trying to make something work, and I eventually found a solution, so I thought it was a good thing to share it with the community.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to fix broken base64 image using image-webpack and file-loader</title>
+      <link>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</link>
+      <pubDate>Fri, 11 Nov 2016 12:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/11/How-to-fix-broken-base64-image-using-image-webpack-and-file-loader/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;p&gt;If you are here, you are probably trying to setup webpack in order to handle your images. The problem I was experiencing and tyring to document here is, after installing &lt;strong&gt;image-webpack&lt;/strong&gt; and &lt;strong&gt;file-loader&lt;/strong&gt; and using &lt;code&gt;&amp;lt;img src={require(&#39;logo.png&#39;)}/&amp;gt;&lt;/code&gt; the browser was displaying a broken image (encoded in base64).&lt;/p&gt;&#xA;&lt;p&gt;I have followed &lt;a href=&#34;http://www.davidmeents.com/how-to-set-up-webpack-image-loader/&#34;&gt;this article&lt;/a&gt; written by David which helps setting up &lt;strong&gt;webpack&lt;/strong&gt; and &lt;strong&gt;image-webpack-loader&lt;/strong&gt;, the problem I had was that the browser was displaying a broken image so after a little research I&amp;rsquo;ve found &lt;a href=&#34;https://github.com/webpack/file-loader/issues/35&#34;&gt;webpack/file-loader/issue/35&lt;/a&gt; which explains the reason of this.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

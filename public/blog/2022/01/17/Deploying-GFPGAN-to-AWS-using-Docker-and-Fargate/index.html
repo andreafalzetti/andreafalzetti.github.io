@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Andrea Falzetti</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Deploying a Machine Learning container to AWS ECS Fargate">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Andrea Falzetti, Hugo Template by samrobbins85">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://localhost:1313/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Deploying GFPGAN to AWS using Docker and Fargate</h1>
+    <p class="uk-text-center uk-text-lead">Deploying a Machine Learning container to AWS ECS Fargate</p>
+    <div class="uk-text-center tags-list"><a href="http://localhost:1313/tags/machine-learning/" style="margin-right: 8px"
+        >#machine learning</a
+      >
+      <a href="http://localhost:1313/tags/gfpgan/" style="margin-right: 8px"
+        >#gfpgan</a
+      >
+      <a href="http://localhost:1313/tags/aws-fargate/" style="margin-right: 8px"
+        >#aws fargate</a
+      >
+      <a href="http://localhost:1313/tags/docker/" style="margin-right: 8px"
+        >#docker</a
+      >
+      </div>
+
+    <p class="uk-text-center uk-margin-medium-top">Published on Jan 17, 2022</p>
+    <p class="uk-text-center">Reading time: 6 minutes.</p>
+
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <blockquote>
+<p>This post aims to help you deploy <a href="https://github.com/TencentARC/GFPGAN">GFPGAN</a> on AWS using ECS Fargate.</p></blockquote>
+<hr>
+<h2 id="what-is-gfpgan">What is GFPGAN?!</h2>
+<p>I&rsquo;ve recently discovered this fantastic Machine Learning project trained and designed to restore faces.</p>
+<p>The project&rsquo;s headline is:</p>
+<blockquote>
+<p>GFPGAN aims at developing Practical Algorithms for Real-world Face Restoration.</p></blockquote>
+<p>In short, given a blurred, damaged, or low-quality photo of a person&rsquo;s face, the algorithm it&rsquo;s able to restore the face and improve its quality.</p>
+<p>Example</p>
+<!-- raw HTML omitted -->
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0lfcako8ijxfisys3a31.jpg" alt="Image description"></p>
+<h2 id="the-challenge">The challenge</h2>
+<p>So, I decided to write this blog post because I recently deployed this tool on AWS, and there were a few things that I wish I had known before starting.</p>
+<p>GFPGAN is written in Python, and its entry point assumes you&rsquo;re going to convert a batch of images, reading and writing those from disk.</p>
+<p>Now, I am not sure about your use case, but this was a significant limitation for me.</p>
+<p>If you&rsquo;re intimidated by Python, don&rsquo;t worry. The entry point is relatively simple to modify. I didn&rsquo;t have any Python experience before this.</p>
+<p>My use case is to provide an HTTP API to a front-end application to call and retrieve the enhanced image.</p>
+<h2 id="architecture">Architecture</h2>
+<p>To provide such API, I came up with this architecture that is currently working fine in my side-project.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r73gf3t1yjhf1dme73f4.png" alt="Image description"></p>
+<p>To better understand the flow, this is a sequence diagram:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g4zuukm891vul854unze.png" alt="Image description"></p>
+<h2 id="how-to-use-it">How to Use it</h2>
+<p>Before you start getting your hands dirty with Terraform or CloudFormation code, I recommend trying out the Docker image locally.</p>
+<h3 id="step-1---fork-the-repo">Step 1 - Fork the repo</h3>
+<p>At the moment of writing this, the official repository has an <a href="https://github.com/TencentARC/GFPGAN/pull/103">open PR for adding the Dockerfile</a>, shout out to <a href="https://github.com/mmenbawy">Mostafa Elmenbawy</a> for his valuable contribution!</p>
+<p>I also want to personally thank Mostafa for helping me understand how GFPGAN Python entry point works!</p>
+<p>I recommend forking his repo until the PR has been merged.</p>
+<h3 id="step-2---build-the-image">Step 2 - Build the image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker build -t gfpgan .
+</span></span></code></pre></div><h3 id="step-3---run-the-container">Step 3 - Run the container</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --name gfpgan <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rm <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --volume &lt;PROJECT_ABSOLUTE_PATH&gt;/inputs:/app/inputs <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --volume &lt;PROJECT_ABSOLUTE_PATH&gt;/results:/app/results <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    gfpgan <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    python3 inference_gfpgan.py --upscale <span style="color:#ae81ff">2</span> --test_path inputs --save_root results
+</span></span></code></pre></div><p>The command above will start the container that, by running GFPGAN, will transform the default inputs photos and produce outputs in the results folder.</p>
+<h2 id="how-to-deploy-it">How to Deploy It</h2>
+<p>Before proceeding, please note that I&rsquo;ve adapted the Python entry point to integrate with SQS to receive jobs, S3 to persist the enhanced image files, and DynamoDB as a temporary state to inform the web-app about the status of the job.</p>
+<h3 id="step-1---customize-the-entry-point">Step 1 - Customize the entry point</h3>
+<p>I have changed <a href="https://github.com/TencentARC/GFPGAN/blob/master/inference_gfpgan.py">inference_gfpgan.py</a> as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> cv2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> glob
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> uuid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pythonjsonlogger <span style="color:#f92672">import</span> jsonlogger
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> basicsr.utils <span style="color:#f92672">import</span> imwrite
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> gfpgan <span style="color:#f92672">import</span> GFPGANer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqs <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#34;sqs&#34;</span>)
+</span></span><span style="display:flex;"><span>queue <span style="color:#f92672">=</span> sqs<span style="color:#f92672">.</span>get_queue_by_name(QueueName<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;SQS_QUEUE_NAME&#34;</span>])
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#34;dynamodb&#34;</span>)
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;DYNAMODB_TABLE_NAME&#34;</span>])
+</span></span><span style="display:flex;"><span>s3 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#34;s3&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#34;boto&#34;</span>, <span style="color:#e6db74">&#34;urllib3&#34;</span>, <span style="color:#e6db74">&#34;s3transfer&#34;</span>, <span style="color:#e6db74">&#34;boto3&#34;</span>, <span style="color:#e6db74">&#34;botocore&#34;</span>, <span style="color:#e6db74">&#34;nose&#34;</span>]:
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>getLogger(name)<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>CRITICAL)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setup_logging</span>(log_level):
+</span></span><span style="display:flex;"><span>    logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>setLevel(log_level)
+</span></span><span style="display:flex;"><span>    json_handler <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>StreamHandler()
+</span></span><span style="display:flex;"><span>    formatter <span style="color:#f92672">=</span> jsonlogger<span style="color:#f92672">.</span>JsonFormatter(
+</span></span><span style="display:flex;"><span>        fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%(name)s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    json_handler<span style="color:#f92672">.</span>setFormatter(formatter)
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>addHandler(json_handler)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(logger, message):
+</span></span><span style="display:flex;"><span>    [f<span style="color:#f92672">.</span>unlink() <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> Path(<span style="color:#e6db74">&#34;./inputs&#34;</span>)<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;*&#34;</span>) <span style="color:#66d9ef">if</span> f<span style="color:#f92672">.</span>is_file()]
+</span></span><span style="display:flex;"><span>    [f<span style="color:#f92672">.</span>unlink() <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> Path(<span style="color:#e6db74">&#34;./results&#34;</span>)<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;*&#34;</span>) <span style="color:#66d9ef">if</span> f<span style="color:#f92672">.</span>is_file()]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;experiments/pretrained_models/GFPGANCleanv1-NoCE-C2.pth&#34;</span>
+</span></span><span style="display:flex;"><span>    upscale <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    arch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;clean&#34;</span>
+</span></span><span style="display:flex;"><span>    channel <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    ext <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;auto&#34;</span>
+</span></span><span style="display:flex;"><span>    suffix <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    save_root <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;results&#34;</span>
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>makedirs(save_root, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    inputs_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;inputs&#34;</span>, <span style="color:#e6db74">&#34;input.jpg&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    img_data <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url<span style="color:#f92672">=</span>message[<span style="color:#e6db74">&#34;imageUrl&#34;</span>])<span style="color:#f92672">.</span>content
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Downloading image </span><span style="color:#e6db74">{</span>message[<span style="color:#e6db74">&#39;imageUrl&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">{</span>inputs_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(inputs_path, <span style="color:#e6db74">&#34;wb&#34;</span>) <span style="color:#66d9ef">as</span> handler:
+</span></span><span style="display:flex;"><span>            handler<span style="color:#f92672">.</span>write(img_data)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;Cannot download file&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    restorer <span style="color:#f92672">=</span> GFPGANer(
+</span></span><span style="display:flex;"><span>        model_path<span style="color:#f92672">=</span>model_path,
+</span></span><span style="display:flex;"><span>        upscale<span style="color:#f92672">=</span>upscale,
+</span></span><span style="display:flex;"><span>        arch<span style="color:#f92672">=</span>arch,
+</span></span><span style="display:flex;"><span>        channel_multiplier<span style="color:#f92672">=</span>channel,
+</span></span><span style="display:flex;"><span>        bg_upsampler<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    img_list <span style="color:#f92672">=</span> sorted(glob<span style="color:#f92672">.</span>glob(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;inputs&#34;</span>, <span style="color:#e6db74">&#34;*&#34;</span>)))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> img_path <span style="color:#f92672">in</span> img_list:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># read image</span>
+</span></span><span style="display:flex;"><span>        img_name <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(img_path)
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Processing </span><span style="color:#e6db74">{</span>img_name<span style="color:#e6db74">}</span><span style="color:#e6db74"> ...&#34;</span>)
+</span></span><span style="display:flex;"><span>        basename, ext <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>splitext(img_name)
+</span></span><span style="display:flex;"><span>        input_img <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(img_path, cv2<span style="color:#f92672">.</span>IMREAD_COLOR)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># restore faces and background if necessary</span>
+</span></span><span style="display:flex;"><span>        cropped_faces, restored_faces, restored_img <span style="color:#f92672">=</span> restorer<span style="color:#f92672">.</span>enhance(
+</span></span><span style="display:flex;"><span>            input_img, has_aligned<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, only_center_face<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, paste_back<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># save faces</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> idx, (cropped_face, restored_face) <span style="color:#f92672">in</span> enumerate(
+</span></span><span style="display:flex;"><span>            zip(cropped_faces, restored_faces)
+</span></span><span style="display:flex;"><span>        ):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># save cropped face</span>
+</span></span><span style="display:flex;"><span>            save_crop_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>                save_root, <span style="color:#e6db74">&#34;cropped_faces&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>idx<span style="color:#e6db74">:</span><span style="color:#e6db74">02d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png&#34;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            imwrite(cropped_face, save_crop_path)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># save restored face</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> suffix <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>                save_face_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>idx<span style="color:#e6db74">:</span><span style="color:#e6db74">02d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>suffix<span style="color:#e6db74">}</span><span style="color:#e6db74">.png&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                save_face_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>idx<span style="color:#e6db74">:</span><span style="color:#e6db74">02d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png&#34;</span>
+</span></span><span style="display:flex;"><span>            save_restore_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>                save_root, <span style="color:#e6db74">&#34;restored_faces&#34;</span>, save_face_name
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            imwrite(restored_face, save_restore_path)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># save comparison image</span>
+</span></span><span style="display:flex;"><span>            cmp_img <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>concatenate((cropped_face, restored_face), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>            imwrite(
+</span></span><span style="display:flex;"><span>                cmp_img, os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(save_root, <span style="color:#e6db74">&#34;cmp&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>idx<span style="color:#e6db74">:</span><span style="color:#e6db74">02d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png&#34;</span>)
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> restored_img <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> ext <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;auto&#34;</span>:
+</span></span><span style="display:flex;"><span>                extension <span style="color:#f92672">=</span> ext[<span style="color:#ae81ff">1</span>:]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                extension <span style="color:#f92672">=</span> ext
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> suffix <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>                save_restore_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>                    save_root, <span style="color:#e6db74">&#34;restored_imgs&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>suffix<span style="color:#e6db74">}</span><span style="color:#e6db74">.</span><span style="color:#e6db74">{</span>extension<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                save_restore_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>                    save_root, <span style="color:#e6db74">&#34;restored_imgs&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>basename<span style="color:#e6db74">}</span><span style="color:#e6db74">.</span><span style="color:#e6db74">{</span>extension<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Saving restored image to </span><span style="color:#e6db74">{</span>save_restore_path<span style="color:#e6db74">}</span><span style="color:#e6db74"> ...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            imwrite(restored_img, save_restore_path)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    s3key <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;gfpgan_</span><span style="color:#e6db74">{</span>message[<span style="color:#e6db74">&#34;orgId&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>uuid<span style="color:#f92672">.</span>uuid4()<span style="color:#f92672">.</span>hex<span style="color:#e6db74">}</span><span style="color:#e6db74">.jpg&#39;</span>
+</span></span><span style="display:flex;"><span>    s3<span style="color:#f92672">.</span>upload_file(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;results/restored_imgs/input..jpg&#34;</span>, os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;S3_BUCKET_NAME&#34;</span>], s3key
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    new_record <span style="color:#f92672">=</span> message<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>    new_record[<span style="color:#e6db74">&#34;enhancedImageS3Key&#34;</span>] <span style="color:#f92672">=</span> s3key
+</span></span><span style="display:flex;"><span>    new_record[<span style="color:#e6db74">&#34;updatedAt&#34;</span>] <span style="color:#f92672">=</span> round(time<span style="color:#f92672">.</span>time())
+</span></span><span style="display:flex;"><span>    new_record[<span style="color:#e6db74">&#34;timeTaken&#34;</span>] <span style="color:#f92672">=</span> new_record[<span style="color:#e6db74">&#34;updatedAt&#34;</span>] <span style="color:#f92672">-</span> new_record[<span style="color:#e6db74">&#34;createdAt&#34;</span>]
+</span></span><span style="display:flex;"><span>    update_record(new_record)
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Result uploaded in S3: </span><span style="color:#e6db74">{</span>s3key<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_record</span>(message):
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>put_item(
+</span></span><span style="display:flex;"><span>        Item<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;enhancementId&#34;</span>: message[<span style="color:#e6db74">&#34;enhancementId&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;imageUrl&#34;</span>: message[<span style="color:#e6db74">&#34;imageUrl&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;createdAt&#34;</span>: message[<span style="color:#e6db74">&#34;createdAt&#34;</span>],
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_record</span>(message):
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>put_item(
+</span></span><span style="display:flex;"><span>        Item<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;enhancementId&#34;</span>: message[<span style="color:#e6db74">&#34;enhancementId&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;imageUrl&#34;</span>: message[<span style="color:#e6db74">&#34;imageUrl&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;createdAt&#34;</span>: message[<span style="color:#e6db74">&#34;createdAt&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Additional Props</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;enhancedImageS3Key&#34;</span>: message[<span style="color:#e6db74">&#34;enhancedImageS3Key&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;updatedAt&#34;</span>: message[<span style="color:#e6db74">&#34;updatedAt&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;timeTaken&#34;</span>: message[<span style="color:#e6db74">&#34;timeTaken&#34;</span>],
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">retrieve_messages</span>():
+</span></span><span style="display:flex;"><span>    setup_logging(logging<span style="color:#f92672">.</span>INFO)
+</span></span><span style="display:flex;"><span>    logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger()
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Starting retrieve_messages&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#34;Fetching SQS messages&#34;</span>)
+</span></span><span style="display:flex;"><span>        messages <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>receive_messages(MaxNumberOfMessages<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, WaitTimeSeconds<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> message <span style="color:#f92672">in</span> messages:
+</span></span><span style="display:flex;"><span>            parsed_message <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(message<span style="color:#f92672">.</span>body)
+</span></span><span style="display:flex;"><span>            parsed_message[<span style="color:#e6db74">&#34;createdAt&#34;</span>] <span style="color:#f92672">=</span> round(time<span style="color:#f92672">.</span>time())
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>info(parsed_message)
+</span></span><span style="display:flex;"><span>            create_record(parsed_message)
+</span></span><span style="display:flex;"><span>            main(logger, parsed_message)
+</span></span><span style="display:flex;"><span>            message<span style="color:#f92672">.</span>delete()
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    retrieve_messages()
+</span></span></code></pre></div><p>Note: the code above pulls new messages from SQS every 5 seconds.</p>
+<p>The SQS message should follow this schema:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;enhancementId&#34;</span>: <span style="color:#e6db74">&#34;12345&#34;</span>, <span style="color:#f92672">&#34;imageUrl&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/photo.jpg&#34;</span>}
+</span></span></code></pre></div><h3 id="step-2---update-the-dockerfile">Step 2 - Update the Dockerfile</h3>
+<p>I&rsquo;ve also updated the Dockerfile as follows. Again, shout out to <a href="https://github.com/mmenbawy">Mostafa Elmenbawy</a> for creating the initial Dockerfile! 🙏</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">nvidia/cuda:10.0-cudnn7-devel</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span> <span style="color:#e6db74">/app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install -y --no-install-recommends --fix-missing <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># python</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    python3.8 python3-pip python3-setuptools python3-dev <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># OpenCV deps</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    libglib2.0-0 libsm6 libxext6 libxrender1 libgl1-mesa-glx <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># c++</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    g++ <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># others</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    wget unzip<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Ninja</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> wget https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-linux.zip <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    unzip ninja-linux.zip -d /usr/local/bin/ <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    update-alternatives --install /usr/bin/ninja ninja /usr/local/bin/ninja <span style="color:#ae81ff">1</span> --force<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># basicsr facexlib</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> python3 -m pip install --upgrade pip <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    pip3 install --no-cache-dir torch&gt;<span style="color:#f92672">=</span>1.7 opencv-python&gt;<span style="color:#f92672">=</span>4.5 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    pip3 install --no-cache-dir basicsr facexlib realesrgan boto3 python-json-logger uuid<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># weights</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> wget https://github.com/TencentARC/GFPGAN/releases/download/v0.2.0/GFPGANCleanv1-NoCE-C2.pth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        -P experiments/pretrained_models <span style="color:#f92672">&amp;&amp;</span><span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    wget https://github.com/TencentARC/GFPGAN/releases/download/v0.1.0/GFPGANv1.pth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        -P experiments/pretrained_models <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.1/RealESRGAN_x2plus.pth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        -P /usr/local/lib/python3.6/dist-packages/realesrgan/weights/ <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        -P /usr/local/lib/python3.6/dist-packages/facexlib/weights/<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> rm -rf /var/cache/apt/* /var/lib/apt/lists/* <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    apt-get autoremove -y <span style="color:#f92672">&amp;&amp;</span> apt-get clean<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> requirements.txt .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir -r requirements.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;python3&#34;</span>, <span style="color:#e6db74">&#34;inference_gfpgan.py&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-3---publish-the-image-to-ecr">Step 3 - Publish the image to ECR</h3>
+<p>In your CI/CD, build the Dockerfile and publish the image to ECR.</p>
+<h3 id="step-4---deploy-the-ecs-task-using-fargate">Step 4 - Deploy the ECS task using Fargate</h3>
+<p>Using Terraform or CloudFormation, create and deploy the ECS task. Please note, this service doesn&rsquo;t need to be exposed to the internet via Route53 or an Application Load Balancer.</p>
+<p>If you have deployed APIs or public-facing services before to ECS, you might be familiar with configuring the Target Group&rsquo;s healthcheck. The healthcheck detects if the main process running in the container is still health or the container needs to be restarted.</p>
+<p>In this case, the container doesn&rsquo;t expose an HTTP endpoint for the Target Group to call, so we have to use <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">container level healthchecks</a>.</p>
+<p>Instead of configuring the healthcheck in the Target Group, container-level healthchecks are defined in the ECS task definition, as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;healthCheck&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;command&#34;</span>: [ <span style="color:#e6db74">&#34;CMD-SHELL&#34;</span>, <span style="color:#e6db74">&#34;exit 0&#34;</span> ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;startPeriod&#34;</span>: <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">...</span>
+</span></span></code></pre></div><p>Please note, the <code>CMD-SHELL</code> can be any bash command. Ideally, the command would help you validate if the process is healthy.</p>
+<p>By using <code>exit 0</code>, you assume that the container is always healthy.</p>
+<p>This is not ideal, but I haven&rsquo;t found an alternative approach yet.</p>
+<h3 id="takeaways">Takeaways</h3>
+<p>GFPGAN:</p>
+<ul>
+<li>is a ML project able to restore damaged or low-quality photos</li>
+<li>is written in Python but the interface is fairly easy to modify, even if you&rsquo;re not a Python Developer</li>
+<li>can be containerized in Docker</li>
+<li>can be deployed to ECS Fargate, I am using 2 GB o RAM and 1 CPU</li>
+<li>you can easily integrate it with a queue system and integrate it with your app via an API</li>
+</ul>
+<h3 id="conclusions">Conclusions</h3>
+<p>Hopefully, I&rsquo;ve provided you with a real-world scenario in which GFPGAN is used and deployed to AWS.</p>
+<p>I didn&rsquo;t include the entire Terraform code to keep the blog post readable, but I am happy to share more.</p>
+<p>Just reach out to me if you need any help with this; I am more than happy to give you a hand deploying GFPGAN to AWS.</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Contact</h5>
+        <a href="mailto:andrea@falzetti.me">andrea@falzetti.me</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+          <div uk-lightbox>
+            Europe 🇪🇺
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Andrea Falzetti, Hugo Template by samrobbins85
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>
