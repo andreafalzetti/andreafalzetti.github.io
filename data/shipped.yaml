@@ -259,3 +259,10 @@
   title: "es6-template-render: nested objects"
   line: "Added support for nested objects in templates."
   link: "https://github.com/guillaumevincent/es6-template-render/pull/10"
+
+- date: "2015-12-11"
+  at: Personal
+  kind: side
+  title: "WP Snow Effect Pro"
+  line: "A WordPress plugin that lets snow fall on a website, sold on CodeCanyon."
+  link: "https://codecanyon.net/user/rexromae"
