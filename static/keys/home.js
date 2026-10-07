@@ -643,4 +643,117 @@ copy.addEventListener('click', () => {
   const sel = () => { const r = document.createRange(); r.selectNodeContents($('#mail')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); };
   try { navigator.clipboard.writeText('andrea@falzetti.me').then(() => done('Copied'), sel); } catch (e) { sel(); }
 });
+
+// ---------- L'onda in cima alla fascia arancione: il mouse ci cade dentro e schizza ----------
+// Una fila di colonne di liquido legate da molle (ogni colonna tira le vicine), sopra l'ondeggiare lento di sempre.
+// Quando il puntatore attraversa la superficie scendendo, la superficie si abbassa come sotto un peso e partono gocce
+// che ricadono; uscendo verso l'alto lo schizzo è più piccolo.
+(() => {
+  const host = document.querySelector('.work .wave');
+  if (!host || reduce) return;
+  const cv = document.createElement('canvas');
+  const g = cv.getContext('2d');
+  if (!g) return;
+  host.appendChild(cv);
+  host.classList.add('live');
+  host.closest('.work').classList.add('live-wave');
+  const H = 240, BAND = 170, REST = BAND - 17, STEP = 6;  // tela, bordo della fascia, linea di riposo, passo (px)
+  const K = 0.028, DAMP = 0.03, SPREAD = 0.24, GRAV = 0.32;
+  const fill = getComputedStyle(document.documentElement).getPropertyValue('--liquid').trim() || '#FF6B35';
+  let W = 0, N = 0, dpr = 1, h = new Float32Array(0), v = h, dl = h, dr = h, t = 0, visible = true, acc = 0, lastT = 0;
+  const drops = [];
+  function resize() {
+    W = host.clientWidth; dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = Math.max(2, Math.round(W * dpr)); cv.height = Math.round(H * dpr);
+    const n = Math.ceil(W / STEP) + 1;
+    if (n !== N) { N = n; h = new Float32Array(N); v = new Float32Array(N); dl = new Float32Array(N); dr = new Float32Array(N); }
+  }
+  resize();
+  addEventListener('resize', resize);
+  const ambient = x => 6 * Math.sin(x / (W || 1) * Math.PI * 8 - t * 0.8) + 2.5 * Math.sin(x / (W || 1) * Math.PI * 19 + t * 1.3);
+  const col = x => Math.max(0, Math.min(N - 1, Math.round(x / STEP)));
+  const surface = x => REST + ambient(x) + h[col(x)];
+  // Un colpo a forma di campana: più è largo, più sembra pesante quello che cade.
+  function hit(x, force, width) {
+    const c = x / STEP, r = Math.max(1, width / STEP);
+    for (let i = Math.max(0, Math.floor(c - 2.5 * r)); i <= Math.min(N - 1, Math.ceil(c + 2.5 * r)); i++) {
+      const d = (i - c) / r; v[i] += force * Math.exp(-d * d);
+    }
+  }
+  function splash(x, speed, entering) {
+    hit(x, entering ? 2.6 + speed * 3.4 : -(1.2 + speed * 1.6), 9 + speed * 7);
+    const n = Math.min(16, Math.round((entering ? 4 : 2) + speed * 5));
+    const y0 = surface(x) - 1;
+    for (let k = 0; k < n; k++) {
+      const a = -Math.PI / 2 + (Math.random() - 0.5) * 1.7;
+      const s = (2.4 + Math.random() * 3.6) * (0.55 + Math.min(1.8, speed) * 0.55) * (entering ? 1 : 0.7);
+      drops.push({ x: x + (Math.random() - 0.5) * 10, y: y0, vx: Math.cos(a) * s, vy: Math.sin(a) * s, r: 1.6 + Math.random() * 3.2 });
+    }
+  }
+  let prev = null;
+  addEventListener('pointermove', e => {
+    const b = cv.getBoundingClientRect();
+    const x = e.clientX - b.left, y = e.clientY - b.top;
+    if (x < 0 || x > W || y < -60 || y > H + 60) { prev = null; return; }
+    if (prev && prev.id === e.pointerId) {
+      const above = prev.y < surface(prev.x), nowAbove = y < surface(x);
+      if (above !== nowAbove) {
+        const speed = Math.min(3, Math.abs(y - prev.y) / Math.max(8, e.timeStamp - prev.t));   // px al ms
+        splash(x, Math.max(0.3, speed), above);
+      }
+    }
+    prev = { x, y, t: e.timeStamp, id: e.pointerId };
+  }, { passive: true });
+  function step() {
+    for (let i = 0; i < N; i++) { v[i] += -K * h[i] - DAMP * v[i]; h[i] += v[i]; }
+    for (let p = 0; p < 4; p++) {
+      for (let i = 0; i < N; i++) {
+        if (i > 0) { dl[i] = SPREAD * (h[i] - h[i - 1]); v[i - 1] += dl[i]; }
+        if (i < N - 1) { dr[i] = SPREAD * (h[i] - h[i + 1]); v[i + 1] += dr[i]; }
+      }
+      for (let i = 0; i < N; i++) {
+        if (i > 0) h[i - 1] += dl[i];
+        if (i < N - 1) h[i + 1] += dr[i];
+      }
+    }
+    for (let k = drops.length - 1; k >= 0; k--) {
+      const d = drops[k];
+      d.vy += GRAV; d.x += d.vx; d.y += d.vy;
+      if (d.vy > 0 && d.y > surface(d.x)) { hit(d.x, Math.min(2.5, d.vy * 0.35), 5); drops.splice(k, 1); }
+      else if (d.x < -20 || d.x > W + 20) drops.splice(k, 1);
+    }
+  }
+  function draw() {
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    g.clearRect(0, 0, W, H);
+    g.fillStyle = fill;
+    g.beginPath();
+    g.moveTo(0, H);
+    g.lineTo(0, surface(0));
+    for (let i = 1; i < N; i++) {
+      const x0 = (i - 1) * STEP, x1 = i * STEP;
+      const y0 = Math.min(H - 1, REST + ambient(x0) + h[i - 1]), y1 = Math.min(H - 1, REST + ambient(x1) + h[i]);
+      g.quadraticCurveTo(x0, y0, (x0 + x1) / 2, (y0 + y1) / 2);
+    }
+    g.lineTo(W, surface(W));
+    g.lineTo(W, H);
+    g.closePath();
+    g.fill();
+    for (const d of drops) { g.beginPath(); g.arc(d.x, d.y, d.r, 0, Math.PI * 2); g.fill(); }
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; }, { rootMargin: '120px' }).observe(host);
+  }
+  function frame(now) {
+    const dt = Math.min(0.05, ((now - (lastT || now)) / 1000)); lastT = now;
+    if (visible) {
+      t += dt;
+      acc = Math.min(acc + dt, 4 / 60);
+      while (acc >= 1 / 60) { acc -= 1 / 60; step(); }
+      draw();
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
 })();
