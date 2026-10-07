@@ -141,13 +141,6 @@
   line: A Node.js client for Aruba's Italian e-invoicing API.
   link: https://www.npmjs.com/package/fatturazione-elettronica-aruba
 
-- date: "2018-01-15"
-  at: DAZN
-  kind: product
-  title: The Hacker Games 2018
-  line: A 48-hour charity hackathon. We built a React Native chat app for partners of military veterans.
-  link: https://github.com/maxgallo/the-hacker-games-2018
-
 - date: "2017-01-01"
   at: OFC
   kind: product
