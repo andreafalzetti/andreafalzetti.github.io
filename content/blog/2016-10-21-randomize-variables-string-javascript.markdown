@@ -23,7 +23,7 @@ I need to render the text randomising the action (_go for a walk_ **or** _to the
 
 I wrote a little snippet to do it, so feel free to use it:
 
-{% gist andreafalzetti/2d90bc57dcdcaf1fde4dedd9361f1f93 %}
+{{< gist andreafalzetti 2d90bc57dcdcaf1fde4dedd9361f1f93 >}}
 
 **GitHub Gist** available [here](https://gist.github.com/andreafalzetti/2d90bc57dcdcaf1fde4dedd9361f1f93).
 

@@ -24,8 +24,16 @@ params:
         - URL: 'https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js'
   home: Home
   description: >-
-    Andrea Falzetti, Senior Software Engineer in 🇪🇺
+    Andrea Falzetti, software engineer. I make games, developer tools and SaaS.
   author: Andrea Falzetti, Hugo Template by samrobbins85
   footer:
     email: andrea@falzetti.me
     address: 'Europe 🇪🇺'
+
+markup:
+  goldmark:
+    renderer:
+      # Gli articoli importati da Jekyll incorporano tweet e GIF in HTML.
+      unsafe: true
+  highlight:
+    style: github

@@ -20,7 +20,7 @@ We will look into JavaScript code, but the concepts apply to any language.
 
 I named it, **Picasso code**:
 
-{% gist andreafalzetti/1cd9e8c9cd5af3b37e8b2f77d68a87df %}
+{{< gist andreafalzetti 1cd9e8c9cd5af3b37e8b2f77d68a87df >}}
 _This is just a sample of the component_
 
 With a quick read of the code above, you will immediately see that:

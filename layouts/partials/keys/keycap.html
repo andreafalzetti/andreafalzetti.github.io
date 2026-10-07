@@ -1,0 +1,10 @@
+{{- /* Un tasto col liquido. id: unico nella pagina; w: larghezza nel viewBox (120 = un tasto);
+       legend, size, y: legenda in alto a sinistra; level: altezza del liquido (40 pieno, 92 quasi vuoto). */ -}}
+{{- $w := .w -}}
+{{- $outer := printf "M28 6H%dA22 22 0 0 1 %d 28V92A22 22 0 0 1 %d 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" (sub $w 28) (sub $w 6) (sub $w 28) -}}
+{{- $inner := printf "M32 12H%dA14 14 0 0 1 %d 26V80A14 14 0 0 1 %d 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" (sub $w 32) (sub $w 18) (sub $w 32) -}}
+{{- $wave := "M-60 0Q-52.5 -3.2 -45 0" -}}
+{{- range seq -30 15 (add $w 30) }}{{ $wave = printf "%sT%d 0" $wave . }}{{ end -}}
+{{- $wave = printf "%sV200H-60Z" $wave -}}
+{{- $deep := sub 114 .level -}}
+<svg class="cap" viewBox="0 0 {{ $w }} 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-{{ .id }}"><path d="{{ $outer }}"/></clipPath></defs><path class="body" d="{{ $outer }}"/><g clip-path="url(#c-{{ .id }})"><g transform="translate(0 {{ .level }})"><g class="liq"><path class="wv" d="{{ $wave }}"/></g></g><circle class="bub" cx="{{ sub $w 36 }}" cy="{{ add .level (div (mul $deep 30) 100) }}" r="3.2"/><circle class="bub" cx="{{ sub $w 27 }}" cy="{{ add .level (div (mul $deep 62) 100) }}" r="2.2"/><circle class="bub" cx="{{ sub $w 46 }}" cy="{{ add .level (div (mul $deep 70) 100) }}" r="1.5"/></g><path class="o" d="{{ $outer }}" stroke-width="6"/><g class="top"><path class="o" d="{{ $inner }}" stroke-width="4.5"/><text class="lg" x="26" y="{{ .y }}" style="font-size:{{ .size }}px">{{ .legend }}</text></g></svg>

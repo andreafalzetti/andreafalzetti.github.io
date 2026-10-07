@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+</header>
+<div class="about">
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <figure class="portrait">
+    <img src="{{ "images/about/profile.jpg" | relURL }}" alt="Andrea Falzetti" width="512" height="512">
+  </figure>
+  {{- with site.Data.homepage.experience }}{{ if .enable }}
+  <section class="experience" aria-labelledby="experience-h">
+    <h2 id="experience-h">Experience</h2>
+    <ol class="xp">
+      {{- range .item }}
+      <li><time>{{ .duration }}</time><div><strong>{{ .title }}</strong><span>{{ .company }}</span></div></li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}{{ end }}
+</div>
+{{ end }}

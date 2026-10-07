@@ -64,7 +64,7 @@ These are the stories that I have created so far:
 
 To handle the state of the component, so which option is selected, I decided to build a wrapper component which will act as "selector" and it will orchestrate the rendering of the child boxes. I kept the main component standalone, so I can use it even if I don't need to click handlers or change of state in my application.
 
-{% gist andreafalzetti/240d933f864c8674ede656e80abf844d %}
+{{< gist andreafalzetti 240d933f864c8674ede656e80abf844d >}}
 
 ## Accessibility
 

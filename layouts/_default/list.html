@@ -1,0 +1,31 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ if eq .Kind "term" }}#{{ .Title }}{{ else }}{{ .Title }}{{ end }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+</header>
+{{- $groups := .Pages.GroupByDate "2006" -}}
+{{- $max := 1 -}}
+{{- range $groups }}{{ if gt (len .Pages) $max }}{{ $max = len .Pages }}{{ end }}{{ end }}
+<div class="posts">
+  {{- range $groups }}
+  {{- $n := len .Pages }}
+  <section class="year" aria-labelledby="y-{{ .Key }}">
+    <h2 class="year-key" id="y-{{ .Key }}">
+      {{ partial "keys/keycap.html" (dict "id" (printf "y%s" .Key) "w" 180 "legend" .Key "size" 30 "y" 49 "level" (sub 92 (div (mul 34 $n) $max))) }}
+      <span class="sr">{{ .Key }}, </span><span>{{ $n }} {{ cond (eq $n 1) "post" "posts" }}</span>
+    </h2>
+    <ol class="post-list">
+      {{- range .Pages }}
+      <li>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+        <div>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{- with .Description }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+</div>
+{{ end }}
