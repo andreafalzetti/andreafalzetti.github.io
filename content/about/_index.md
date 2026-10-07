@@ -16,7 +16,9 @@ I'm an AWS Community Builders alum, and I love creating products, building compa
 
 ### How I work
 
-Although I have a strong understanding of the whole stack, I prefer working on the back end and in the cloud. I like contributing to the entire development lifecycle from planning, architecture, coding, provisioning cloud infrastructure, CI/CD automation, testing, on-call, writing docs and giving tech-talks.
+<p class="struck"><del>Although I have a strong understanding of the whole stack, I prefer working on the back end and in the cloud. I like contributing to the entire development lifecycle from planning, architecture, coding, provisioning cloud infrastructure, CI/CD automation, testing, on-call, writing docs and giving tech-talks.</del></p>
+
+These days I write the plan, Claude Code and Codex write the code, and I argue with both of them in review. The architecture, the cloud bill and the 3 a.m. pager are still mine.
 
 I have experience mentoring and leading company-wide initiatives, including interviewing and hiring other engineers.
 

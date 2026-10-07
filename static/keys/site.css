@@ -102,6 +102,9 @@ a.chip:active{transform:translateY(3px);box-shadow:0 0 0 var(--ink)}
 /* Una cancellatura come un colpo di pennarello arancione, un po' storto. */
 .prose del{position:relative;text-decoration:none;color:var(--ink-2);white-space:nowrap}
 .prose del::after{content:"";position:absolute;left:-.12em;right:-.12em;top:50%;height:.2em;margin-top:-.06em;background:var(--liquid);border-radius:.12em;transform:rotate(-2.5deg)}
+/* Un paragrafo intero barrato: la barra arancione segue ogni riga. */
+.prose .struck del{white-space:normal;background:linear-gradient(transparent 47%,var(--liquid) 47% 63%,transparent 63%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.prose .struck del::after{display:none}
 .prose hr{border:0;border-top:2px dashed var(--paper-dim);margin:2.6em 0}
 /* In About gli elenchi fatti solo di codice (le tecnologie) diventano una fila di tasti. */
 .about .prose ul:has(> li > code){list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:12px 10px}
