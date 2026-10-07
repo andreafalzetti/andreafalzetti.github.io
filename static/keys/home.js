@@ -690,20 +690,27 @@ copy.addEventListener('click', () => {
       drops.push({ x: x + (Math.random() - 0.5) * 10, y: y0, vx: Math.cos(a) * s, vy: Math.sin(a) * s, r: 1.6 + Math.random() * 3.2 });
     }
   }
+  // Il puntatore si controlla a ogni fotogramma, non solo quando si muove: anche scorrendo la pagina la superficie
+  // gli passa sotto. Conta solo la linea dell'acqua a riposo, così l'onda lenta e gli avvallamenti non fanno schizzi
+  // da soli, e il puntatore deve spostarsi davvero rispetto al liquido.
+  const ptr = { cx: 0, cy: 0, on: false };
   let prev = null;
-  addEventListener('pointermove', e => {
+  addEventListener('pointermove', e => { ptr.cx = e.clientX; ptr.cy = e.clientY; ptr.on = true; }, { passive: true });
+  addEventListener('pointerout', e => { if (!e.relatedTarget) { ptr.on = false; prev = null; } });
+  addEventListener('pointercancel', () => { ptr.on = false; prev = null; });
+  const waterline = x => REST + ambient(x);
+  function watch(ms) {
+    if (!ptr.on) return;
     const b = cv.getBoundingClientRect();
-    const x = e.clientX - b.left, y = e.clientY - b.top;
-    if (x < 0 || x > W || y < -60 || y > H + 60) { prev = null; return; }
-    if (prev && prev.id === e.pointerId) {
-      const above = prev.y < surface(prev.x), nowAbove = y < surface(x);
-      if (above !== nowAbove) {
-        const speed = Math.min(3, Math.abs(y - prev.y) / Math.max(8, e.timeStamp - prev.t));   // px al ms
-        splash(x, Math.max(0.3, speed), above);
-      }
+    const x = ptr.cx - b.left, y = ptr.cy - b.top;
+    if (x < 0 || x > W) { prev = null; return; }
+    if (prev && Math.abs(y - prev.y) >= 1) {
+      const above = prev.y < waterline(prev.x), nowAbove = y < waterline(x);
+      if (above !== nowAbove) splash(x, Math.max(0.3, Math.min(3, Math.abs(y - prev.y) / Math.max(8, ms))), above);
     }
-    prev = { x, y, t: e.timeStamp, id: e.pointerId };
-  }, { passive: true });
+    // Si segue il puntatore anche lontano dal bordo: uno scorrimento veloce può saltarlo in un solo fotogramma.
+    prev = y > -400 && y < H + 400 ? { x, y } : null;
+  }
   function step() {
     for (let i = 0; i < N; i++) { v[i] += -K * h[i] - DAMP * v[i]; h[i] += v[i]; }
     for (let p = 0; p < 4; p++) {
@@ -748,10 +755,11 @@ copy.addEventListener('click', () => {
     const dt = Math.min(0.05, ((now - (lastT || now)) / 1000)); lastT = now;
     if (visible) {
       t += dt;
+      watch(dt * 1000);
       acc = Math.min(acc + dt, 4 / 60);
       while (acc >= 1 / 60) { acc -= 1 / 60; step(); }
       draw();
-    }
+    } else prev = null;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
