@@ -4,8 +4,8 @@
   {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
 </header>
 {{- $items := partial "keys/shipped-items.html" . -}}
-{{- $labels := dict "product" "Products" "feature" "Features" "tool" "Tools" "company" "Company" "game" "Games" "post" "Posts" -}}
-{{- $kind := dict "product" "Product" "feature" "Feature" "tool" "Tool" "company" "Company" "game" "Game" "post" "Post" -}}
+{{- $labels := dict "product" "Products" "oss" "OSS" "tool" "Tools" "company" "Company" "game" "Games" "post" "Posts" -}}
+{{- $kind := dict "product" "Product" "oss" "OSS" "tool" "Tool" "company" "Company" "game" "Game" "post" "Post" -}}
 {{- $years := slice -}}
 {{- range $items }}{{ $years = $years | append .year }}{{ end -}}
 {{- $years = uniq $years -}}
@@ -14,7 +14,7 @@
 <div class="posts shipped">
   <div class="filters" role="group" aria-label="Show">
     <button type="button" class="chip" data-kind="all" aria-pressed="true">All <span>{{ len $items }}</span></button>
-    {{- range slice "product" "feature" "tool" "company" "game" "post" }}
+    {{- range slice "product" "oss" "tool" "company" "game" "post" }}
     {{- $n := len (where $items "kind" .) }}{{ if $n }}
     <button type="button" class="chip" data-kind="{{ . }}" aria-pressed="false">{{ index $labels . }} <span>{{ $n }}</span></button>
     {{- end }}{{ end }}
