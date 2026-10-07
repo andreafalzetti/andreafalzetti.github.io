@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{ partial "keys/head.html" . }}
+</head>
+<body>
+{{ partial "keys/header.html" . }}
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "keys/footer.html" . }}
+<script src="{{ "keys/site.js" | relURL }}" defer></script>
+</body>
+</html>

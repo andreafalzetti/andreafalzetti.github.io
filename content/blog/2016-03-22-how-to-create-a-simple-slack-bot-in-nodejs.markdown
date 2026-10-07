@@ -17,8 +17,7 @@ aliases:
 
 In this post I want to help you creating a *simple Slack bot with Node.js*.
 
-Slack has created two different integrations methods, **Incoming/Outcoming Webhooks** and **Bot Users**. If you are interested in the latter case, please read my article about [_Creating a Slack User Bot_]({% post_url
-  2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).
+Slack has created two different integrations methods, **Incoming/Outcoming Webhooks** and **Bot Users**. If you are interested in the latter case, please read my article about [_Creating a Slack User Bot_](/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/).
 
 In this article, we are going to integrate the Slack Incoming Webhooks which allows you to **send data into Slack** in real-time.
 
@@ -400,5 +399,4 @@ Now you are ready to call your API Endpoint at your-app-domain`/today` and if yo
 
 ## What next?
 
-In the next article, you will see [How to create a smart Slack Bot in Node.js that schedules appointments for you]({% post_url
-  2016-04-4-how-to-create-a-smart-slack-bot-in-nodejs %}).
+In the next article, you will see [How to create a smart Slack Bot in Node.js that schedules appointments for you](/blog/2016/04/04/How-to-create-a-smart-Slack-Bot-in-Node.js/).

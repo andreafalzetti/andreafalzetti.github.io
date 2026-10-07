@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Andrea Falzetti</title>
+<meta name="description" content="Andrea Falzetti, software engineer. I make games, developer tools and SaaS.">
+<meta property="og:title" content="Andrea Falzetti">
+<meta property="og:description" content="Andrea Falzetti, software engineer. I make games, developer tools and SaaS.">
+<meta property="og:url" content="https://falzetti.me/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://falzetti.me/">
+<link rel="icon" type="image/svg+xml" href="/keys/key.svg">
+<link rel="alternate" type="application/rss+xml" title="Andrea Falzetti" href="/blog/index.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="/keys/home.css">
+</head>
+<body>
+<main>
+<section class="hero" aria-labelledby="titolo">
+  <div class="bar">
+    <button class="sound" id="sound" type="button" aria-pressed="true" aria-label="Key sounds">
+      <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11"/></svg>
+      <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
+    </button>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <h1 class="sr" id="titolo">Andrea Falzetti</h1>
+  <div class="lockup">
+    <button class="key" id="key" type="button" aria-label="Press the A key">
+      <canvas aria-hidden="true"></canvas>
+      <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <path class="static-liq" d="M6 70Q12.75 64 19.5 70T33 70T46.5 70T60 70T73.5 70T87 70T100.5 70T114 70V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92Z"/>
+        <circle class="static-bub" cx="84" cy="82" r="3.2"/><circle class="static-bub" cx="92" cy="104" r="2.2"/><circle class="static-bub" cx="76" cy="106" r="1.5"/>
+        <path class="ink-s outer" pathLength="1" stroke-width="6" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/>
+        <g class="top">
+          <path class="ink-s inner" pathLength="1" stroke-width="4.5" d="M32 12H88A14 14 0 0 1 102 26V80A14 14 0 0 1 88 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z"/>
+          <text class="lg" x="26" y="51" font-size="34"><tspan class="ch">A</tspan></text>
+        </g>
+      </svg>
+    </button>
+    <span class="name" aria-hidden="true"><span class="ch">F</span><span class="ch">A</span><span class="ch">L</span><span class="ch">Z</span><span class="ch">E</span><span class="ch">T</span><span class="ch">T</span><span class="ch">I</span><span class="caret" id="caret"></span></span>
+  </div>
+
+  <div class="hero-foot">
+    <p class="tagline">Andrea Falzetti, software engineer. I make games, developer tools and SaaS.</p>
+    <p class="hint" id="hint">Press <kbd>A</kbd></p>
+  </div>
+</section>
+
+<section class="work" aria-labelledby="work-h">
+  <div class="wave" aria-hidden="true"><svg viewBox="0 0 1200 34" preserveAspectRatio="none"><path d="M0 17C25 9 50 9 75 17S125 25 150 17S200 9 225 17S275 25 300 17S350 9 375 17S425 25 450 17S500 9 525 17S575 25 600 17S650 9 675 17S725 25 750 17S800 9 825 17S875 25 900 17S950 9 975 17S1025 25 1050 17S1100 9 1125 17S1175 25 1200 17V34H0Z"/></svg></div>
+  <h2 class="sr" id="work-h">What I make</h2>
+  <ul class="row">
+    <li class="svc" style="--w:2">
+      <svg class="cap" viewBox="0 0 240 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-froststead"><path d="M28 6H212A22 22 0 0 1 234 28V92A22 22 0 0 1 212 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H212A22 22 0 0 1 234 28V92A22 22 0 0 1 212 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-froststead)"><g class="liq"><path class="wv" d="M-60 78Q-52.5 74.8 -45 78T-30 78T-15 78T0 78T15 78T30 78T45 78T60 78T75 78T90 78T105 78T120 78T135 78T150 78T165 78T180 78T195 78T210 78T225 78T240 78T255 78T270 78V120H-60Z"/></g><circle class="bub" cx="204" cy="88" r="3.2"/><circle class="bub" cx="213" cy="104" r="2.2"/><circle class="bub" cx="194" cy="106" r="1.5"/></g><path class="o" d="M28 6H212A22 22 0 0 1 234 28V92A22 22 0 0 1 212 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H208A14 14 0 0 1 222 26V80A14 14 0 0 1 208 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:18px"><tspan x="26" y="41">Froststead</tspan></text></g></svg>
+      <h3 class="sr">Froststead</h3>
+      <p>My game. You rekindle a dead hearth and rebuild a village in the snow. Coming to iOS and Android.</p>
+      <a class="more" href="https://froststead.com" target="_blank" rel="noopener">froststead.com ↗</a>
+    </li>
+    <li class="svc" style="--w:2.25">
+      <svg class="cap" viewBox="0 0 270 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-ofc"><path d="M28 6H242A22 22 0 0 1 264 28V92A22 22 0 0 1 242 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H242A22 22 0 0 1 264 28V92A22 22 0 0 1 242 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-ofc)"><g class="liq"><path class="wv" d="M-60 80Q-52.5 76.8 -45 80T-30 80T-15 80T0 80T15 80T30 80T45 80T60 80T75 80T90 80T105 80T120 80T135 80T150 80T165 80T180 80T195 80T210 80T225 80T240 80T255 80T270 80T285 80T300 80V120H-60Z"/></g><circle class="bub" cx="234" cy="88" r="3.2"/><circle class="bub" cx="243" cy="104" r="2.2"/><circle class="bub" cx="224" cy="106" r="1.5"/></g><path class="o" d="M28 6H242A22 22 0 0 1 264 28V92A22 22 0 0 1 242 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H238A14 14 0 0 1 252 26V80A14 14 0 0 1 238 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:18px"><tspan x="26" y="41">Onoranze</tspan><tspan x="26" y="62">Funebri Cloud</tspan></text></g></svg>
+      <h3 class="sr">Onoranze Funebri Cloud</h3>
+      <p>The SaaS for Italian funeral homes I co-founded in 2017. I&#x27;m the CTO.</p>
+      <a class="more" href="https://onoranzefunebricloud.com" target="_blank" rel="noopener">onoranzefunebricloud.com ↗</a>
+    </li>
+    <li class="svc" style="--w:1.5">
+      <svg class="cap" viewBox="0 0 180 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-devx"><path d="M28 6H152A22 22 0 0 1 174 28V92A22 22 0 0 1 152 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H152A22 22 0 0 1 174 28V92A22 22 0 0 1 152 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-devx)"><g class="liq"><path class="wv" d="M-60 78Q-52.5 74.8 -45 78T-30 78T-15 78T0 78T15 78T30 78T45 78T60 78T75 78T90 78T105 78T120 78T135 78T150 78T165 78T180 78T195 78T210 78V120H-60Z"/></g><circle class="bub" cx="144" cy="88" r="3.2"/><circle class="bub" cx="153" cy="104" r="2.2"/><circle class="bub" cx="134" cy="106" r="1.5"/></g><path class="o" d="M28 6H152A22 22 0 0 1 174 28V92A22 22 0 0 1 152 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H148A14 14 0 0 1 162 26V80A14 14 0 0 1 148 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:18px"><tspan x="26" y="41">DevX</tspan></text></g></svg>
+      <h3 class="sr">Developer experience</h3>
+      <p>Platform engineering and developer experience. Previously at Okteto, Gitpod and DAZN.</p>
+      <a class="more" href="/about/">About me</a>
+    </li>
+  </ul>
+</section>
+
+<section class="elsewhere" aria-labelledby="elsewhere-h">
+  <h2 id="elsewhere-h">Elsewhere</h2>
+  <ul class="links">
+    <li><a href="/blog/">
+      <svg class="cap" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-blog"><path d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-blog)"><g class="liq"><path class="wv" d="M-60 72Q-52.5 68.8 -45 72T-30 72T-15 72T0 72T15 72T30 72T45 72T60 72T75 72T90 72T105 72T120 72T135 72T150 72V120H-60Z"/></g><circle class="bub" cx="84" cy="88" r="3.2"/><circle class="bub" cx="93" cy="104" r="2.2"/><circle class="bub" cx="74" cy="106" r="1.5"/></g><path class="o" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H88A14 14 0 0 1 102 26V80A14 14 0 0 1 88 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:26px"><tspan x="26" y="49">Blog</tspan></text></g></svg>
+      <div><strong>Blog</strong><span>Writing since 2016</span></div>
+    </a></li>
+    <li><a href="https://github.com/andreafalzetti" target="_blank" rel="noopener">
+      <svg class="cap" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-gh"><path d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-gh)"><g class="liq"><path class="wv" d="M-60 72Q-52.5 68.8 -45 72T-30 72T-15 72T0 72T15 72T30 72T45 72T60 72T75 72T90 72T105 72T120 72T135 72T150 72V120H-60Z"/></g><circle class="bub" cx="84" cy="88" r="3.2"/><circle class="bub" cx="93" cy="104" r="2.2"/><circle class="bub" cx="74" cy="106" r="1.5"/></g><path class="o" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H88A14 14 0 0 1 102 26V80A14 14 0 0 1 88 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:30px"><tspan x="26" y="49">GH</tspan></text></g></svg>
+      <div><strong>GitHub</strong><span>andreafalzetti</span></div>
+    </a></li>
+    <li><a href="https://www.linkedin.com/in/andreafalzetti" target="_blank" rel="noopener">
+      <svg class="cap" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-in"><path d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-in)"><g class="liq"><path class="wv" d="M-60 72Q-52.5 68.8 -45 72T-30 72T-15 72T0 72T15 72T30 72T45 72T60 72T75 72T90 72T105 72T120 72T135 72T150 72V120H-60Z"/></g><circle class="bub" cx="84" cy="88" r="3.2"/><circle class="bub" cx="93" cy="104" r="2.2"/><circle class="bub" cx="74" cy="106" r="1.5"/></g><path class="o" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H88A14 14 0 0 1 102 26V80A14 14 0 0 1 88 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:30px"><tspan x="26" y="49">in</tspan></text></g></svg>
+      <div><strong>LinkedIn</strong><span>andreafalzetti</span></div>
+    </a></li>
+    <li><a href="https://x.com/rexromae" target="_blank" rel="noopener">
+      <svg class="cap" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-x"><path d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-x)"><g class="liq"><path class="wv" d="M-60 72Q-52.5 68.8 -45 72T-30 72T-15 72T0 72T15 72T30 72T45 72T60 72T75 72T90 72T105 72T120 72T135 72T150 72V120H-60Z"/></g><circle class="bub" cx="84" cy="88" r="3.2"/><circle class="bub" cx="93" cy="104" r="2.2"/><circle class="bub" cx="74" cy="106" r="1.5"/></g><path class="o" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H88A14 14 0 0 1 102 26V80A14 14 0 0 1 88 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:30px"><tspan x="26" y="49">X</tspan></text></g></svg>
+      <div><strong>X</strong><span>@rexromae</span></div>
+    </a></li>
+    <li><a href="https://www.instagram.com/rexromae" target="_blank" rel="noopener">
+      <svg class="cap" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><clipPath id="c-ig"><path d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/></clipPath></defs><path class="body" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/><g clip-path="url(#c-ig)"><g class="liq"><path class="wv" d="M-60 72Q-52.5 68.8 -45 72T-30 72T-15 72T0 72T15 72T30 72T45 72T60 72T75 72T90 72T105 72T120 72T135 72T150 72V120H-60Z"/></g><circle class="bub" cx="84" cy="88" r="3.2"/><circle class="bub" cx="93" cy="104" r="2.2"/><circle class="bub" cx="74" cy="106" r="1.5"/></g><path class="o" d="M28 6H92A22 22 0 0 1 114 28V92A22 22 0 0 1 92 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z" stroke-width="6"/><g class="top"><path class="o" d="M32 12H88A14 14 0 0 1 102 26V80A14 14 0 0 1 88 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z" stroke-width="4.5"/><text class="lg" style="font-size:30px"><tspan x="26" y="49">IG</tspan></text></g></svg>
+      <div><strong>Instagram</strong><span>@rexromae</span></div>
+    </a></li>
+  </ul>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="contact-in">
+    <a class="enter" id="invio" href="mailto:andrea@falzetti.me" aria-label="Enter: write to andrea@falzetti.me">
+      <canvas aria-hidden="true"></canvas>
+      <svg viewBox="0 0 180 240" aria-hidden="true" focusable="false">
+        <path class="static-liq" d="M36 178Q49.5 172 63 178T90 178T117 178T144 178T171 178V212A22 22 0 0 1 152 234H58A22 22 0 0 1 36 212Z"/>
+        <path class="p-s" stroke-width="6" d="M28 6H152A22 22 0 0 1 174 28V212A22 22 0 0 1 152 234H58A22 22 0 0 1 36 212V120A6 6 0 0 0 30 114H28A22 22 0 0 1 6 92V28A22 22 0 0 1 28 6Z"/>
+        <g class="top">
+          <path class="p-s" stroke-width="4.5" d="M32 12H148A14 14 0 0 1 162 26V200A14 14 0 0 1 148 214H62A14 14 0 0 1 48 200V100A6 6 0 0 0 42 94H32A14 14 0 0 1 18 80V26A14 14 0 0 1 32 12Z"/>
+          <text class="lg-p" x="28" y="46">Enter</text>
+          <path class="p-s" stroke-width="5" d="M136 128V162H80M94 148L80 162L94 176"/>
+        </g>
+      </svg>
+    </a>
+    <div>
+      <h2 id="contact-h">Write to me</h2>
+      <p class="mail"><a href="mailto:andrea@falzetti.me" id="mail">andrea@falzetti.me</a><button class="copy" id="copy" type="button">Copy</button></p>
+    </div>
+  </div>
+  <div class="foot"><p>Andrea Falzetti</p><p>falzetti.me</p></div>
+</section>
+</main>
+
+<script src="/keys/home.js"></script>
+</body>
+</html>

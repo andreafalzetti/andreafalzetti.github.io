@@ -1,0 +1,13 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>404</h1>
+</header>
+<div class="missing">
+  <p>There's no page at this address.</p>
+  <nav aria-label="Where to go">
+    <a class="chip" href="{{ "/" | relURL }}">Home</a>
+    <a class="chip" href="{{ "blog/" | relURL }}">Blog</a>
+    <a class="chip" href="{{ "about/" | relURL }}">About</a>
+  </nav>
+</div>
+{{ end }}

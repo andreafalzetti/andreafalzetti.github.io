@@ -112,11 +112,11 @@ storiesOf('MyBeautifulButton', module)
 
 ### Output
 
-![storybook-3-result]({{site.baseurl}}/img/2017/05/storybook-3-state-started.jpg)
+![storybook-3-result](/img/2017/05/storybook-3-state-started.jpg)
 
-![storybook-3-result]({{site.baseurl}}/img/2017/05/storybook-3-state-completed.jpg)
+![storybook-3-result](/img/2017/05/storybook-3-state-completed.jpg)
 
-![storybook-3-result]({{site.baseurl}}/img/2017/05/storybook-3-bootstrap-buttons.jpg)
+![storybook-3-result](/img/2017/05/storybook-3-bootstrap-buttons.jpg)
 
 ## Customise Bootstrap
 

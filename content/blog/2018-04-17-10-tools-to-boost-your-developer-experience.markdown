@@ -40,19 +40,19 @@ Well, most of the time they are used in scripts, generally piped to `curl` or `h
 
 In the examples below I hit a public API that returns countries VAT. This is the output of a GET (all countries) without using jq.
 
-![jq-example]({{site.baseurl}}/img/2018/04/jq-1.png)
+![jq-example](/img/2018/04/jq-1.png)
 
 **jq** has some built-in operators we can use to count, select, filter and much more. In the following example I simply count how many items the `.rates` array has.
 
-![jq-example]({{site.baseurl}}/img/2018/04/jq-2.png)
+![jq-example](/img/2018/04/jq-2.png)
 
 Here we search the array for a specific item that contains a property `country_code` that equals `GB`. This gives us back the whole item.
 
-![jq-example]({{site.baseurl}}/img/2018/04/jq-3.png)
+![jq-example](/img/2018/04/jq-3.png)
 
 We can finally extract the values that we need and use them in a bash script!
 
-![jq-example]({{site.baseurl}}/img/2018/04/jq-4.png)
+![jq-example](/img/2018/04/jq-4.png)
 
 Here are the commands I have used above, feel free to experiment with them:
 
@@ -84,11 +84,11 @@ echo "VAT in $COUNTRY is $VAT%"
 
 As you can see in the image below, I am hitting a public weather API to get the London's current weather, the command I have ran is:
 
-![httpie-example]({{site.baseurl}}/img/2018/04/httpie.png)
+![httpie-example](/img/2018/04/httpie.png)
 
 You can achieve the same result using a combination of commands, **curl** and **jq**, mentioned above.
 
-![curl-jq]({{site.baseurl}}/img/2018/04/curl-jq.png)
+![curl-jq](/img/2018/04/curl-jq.png)
 
 I personally use both approaches, but I use `http` when I can't remember how to do some specific requests using `curl` and I'm too lazy to check the manual. I must have googled "_curl post json_" hundreds of times 😂
 
@@ -116,13 +116,13 @@ You can specify the **HTTP method** (PUT, POST, PATCH, etc) before the URL and p
 
 Front-end developers and QA engineers will particularly like this! [Choosy](https://www.choosyosx.com/) lets you pick what browser to use when you click on a link.
 
-![choosy]({{site.baseurl}}/img/2018/04/choosy.gif)
+![choosy](/img/2018/04/choosy.gif)
 
 I like it because it's lightweight, smart and **not intrusive**. For instance it won't prompt you to choose a browser if you are already in one, or it will not display browsers that are not open, this means if you keep your favourite one on, you won't need to decide every time, choosy will use that.
 
 It comes very handy when you need to open a link from the Terminal or within an Email, Slack, Trello etc.
 
-![choosy]({{site.baseurl}}/img/2018/04/choosy.png)
+![choosy](/img/2018/04/choosy.png)
 
 I personally use three or four browsers (including [Brave](https://brave.com/)) for different purposes, so if you are like me, you'll really like this one. Choosy also supports Chrome profiles and incognito so if you need to test a website under different sessions / users, it can really save you some time!
 
@@ -141,7 +141,7 @@ I also like that the output it's nice and clear:
 
 * [Get Ag](https://github.com/ggreer/the_silver_searcher)
 
-![ag]({{site.baseurl}}/img/2018/04/ag.png)
+![ag](/img/2018/04/ag.png)
 
 
 ### 5. trailer
@@ -151,15 +151,15 @@ I also like that the output it's nice and clear:
 
 Rather than looking at emails or checking the website I prefer to to receive a push notification when someone opened or reviewed a pull request.
 
-![trailer]({{site.baseurl}}/img/2018/04/trailer-1.png)
+![trailer](/img/2018/04/trailer-1.png)
 
 Once expanded, you can see the notifications history and jump directly at them if you like.
 
-![trailer]({{site.baseurl}}/img/2018/04/trailer-2.png)
+![trailer](/img/2018/04/trailer-2.png)
 
 If you are scared to receive hundreds of notifications with this, don't worry! You can decide on what repositories you want to be notified.
 
-![trailer]({{site.baseurl}}/img/2018/04/trailer-3.png)
+![trailer](/img/2018/04/trailer-3.png)
 
 * [Get **Trailer**](https://github.com/ptsochantaris/trailer)
 
@@ -168,7 +168,7 @@ If you are scared to receive hundreds of notifications with this, don't worry! Y
 
 Most of us use **Jira** these days, so why not having a little helper.
 
-![plugin-jira]({{site.baseurl}}/img/2018/04/plugin-jira.gif)
+![plugin-jira](/img/2018/04/plugin-jira.gif)
 
 You can also run `jira new` to quickly create a new ticket!
 
@@ -183,7 +183,7 @@ This utility allows you to *play/stop* , *search* for songs or playlists, *skip*
 
 * [Get **shpotify**](https://github.com/hnarayanan/shpotify)
 
-![plugin-shpotify]({{site.baseurl}}/img/2018/04/plugin-shpotify.gif)
+![plugin-shpotify](/img/2018/04/plugin-shpotify.gif)
 
 
 ### 8. now
@@ -204,7 +204,7 @@ Documentation for a load of frameworks and libraries have been imported, and it 
 
 They have also introduced cheat sheets for shortcuts and useful commands (e.g. `vim`, `Kubernetes`, etc).
 
-![dash]({{site.baseurl}}/img/2018/04/dash.png)
+![dash](/img/2018/04/dash.png)
 
 * [Get **Dash**](https://kapeli.com/dash)
 

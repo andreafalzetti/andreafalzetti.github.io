@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-head">
+    <a class="back" href="{{ "blog/" | relURL }}">← Blog</a>
+    <h1>{{ .Title }}</h1>
+    <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · {{ .ReadingTime }} min read</p>
+    {{- with .GetTerms "tags" }}
+    <ul class="tags">
+      {{- range . }}<li><a class="chip" href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></li>{{ end }}
+    </ul>
+    {{- end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{- $posts := (where site.RegularPages "Section" .Section).ByDate -}}
+  {{- $i := -1 -}}
+  {{- range $index, $p := $posts }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $i = $index }}{{ end }}{{ end -}}
+  {{- if ge $i 0 }}
+  <nav class="pager" aria-label="More posts">
+    {{- if gt $i 0 }}{{ with index $posts (sub $i 1) }}
+    <a class="older" href="{{ .RelPermalink }}"><small>← Older</small><strong>{{ .Title }}</strong></a>
+    {{- end }}{{ end }}
+    {{- if lt (add $i 1) (len $posts) }}{{ with index $posts (add $i 1) }}
+    <a class="newer" href="{{ .RelPermalink }}"><small>Newer →</small><strong>{{ .Title }}</strong></a>
+    {{- end }}{{ end }}
+  </nav>
+  {{- end }}
+</article>
+{{ end }}

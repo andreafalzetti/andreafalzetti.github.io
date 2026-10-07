@@ -1,14 +1,14 @@
 ---
 title: "About"
 date: 2019-05-12T12:14:34+06:00
-description: "This is meta description."
-author : "Sam Robbins"
+description: "Who I am, how I work and where I have worked."
+author : "Andrea Falzetti"
 authorImage : "images/about/profile.jpg"
 ---
 
-👋 I'm Andrea, a Teach Lead & Staff Software Engineer and AWS Community Builders alum based in Europe. I am passionate about building products and tools that bring value to people. I have been crafting software since 2010.
+👋 I'm Andrea, a Tech Lead & Staff Software Engineer and AWS Community Builders alum based in Europe. I am passionate about building products and tools that bring value to people. I have been crafting software since 2010.
 
-Since 2021 I have been working within the Developer Experience space, empowering other developers have a better experience doing their work, every day.
+Since 2021 I have been working within the Developer Experience space, helping other developers have a better experience doing their work, every day.
 
 I am passionate about creating products, startups, building companies, coding, traveling, making bread and pizza 🍕.
 

@@ -1,0 +1,123 @@
+/* Layout: la pagina è una tastiera. Il tasto A e il cognome riempiono la prima schermata;
+   poi una fila di tasti (che cosa faccio), una fila di tasti quadrati (dove trovarmi)
+   e il tasto Invio della tastiera ISO (scrivimi). Allineamento a sinistra per i testi,
+   il logo al centro. */
+:root{
+  --paper:#F3F1EC;
+  --paper-dim:#A8A398;
+  --ink:#161616;
+  --ink-2:#57524A;
+  --liquid:#FF6B35;
+  --mono:'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --gutter:clamp(16px, 4vw, 56px);
+  --u:clamp(92px, 8.4vw, 124px);
+  --K:min(46svh, 27vw);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.6 var(--mono);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:6px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- Prima schermata ---------- */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;padding:clamp(12px,2vw,24px) var(--gutter) clamp(20px,3.2vw,40px);overflow:clip}
+.bar{display:flex;justify-content:flex-end;align-items:center;gap:4px 18px;flex-wrap:wrap;position:relative;z-index:3;transition:opacity .6s}
+.bar a{font-weight:700;text-decoration:none;padding:10px 4px;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 6px)/0 2px no-repeat;transition:background-size .25s}
+.bar a:hover{background-size:100% 2px}
+.sound{appearance:none;border:0;background:none;color:var(--ink);width:44px;height:44px;display:grid;place-items:center;cursor:pointer;border-radius:50%;padding:0}
+.sound svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sound[aria-pressed="false"] .on,.sound[aria-pressed="true"] .off{display:none}
+
+.lockup{display:flex;align-items:center;justify-content:center;gap:calc(var(--K)*.19);padding-block:clamp(24px,5svh,64px)}
+.key{appearance:none;border:0;background:none;padding:0;margin:0;font:inherit;color:inherit;position:relative;z-index:2;display:block;flex:none;width:var(--K);height:var(--K);cursor:grab;touch-action:pan-y;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;will-change:transform}
+.key.grab{cursor:grabbing}
+.key canvas,.key svg{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;overflow:visible}
+.name{position:relative;font-weight:700;font-size:calc(var(--K)*.4);line-height:1;letter-spacing:.02em;user-select:none;-webkit-user-select:none;white-space:nowrap}
+.caret{position:absolute;left:0;top:.12em;width:.08em;height:.76em;background:var(--liquid);animation:blink 1.05s steps(1) infinite;transition:left .06s steps(1)}
+@keyframes blink{50%{opacity:0}}
+
+.ink-s{fill:none;stroke:var(--ink);stroke-linejoin:round;stroke-linecap:round}
+.lg{font-family:var(--mono);font-weight:700;fill:var(--ink)}
+.top{transition:transform .12s cubic-bezier(.3,1.6,.5,1)}
+.down .top{transform:translateY(5px);transition-duration:.04s}
+.static-liq{fill:var(--liquid)}
+.static-bub{fill:var(--paper)}
+.gl .static-liq,.gl .static-bub{display:none}
+
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 32px;flex-wrap:wrap;position:relative;z-index:1;transition:opacity .6s}
+.tagline{margin:0;font-size:clamp(15px,1.3vw,19px);font-weight:700;line-height:1.45;max-width:32ch;text-wrap:balance}
+.hint{margin:0;font-size:clamp(14px,1.05vw,16px);color:var(--ink-2);display:flex;align-items:center;gap:.55em}
+kbd{font:700 .86em/1 var(--mono);color:var(--ink);display:inline-block;min-width:2.2em;text-align:center;padding:.5em .55em .55em;border:2px solid var(--ink);border-radius:.5em;box-shadow:0 3px 0 var(--ink);transition:transform .06s,box-shadow .06s}
+kbd.down{transform:translateY(3px);box-shadow:0 0 0 var(--ink)}
+
+/* Sequenza d'apertura: il tasto si disegna, la legenda si scrive, il liquido si versa. */
+.intro .key .ink-s{stroke-dasharray:1 1;stroke-dashoffset:1;animation:draw .75s cubic-bezier(.65,0,.25,1) forwards}
+.intro .key .inner{animation-delay:.16s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.intro .ch{visibility:hidden}
+.ch.on{visibility:visible}
+.intro .hero-foot,.intro .bar{opacity:0}
+
+/* ---------- Che cosa faccio ---------- */
+.work{--u:clamp(104px,10.4vw,150px);position:relative;background:var(--liquid);padding:clamp(56px,8vw,112px) var(--gutter) clamp(64px,8vw,112px)}
+.wave{position:absolute;left:0;right:0;top:1px;height:34px;transform:translateY(-100%);overflow:hidden;pointer-events:none}
+.wave svg{display:block;width:200%;height:100%;animation:sea 8s linear infinite}
+.wave path{fill:var(--liquid)}
+@keyframes sea{to{transform:translateX(-50%)}}
+.row{list-style:none;margin:0 auto;padding:0;max-width:1120px;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(36px,5vw,64px) clamp(20px,2.6vw,36px)}
+.svc{width:calc(var(--u) * var(--w));display:grid;gap:18px;min-width:0}
+.svc p{margin:0;max-width:30ch;font-size:clamp(15px,1.15vw,17px);line-height:1.55}
+.svc .more{justify-self:start;font-weight:700;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 2px no-repeat;padding-bottom:2px}
+.cap{display:block;width:100%;height:auto;overflow:visible;user-select:none;-webkit-user-select:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cap .body{fill:var(--paper)}
+.cap .o{fill:none;stroke:var(--ink);stroke-linejoin:round}
+.cap .wv{fill:var(--liquid);animation:wv 2.4s linear infinite}
+.cap .bub{fill:var(--paper)}
+.cap .lg{font-family:var(--mono);font-weight:700;fill:var(--ink)}
+.cap .liq{transform-box:view-box;transform-origin:50% 80%}
+@keyframes wv{to{transform:translateX(30px)}}
+.svc:hover .top,.links a:hover .top{transform:translateY(4px)}
+.slosh .liq{animation:slosh 1.1s cubic-bezier(.3,.6,.4,1)}
+@keyframes slosh{0%{transform:rotate(0)}15%{transform:rotate(-7deg) translateY(-6px)}35%{transform:rotate(5deg)}55%{transform:rotate(-3deg)}75%{transform:rotate(1.5deg)}100%{transform:rotate(0)}}
+
+/* ---------- Dove trovarmi ---------- */
+.elsewhere{max-width:1120px;margin:0 auto;padding:clamp(88px,11vw,160px) var(--gutter)}
+.elsewhere h2{margin:0 0 clamp(36px,5vw,64px);font-size:clamp(15px,1.3vw,18px);font-weight:700}
+.links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(28px,4vw,56px) clamp(16px,2.4vw,32px)}
+.links a{display:grid;justify-items:start;gap:16px;text-decoration:none;min-width:0}
+.links .cap{width:var(--u)}
+.links strong{display:block;font-size:clamp(18px,1.6vw,22px);line-height:1.2}
+.links span{display:block;margin-top:.3em;color:var(--ink-2);overflow-wrap:anywhere}
+
+/* ---------- Scrivimi ---------- */
+.contact{background:var(--ink);color:var(--paper);padding:clamp(88px,11vw,160px) var(--gutter) 28px}
+.contact-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;gap:clamp(40px,8vw,128px)}
+.enter{position:relative;display:block;flex:none;width:calc(var(--u) * 1.95);aspect-ratio:180/240;max-width:100%;color:var(--paper);cursor:grab;touch-action:pan-y;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;will-change:transform;border-radius:18px}
+.enter.grab{cursor:grabbing}
+.enter canvas,.enter svg{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;overflow:visible}
+.p-s{fill:none;stroke:var(--paper);stroke-linejoin:round;stroke-linecap:round}
+.lg-p{font-family:var(--mono);font-weight:700;font-size:24px;fill:var(--paper)}
+.contact h2{margin:0;font-size:clamp(44px,6.6vw,100px);line-height:1;letter-spacing:-.03em;text-wrap:balance}
+.mail{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;margin:28px 0 0;font-size:clamp(18px,2vw,26px);font-weight:700}
+.mail a{color:var(--liquid);text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 2px no-repeat;padding-bottom:2px;overflow-wrap:anywhere}
+.copy{appearance:none;font:700 14px/1 var(--mono);color:var(--paper);background:none;border:2px solid var(--paper);border-radius:10px;box-shadow:0 3px 0 var(--paper);padding:11px 14px 12px;min-height:44px;cursor:pointer;transition:transform .06s,box-shadow .06s}
+.copy:active{transform:translateY(3px);box-shadow:0 0 0 var(--paper)}
+.foot{max-width:1120px;margin:clamp(96px,12vw,160px) auto 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--paper-dim);font-size:13px}
+.foot p{margin:0}
+
+@media (max-width:720px){
+  :root{--K:min(60vw,40svh);--u:clamp(80px,24vw,104px)}
+  .work{--u:clamp(96px,30vw,128px)}
+  .lockup{flex-direction:column;gap:calc(var(--K)*.14)}
+  .name{font-size:min(calc(var(--K)*.4),calc((100vw - 2 * var(--gutter)) / 5.3))}
+  .row{justify-content:flex-start}
+  .svc{width:min(100%,calc(var(--u) * var(--w) * 1.1))}
+  .links{grid-template-columns:minmax(0,1fr);gap:22px}
+  .links a{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:20px}
+  .links .cap{width:clamp(64px,19vw,80px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .wave svg,.cap .wv,.caret{animation:none}
+}
