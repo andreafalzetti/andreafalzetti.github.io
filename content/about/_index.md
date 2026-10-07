@@ -6,11 +6,11 @@ author : "Andrea Falzetti"
 authorImage : "images/about/profile.jpg"
 ---
 
-👋 I'm Andrea, a technical co-founder. I set the direction for the technology, build it hands-on and take products to market: sales, customer support, strategy and marketing.
+👋 I'm Andrea, a technical co-founder: technology vision, hands-on engineering, go-to-market.
 
 I've been writing software since 2010. I started as a freelancer, building websites and Android apps, and published a space shooter, Xstronauta, on Xbox Live Indie Games. In 2013 I joined Activate Media, a London startup studio, and spent four years building products for early-stage startups. In 2017 I moved to DAZN, the sports-streaming service: first on back-end and cloud services, then on developer experience as a Staff Platform Engineer, making it faster for engineers to build and ship, and interviewing and hiring. That led me to two venture-backed developer-tools startups, Gitpod in 2022 and Okteto in 2023, where I worked on cloud development environments: CLI commands, IDE integrations and more than 260 merged pull requests you can read on GitHub.
 
-Since 2017 I had also been building Onoranze Funebri Cloud on the side, starting from the needs of a single funeral business. It became a company in 2021, and today it's my full-time work: as co-founder and CTO I own the technology, and I still write code. Everything I've shipped along the way is on the [Shipped](/shipped/) page.
+Since 2017 I had also been building Onoranze Funebri Cloud on the side, starting from the needs of a single funeral business. It became a company in 2021, and today it's my full-time work: as co-founder and CTO I own the technology, and I ~~still write code~~ ask Claude Code and Codex to write it. Everything I've shipped along the way is on the [Shipped](/shipped/) page.
 
 I'm an AWS Community Builders alum, and I love creating products, building companies, travelling and making bread and pizza 🍕.
 
