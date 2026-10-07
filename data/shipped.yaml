@@ -1,40 +1,12 @@
 # Everything shipped, for the /shipped/ page and the home. Blog posts join the list automatically.
 # date: YYYY-MM-DD (the page shows the month); at: where it happened; kind: product, feature, tool, company or game.
 
-- date: "2026-09-28"
-  at: OFC
-  kind: feature
-  title: WhatsApp Business in Eterno
-  line: New in Eterno, the management software for funeral businesses.
-  link: https://onoranzefunebricloud.com/novita
-
 - date: "2026-09-06"
   at: Personal
   kind: game
   title: Froststead
   line: A survival and village-building game in the ice, made in my spare time. On TestFlight two days after the first commit.
   link: https://froststead.com
-
-- date: "2026-09-02"
-  at: OFC
-  kind: feature
-  title: The DDT module
-  line: Delivery notes (documenti di trasporto) inside Eterno.
-  link: https://onoranzefunebricloud.com/novita
-
-- date: "2026-07-15"
-  at: OFC
-  kind: feature
-  title: Three AI tools in Giotto
-  line: New tools in Giotto, the editor for death notices and memorial cards.
-  link: https://onoranzefunebricloud.com/novita
-
-- date: "2026-06-08"
-  at: OFC
-  kind: feature
-  title: Area Famiglia
-  line: New in Eterno.
-  link: https://onoranzefunebricloud.com/novita
 
 - date: "2025-07-01"
   at: Personal
