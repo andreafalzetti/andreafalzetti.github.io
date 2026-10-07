@@ -121,10 +121,10 @@
   link: https://github.com/gitpod-io/gitpod/pull/8890
 
 - date: "2021-10-29"
-  at: OFC
+  at: Onoranze Funebri Cloud
   kind: company
-  title: OFC S.R.L.
-  line: Onoranze Funebri Cloud becomes a company. I'm co-founder and CTO.
+  title: Onoranze Funebri Cloud becomes a company
+  line: I'm co-founder and CTO.
   link: https://onoranzefunebricloud.com/chi-siamo
 
 - date: "2021-07-08"
@@ -142,7 +142,7 @@
   link: https://www.npmjs.com/package/fatturazione-elettronica-aruba
 
 - date: "2017-01-01"
-  at: OFC
+  at: Onoranze Funebri Cloud
   kind: product
   title: Onoranze Funebri Cloud, first commit
   line: A side project, built for the needs of a single funeral business.
