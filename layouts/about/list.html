@@ -14,7 +14,7 @@
     <h2 id="experience-h">Experience</h2>
     <ol class="xp">
       {{- range .item }}
-      <li><time>{{ .duration }}</time><div><strong>{{ .title }}</strong><span>{{ .company }}</span></div></li>
+      <li><span class="when">{{ .duration }}</span><div><strong>{{ .title }}</strong><span>{{ .company }}</span></div></li>
       {{- end }}
     </ol>
   </section>
