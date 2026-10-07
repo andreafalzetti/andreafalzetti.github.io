@@ -1,0 +1,44 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+</header>
+{{- $items := partial "keys/shipped-items.html" . -}}
+{{- $labels := dict "product" "Products" "feature" "Features" "tool" "Tools" "company" "Company" "game" "Games" "post" "Posts" -}}
+{{- $kind := dict "product" "Product" "feature" "Feature" "tool" "Tool" "company" "Company" "game" "Game" "post" "Post" -}}
+{{- $years := slice -}}
+{{- range $items }}{{ $years = $years | append .year }}{{ end -}}
+{{- $years = uniq $years -}}
+{{- $max := 1 -}}
+{{- range $years }}{{ $n := len (where $items "year" .) }}{{ if gt $n $max }}{{ $max = $n }}{{ end }}{{ end }}
+<div class="posts shipped">
+  <div class="filters" role="group" aria-label="Show">
+    <button type="button" class="chip" data-kind="all" aria-pressed="true">All <span>{{ len $items }}</span></button>
+    {{- range slice "product" "feature" "tool" "company" "game" "post" }}
+    {{- $n := len (where $items "kind" .) }}{{ if $n }}
+    <button type="button" class="chip" data-kind="{{ . }}" aria-pressed="false">{{ index $labels . }} <span>{{ $n }}</span></button>
+    {{- end }}{{ end }}
+  </div>
+  {{- range $years }}
+  {{- $year := . }}{{ $in := where $items "year" $year }}{{ $n := len $in }}
+  <section class="year" aria-labelledby="y-{{ $year }}">
+    <h2 class="year-key" id="y-{{ $year }}">
+      {{ partial "keys/keycap.html" (dict "id" (printf "y%s" $year) "w" 180 "legend" $year "size" 30 "y" 49 "level" (sub 92 (div (mul 34 $n) $max))) }}
+      <span class="sr">{{ $year }}, </span><span>{{ $n }} shipped</span>
+    </h2>
+    <ol class="post-list">
+      {{- range $in }}
+      <li data-kind="{{ .kind }}">
+        <time datetime="{{ .date }}">{{ (time .date).Format "Jan" }}</time>
+        <div>
+          <p class="entry-meta">{{ .at }} · {{ index $kind .kind }}</p>
+          <a href="{{ .link }}">{{ .title }}</a>
+          {{- with .line }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

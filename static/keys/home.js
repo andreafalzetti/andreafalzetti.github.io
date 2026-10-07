@@ -624,7 +624,7 @@ addEventListener('keyup', e => {
 });
 
 // ---------- Tasti delle file: si premono e il liquido oscilla ----------
-document.querySelectorAll('.svc .cap, .links .cap').forEach(cap => {
+document.querySelectorAll('.svc .cap, .now-card .cap, .links .cap').forEach(cap => {
   cap.addEventListener('pointerdown', () => {
     cap.classList.add('down'); Sound.key(true, 0.8);
     cap.classList.remove('slosh'); void cap.getBoundingClientRect(); cap.classList.add('slosh');

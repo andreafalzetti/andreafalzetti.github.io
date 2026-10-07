@@ -1,0 +1,226 @@
+# Everything shipped, for the /shipped/ page and the home. Blog posts join the list automatically.
+# date: YYYY-MM-DD (the page shows the month); at: where it happened; kind: product, feature, tool, company or game.
+
+- date: "2026-09-28"
+  at: OFC
+  kind: feature
+  title: WhatsApp Business in Eterno
+  line: New in Eterno, the management software for funeral businesses.
+  link: https://onoranzefunebricloud.com/novita
+
+- date: "2026-09-06"
+  at: Personal
+  kind: game
+  title: Froststead
+  line: A survival and village-building game in the ice, made in my spare time. On TestFlight two days after the first commit.
+  link: https://froststead.com
+
+- date: "2026-09-02"
+  at: OFC
+  kind: feature
+  title: The DDT module
+  line: Delivery notes (documenti di trasporto) inside Eterno.
+  link: https://onoranzefunebricloud.com/novita
+
+- date: "2026-07-15"
+  at: OFC
+  kind: feature
+  title: Three AI tools in Giotto
+  line: New tools in Giotto, the editor for death notices and memorial cards.
+  link: https://onoranzefunebricloud.com/novita
+
+- date: "2026-06-08"
+  at: OFC
+  kind: feature
+  title: Area Famiglia
+  line: New in Eterno.
+  link: https://onoranzefunebricloud.com/novita
+
+- date: "2025-07-01"
+  at: Personal
+  kind: tool
+  title: Parse Dashboard contribution
+  line: Its AI agent can now be configured through environment variables.
+  link: https://github.com/parse-community/parse-dashboard/pull/2956
+
+- date: "2024-12-19"
+  at: Okteto
+  kind: feature
+  title: okteto validate and the manifest JSON Schema
+  line: Okteto manifests checked against a JSON Schema, from the CLI and in editors.
+  link: https://github.com/okteto/okteto/pull/4575
+
+- date: "2024-10-01"
+  at: Okteto
+  kind: feature
+  title: Okteto CLI 3.0
+  line: The breaking-change cleanup that removed legacy commands and manifest fields.
+  link: https://www.okteto.com/blog/cli-three-release/
+
+- date: "2024-06-01"
+  at: Okteto
+  kind: feature
+  title: okteto test keeps its results
+  line: Test results and files are exported even when tests fail.
+  link: https://github.com/okteto/okteto/pull/4334
+
+- date: "2024-04-01"
+  at: Okteto
+  kind: feature
+  title: Masked secrets and .env defaults
+  line: Secret values hidden in logs, default values in .env files.
+  link: https://github.com/okteto/okteto/pull/4245
+
+- date: "2024-02-01"
+  at: Okteto
+  kind: feature
+  title: okteto up survives the night
+  line: Development sessions reconnect after overnight disconnects.
+  link: https://github.com/okteto/okteto/pull/4172
+
+- date: "2023-10-01"
+  at: Okteto
+  kind: feature
+  title: Friendlier manifest errors
+  line: Clear messages that point to the mistake in an Okteto manifest.
+  link: https://github.com/okteto/okteto/pull/4009
+
+- date: "2023-09-01"
+  at: Okteto
+  kind: feature
+  title: okteto pipeline list
+  line: Development environments listed with their status and labels.
+  link: https://github.com/okteto/okteto/pull/3971
+
+- date: "2023-08-15"
+  at: Okteto
+  kind: feature
+  title: Short-lived Kubernetes tokens
+  line: The CLI uses short-lived tokens by default.
+  link: https://github.com/okteto/okteto/pull/3891
+
+- date: "2023-08-01"
+  at: Okteto
+  kind: feature
+  title: Images copied, not rebuilt
+  line: Images already built in the shared registry are copied to the developer's registry.
+  link: https://github.com/okteto/okteto/pull/3950
+
+- date: "2023-01-15"
+  at: Gitpod
+  kind: feature
+  title: gp rebuild
+  line: Test a workspace image or .gitpod.yml without leaving the workspace. Today it's gp validate.
+  link: https://github.com/gitpod-io/gitpod/pull/15638
+
+- date: "2022-11-15"
+  at: Gitpod
+  kind: feature
+  title: JetBrains Rider and CLion in beta
+  line: Two more JetBrains IDEs for Gitpod workspaces.
+  link: https://github.com/gitpod-io/gitpod/pull/14524
+
+- date: "2022-08-15"
+  at: Gitpod
+  kind: feature
+  title: Workspace resources in JetBrains
+  line: CPU, memory and workspace class in the JetBrains control center.
+  link: https://github.com/gitpod-io/gitpod/pull/12053
+
+- date: "2022-06-15"
+  at: Gitpod
+  kind: feature
+  title: gp top
+  line: Workspace CPU and memory at a glance, from the terminal.
+  link: https://github.com/gitpod-io/gitpod/pull/10570
+
+- date: "2022-04-15"
+  at: Gitpod
+  kind: feature
+  title: Pick your editor at sign-up
+  line: New users choose VS Code or a JetBrains IDE during onboarding.
+  link: https://github.com/gitpod-io/gitpod/pull/9432
+
+- date: "2022-03-21"
+  at: Gitpod
+  kind: feature
+  title: gp tasks
+  line: List the tasks of a workspace and attach to their terminals.
+  link: https://github.com/gitpod-io/gitpod/pull/8890
+
+- date: "2021-10-29"
+  at: OFC
+  kind: company
+  title: OFC S.R.L.
+  line: Onoranze Funebri Cloud becomes a company. I'm co-founder and CTO.
+  link: https://onoranzefunebricloud.com/chi-siamo
+
+- date: "2021-07-08"
+  at: DAZN
+  kind: feature
+  title: Backstage Scaffolder actions
+  line: fs:delete, fs:rename and github:actions:dispatch, now part of Spotify's Backstage.
+  link: https://github.com/backstage/backstage/pull/6340
+
+- date: "2018-11-01"
+  at: Personal
+  kind: tool
+  title: fatturazione-elettronica-aruba
+  line: A Node.js client for Aruba's Italian e-invoicing API.
+  link: https://www.npmjs.com/package/fatturazione-elettronica-aruba
+
+- date: "2018-01-15"
+  at: DAZN
+  kind: product
+  title: The Hacker Games 2018
+  line: A 48-hour charity hackathon. We built a React Native chat app for partners of military veterans.
+  link: https://github.com/maxgallo/the-hacker-games-2018
+
+- date: "2017-01-01"
+  at: OFC
+  kind: product
+  title: Onoranze Funebri Cloud, first commit
+  line: A side project, built for the needs of a single funeral business.
+  link: https://onoranzefunebricloud.com
+
+- date: "2016-10-15"
+  at: Personal
+  kind: tool
+  title: node-caldav-mod
+  line: A CalDAV calendar client for Node.js, the one behind PlannerBot.
+  link: https://www.npmjs.com/package/node-caldav-mod
+
+- date: "2016-04-15"
+  at: Personal
+  kind: product
+  title: LyricsBot
+  line: A Facebook Messenger bot for song lyrics, built for fun.
+  link: https://github.com/andreafalzetti/FB-LyricsBot
+
+- date: "2015-03-01"
+  at: Personal
+  kind: tool
+  title: UK counties dataset
+  line: The 94 UK counties as CSV, shapefiles, KML and Google Maps files.
+  link: https://github.com/andreafalzetti/uk-counties-list
+
+- date: "2014-09-05"
+  at: Personal
+  kind: product
+  title: PDF Stamper
+  line: A PHP script that stamps images and text onto PDFs, sold on CodeCanyon.
+  link: https://codecanyon.net/item/pdf-stamper/8548120
+
+- date: "2012-09-27"
+  at: Personal
+  kind: product
+  title: Tor Vergata Totem
+  line: An Android app for Tor Vergata students to check exams, bookings and grades. Over 1,000 downloads.
+  link: https://github.com/andreafalzetti/mytotem_android
+
+- date: "2010-02-25"
+  at: Personal
+  kind: game
+  title: Xstronauta
+  line: My first game, a space shooter for Xbox Live Indie Games, with 8 ships and 30 levels.
+  link: https://www.youtube.com/watch?v=SlXwYpwPmVg

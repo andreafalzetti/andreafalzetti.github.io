@@ -1,0 +1,9 @@
+{{- /* Tutto quello che è stato consegnato: le voci di data/shipped.yaml più gli articoli del blog, dal più recente. */ -}}
+{{- $items := slice -}}
+{{- range site.Data.shipped -}}
+  {{- $items = $items | append (dict "date" .date "year" (substr .date 0 4) "at" .at "kind" .kind "title" .title "line" .line "link" .link) -}}
+{{- end -}}
+{{- range where site.RegularPages "Section" "blog" -}}
+  {{- $items = $items | append (dict "date" (.Date.Format "2006-01-02") "year" (.Date.Format "2006") "at" "Blog" "kind" "post" "title" .Title "line" .Description "link" .RelPermalink) -}}
+{{- end -}}
+{{- return (sort $items "date" "desc") -}}

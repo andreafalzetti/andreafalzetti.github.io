@@ -160,3 +160,13 @@ a.chip:active{transform:translateY(3px);box-shadow:0 0 0 var(--ink)}
 @media (prefers-reduced-motion:reduce){
   .cap .wv{animation:none}
 }
+
+/* ---------- Shipped: l'archivio, con i filtri come una fila di tasti ---------- */
+.shipped .filters{display:flex;flex-wrap:wrap;gap:12px 10px;margin-bottom:clamp(8px,2vw,16px)}
+.filters .chip{cursor:pointer;font-size:14px}
+.filters .chip span{color:var(--ink-2);font-weight:400;margin-left:.4em}
+.filters .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);transform:translateY(3px);box-shadow:0 0 0 var(--ink)}
+.filters .chip[aria-pressed="true"] span{color:var(--paper-dim)}
+.entry-meta{margin:0 0 4px!important;font:400 13px/1.4 var(--mono)!important;color:var(--ink-2)}
+
+[hidden]{display:none!important}
