@@ -1,5 +1,5 @@
 # Everything shipped, for the /shipped/ page and the home. Blog posts join the list automatically.
-# date: YYYY-MM-DD (the page shows the month); at: where it happened; kind: product, oss (open-source contributions), tool, company or game.
+# date: YYYY-MM-DD (the page shows the month); at: where it happened; kind: company, oss (everything open source), side (side projects) or game.
 
 - date: "2026-09-06"
   at: Personal
@@ -136,49 +136,42 @@
 
 - date: "2018-11-01"
   at: Personal
-  kind: tool
+  kind: oss
   title: fatturazione-elettronica-aruba
   line: A Node.js client for Aruba's Italian e-invoicing API.
   link: https://www.npmjs.com/package/fatturazione-elettronica-aruba
 
-- date: "2017-01-01"
-  at: Onoranze Funebri Cloud
-  kind: product
-  title: Onoranze Funebri Cloud, first commit
-  line: A side project, built for the needs of a single funeral business.
-  link: https://onoranzefunebricloud.com
-
 - date: "2016-10-15"
   at: Personal
-  kind: tool
+  kind: oss
   title: node-caldav-mod
   line: A CalDAV calendar client for Node.js, the one behind PlannerBot.
   link: https://www.npmjs.com/package/node-caldav-mod
 
 - date: "2016-04-15"
   at: Personal
-  kind: product
+  kind: side
   title: LyricsBot
   line: A Facebook Messenger bot for song lyrics, built for fun.
   link: https://github.com/andreafalzetti/FB-LyricsBot
 
 - date: "2015-03-01"
   at: Personal
-  kind: tool
+  kind: oss
   title: UK counties dataset
   line: The 94 UK counties as CSV, shapefiles, KML and Google Maps files.
   link: https://github.com/andreafalzetti/uk-counties-list
 
 - date: "2014-09-05"
   at: Personal
-  kind: product
+  kind: side
   title: PDF Stamper
   line: A PHP script that stamps images and text onto PDFs, sold on CodeCanyon.
   link: https://codecanyon.net/item/pdf-stamper/8548120
 
 - date: "2012-09-27"
   at: Personal
-  kind: product
+  kind: side
   title: Tor Vergata Totem
   line: An Android app for Tor Vergata students to check exams, bookings and grades. Over 1,000 downloads.
   link: https://github.com/andreafalzetti/mytotem_android
