@@ -4,6 +4,7 @@
     <span aria-hidden="true">FALZETTI</span>
   </a>
   <nav aria-label="Main">
+    <a href="{{ "shipped/" | relURL }}"{{ if eq .Section "shipped" }} aria-current="page"{{ end }}>Shipped</a>
     <a href="{{ "blog/" | relURL }}"{{ if eq .Section "blog" }} aria-current="page"{{ end }}>Blog</a>
     <a href="{{ "about/" | relURL }}"{{ if eq .Section "about" }} aria-current="page"{{ end }}>About</a>
     <a href="#contact">Contact</a>

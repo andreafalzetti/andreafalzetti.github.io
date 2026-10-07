@@ -18,9 +18,13 @@ about:
 experience:
   enable: true
   item:
+    - logo: /img/ofc.jpg
+      title: Onoranze Funebri Cloud
+      company: Co-Founder & CTO · a side project from 2017, a company since 2021
+      duration: Jan 2017
     - logo: /img/okteto.png
       title: Okteto
-      company: Senior Software Engineer 
+      company: Senior Software Engineer
       duration: Mar 2023
     - logo: /img/gitpod.png
       title: Gitpod
@@ -28,20 +32,8 @@ experience:
       duration: Mar 2022
     - logo: /img/dazn.png
       title: DAZN
-      company: Staff Platform Engineer (DevX)
-      duration: Aug 2021
-    - logo: /img/dazn.png
-      title: DAZN
-      company: Platform Engineer (DevX)
-      duration: Jul 2020
-    - logo: /img/dazn.png
-      title: DAZN
-      company: Software Engineer
+      company: Software Engineer, then Platform Engineer (DevX), then Staff Platform Engineer (DevX)
       duration: Nov 2017
-    - logo: /img/ofc.jpg
-      title: Onoranze Funebri Cloud
-      company: Co-Founder & CTO
-      duration: Jan 2017
     - logo: /img/activate.png
       title: Activate Media
       company: Software Engineer
