@@ -9,7 +9,7 @@
   link: https://froststead.com
 
 - date: "2025-07-01"
-  at: Personal
+  at: Parse
   kind: oss
   title: Parse Dashboard contribution
   line: Its AI agent can now be configured through environment variables.
@@ -189,3 +189,80 @@
   title: Xstronauta
   line: My first game, a space shooter for Xbox Live Indie Games, with 8 ships and 30 levels.
   link: https://www.youtube.com/watch?v=SlXwYpwPmVg
+
+- date: "2024-12-20"
+  at: "Okteto"
+  kind: oss
+  title: "180 merged pull requests at Okteto"
+  line: "All of them, from the CLI to the docs."
+  link: "https://github.com/search?type=pullrequests&q=author%3Aandreafalzetti+is%3Apr+is%3Amerged+org%3Aokteto+org%3Aokteto-community"
+
+- date: "2023-02-09"
+  at: "Gitpod"
+  kind: oss
+  title: "83 merged pull requests at Gitpod"
+  line: "All of them, from the gp CLI to the JetBrains integration."
+  link: "https://github.com/search?type=pullrequests&q=author%3Aandreafalzetti+is%3Apr+is%3Amerged+org%3Agitpod-io"
+
+- date: "2021-08-16"
+  at: "AsyncAPI"
+  kind: oss
+  title: "asyncapi-react keeps its styles"
+  line: "Stopped bundlers from stripping the component's CSS."
+  link: "https://github.com/asyncapi/asyncapi-react/pull/408"
+
+- date: "2020-09-24"
+  at: "Serverless"
+  kind: oss
+  title: "Lambda@Edge plugin fix"
+  line: "Made configSchemaHandler optional, so the plugin works across Serverless versions."
+  link: "https://github.com/serverless-operations/serverless-lambda-edge-pre-existing-cloudfront/pull/12"
+
+- date: "2020-03-08"
+  at: "Serverless"
+  kind: oss
+  title: "serverless-bundle: __dirname for Node.js"
+  line: "Fixed __dirname in bundled Node.js functions."
+  link: "https://github.com/AnomalyInnovations/serverless-bundle/pull/64"
+
+- date: "2020-02-19"
+  at: "Cobra"
+  kind: oss
+  title: "Cobra bug fix"
+  line: "Fixed an undefined variable in the Go CLI library."
+  link: "https://github.com/spf13/cobra/pull/1039"
+
+- date: "2019-05-10"
+  at: "Thundra"
+  kind: oss
+  title: "Thundra Lambda examples"
+  line: "Fixed a typo in a dependency version."
+  link: "https://github.com/thundra-io/thundra-examples-lambda-nodejs/pull/8"
+
+- date: "2018-12-04"
+  at: "Middy"
+  kind: oss
+  title: "Middy docs"
+  line: "Fixed a broken link in the docs of the Lambda middleware engine."
+  link: "https://github.com/middyjs/middy/pull/261"
+
+- date: "2017-04-10"
+  at: "OrientJS"
+  kind: oss
+  title: "OrientJS dependency upgrade"
+  line: "Upgraded request in OrientDB's Node.js driver."
+  link: "https://github.com/orientechnologies/orientjs/pull/242"
+
+- date: "2017-02-10"
+  at: "Serverless"
+  kind: oss
+  title: "Serverless examples: Auth0 secret"
+  line: "Pass the Auth0 client secret as a string, without base64 encoding."
+  link: "https://github.com/serverless/examples/pull/69"
+
+- date: "2016-10-21"
+  at: "es6-template-render"
+  kind: oss
+  title: "es6-template-render: nested objects"
+  line: "Added support for nested objects in templates."
+  link: "https://github.com/guillaumevincent/es6-template-render/pull/10"
